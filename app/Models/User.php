@@ -2,48 +2,121 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Enums\AccountState;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Collection;
 
 class User extends Authenticatable
 {
     /** @use HasFactory<UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
+    use Notifiable;
+
     protected $fillable = [
-        'name',
+        'first_name',
+        'middle_name',
+        'last_name',
         'email',
         'password',
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
-     */
     protected $hidden = [
         'password',
         'remember_token',
+        'mfa_secret',
+        'mfa_recovery_codes',
     ];
 
     /**
-     * Get the attributes that should be cast.
+     * Permission names resolved from role grants, cached per request.
      *
-     * @return array<string, string>
+     * @var Collection<int, string>|null
      */
+    protected ?Collection $resolvedPermissions = null;
+
     protected function casts(): array
     {
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'account_state' => AccountState::class,
+            'mfa_secret' => 'encrypted',
+            'mfa_recovery_codes' => 'encrypted:array',
+            'mfa_confirmed_at' => 'datetime',
         ];
+    }
+
+    public function fullName(): string
+    {
+        return collect([$this->first_name, $this->middle_name, $this->last_name])
+            ->filter()
+            ->implode(' ');
+    }
+
+    /** @return HasMany<RoleAssignment, $this> */
+    public function roleAssignments(): HasMany
+    {
+        return $this->hasMany(RoleAssignment::class);
+    }
+
+    /** @return BelongsToMany<Role, $this> */
+    public function roles(): BelongsToMany
+    {
+        return $this->belongsToMany(Role::class, 'role_assignments')
+            ->withPivot(['assigned_by', 'assigned_at']);
+    }
+
+    /** @return HasOne<Collaborator, $this> */
+    public function collaborator(): HasOne
+    {
+        return $this->hasOne(Collaborator::class);
+    }
+
+    /** @return HasMany<Consent, $this> */
+    public function consents(): HasMany
+    {
+        return $this->hasMany(Consent::class);
+    }
+
+    /**
+     * Authorization contract: application code checks permissions, never role
+     * names (ADR-004). Role names are configuration; permissions are contract.
+     */
+    public function hasPermission(string $permission): bool
+    {
+        $this->resolvedPermissions ??= $this->roles()
+            ->with('permissions:id,name')
+            ->get()
+            ->flatMap(fn (Role $role): Collection => $role->permissions->pluck('name'))
+            ->unique()
+            ->values();
+
+        return $this->resolvedPermissions->contains($permission);
+    }
+
+    public function hasRole(string $name): bool
+    {
+        return $this->roles()->where('name', $name)->exists();
+    }
+
+    /**
+     * MFA is mandatory for any user holding a role flagged requires_mfa; the
+     * admin route group enforces enrollment before access (doc 05 §3).
+     */
+    public function requiresMfa(): bool
+    {
+        return $this->roles()->where('requires_mfa', true)->exists();
+    }
+
+    public function hasConfirmedMfa(): bool
+    {
+        return $this->mfa_confirmed_at !== null;
     }
 }
