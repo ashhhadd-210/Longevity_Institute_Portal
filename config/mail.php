@@ -55,10 +55,13 @@ return [
 
         'postmark' => [
             'transport' => 'postmark',
-            // 'message_stream_id' => env('POSTMARK_MESSAGE_STREAM_ID'),
-            // 'client' => [
-            //     'timeout' => 5,
-            // ],
+            // Transactional stream only; future broadcasts use a separate
+            // stream so invitation reputation is never coupled to bulk sends
+            // (ADR-006).
+            'message_stream_id' => env('POSTMARK_MESSAGE_STREAM_ID', 'outbound'),
+            'client' => [
+                'timeout' => 10,
+            ],
         ],
 
         'resend' => [

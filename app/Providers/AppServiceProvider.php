@@ -15,6 +15,7 @@ use App\Models\Profile;
 use App\Models\Referral;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Relations\Relation;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -26,6 +27,13 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        // Permission bridge (ADR-004): any dotted ability name is resolved as
+        // a data-driven permission check. Policies use undotted method names
+        // and are unaffected. Application code never checks role names.
+        Gate::before(function (User $user, string $ability): ?bool {
+            return str_contains($ability, '.') ? $user->hasPermission($ability) : null;
+        });
+
         // Stable, storage-safe morph identifiers. Polymorphic columns
         // (admission_decisions.subject_type, audit_events.subject_type,
         // email_messages.related_type) must never contain PHP class names,

@@ -29,3 +29,24 @@ Delivered so far:
   the five-link profile cap holds in the schema, directory visibility rules behave
   exactly as specified, and admission provenance is traversable years later from
   collaborator back to the original application
+- The identity layer: sign-in, sign-out and password reset with rate limiting and
+  account-enumeration protection; TOTP two-factor authentication with recovery
+  codes, mandatory for administrative roles and enforced by a hard enrollment
+  wall before any administrative page; account suspension that takes effect on
+  live sessions immediately
+- Authorization enforced end to end through data-driven permissions, with an
+  authorization matrix test as the standing regression net
+- The admission services (foundation for Milestone 2): invitation issue, re-send
+  with token rotation, revocation, and registration that atomically creates the
+  admitted collaborator with consent capture — all covered by tests
+- Email infrastructure rails: every outbound message logged with per-message
+  delivery status updated by Postmark webhooks; invitation email template;
+  transactional message stream configuration
+- A minimal administrative dashboard, the authentication interface, and the
+  `portal:create-admin` command for bootstrapping administrator accounts
+- Deployment machinery: staging auto-deploy and manual tag-based production
+  deploy workflows (inert until servers exist), the server provisioning script,
+  and the independent nightly database backup script
+- Operations documentation: deployment, runbook (restore, rotation, incident
+  response), configuration, database and security references
+- Sentry SDK installed for error monitoring (activates when the DSN is set)

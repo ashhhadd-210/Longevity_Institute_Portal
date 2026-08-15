@@ -28,7 +28,7 @@ Named `domain.action[.qualifier]`, seeded in M1 (catalog grows additively):
 | expertise | `expertise.manage` (Institute-controlled vocabulary) |
 | governance | `governance.role.assign`, `governance.audit.view`, `governance.user.suspend` |
 | privacy | `privacy.export.fulfil`, `privacy.erasure.fulfil` |
-| platform | `platform.email_log.view`, `platform.settings.manage` |
+| platform | `platform.admin.access` (gate on the admin route group), `platform.email_log.view`, `platform.settings.manage` |
 
 ## 3. Seeded roles
 

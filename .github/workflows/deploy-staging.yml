@@ -1,0 +1,69 @@
+name: Deploy staging
+
+# Deploys automatically on every push to main once the staging server exists.
+# Gated by the repository variable DEPLOY_STAGING_ENABLED=true so the workflow
+# is inert until infrastructure is provisioned (docs/DEPLOYMENT.md).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-staging
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: vars.DEPLOY_STAGING_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    environment: staging
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up PHP 8.3
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, intl, pdo_pgsql, pgsql, zip, gd, sodium
+
+      - name: Install production dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction --no-dev --optimize-autoloader
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Build frontend assets
+        run: |
+          npm ci
+          npm run build
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.STAGING_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "${{ secrets.STAGING_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Sync application
+        run: |
+          rsync -az --delete \
+            --exclude '.git' --exclude 'node_modules' --exclude 'tests' \
+            --exclude '.env' --exclude 'storage/logs' --exclude 'storage/framework' \
+            ./ "${{ secrets.STAGING_USER }}@${{ secrets.STAGING_HOST }}:/var/www/portal/"
+
+      - name: Release
+        run: |
+          ssh "${{ secrets.STAGING_USER }}@${{ secrets.STAGING_HOST }}" bash -s <<'RELEASE'
+          set -euo pipefail
+          cd /var/www/portal
+          php artisan migrate --force
+          php artisan config:cache
+          php artisan route:cache
+          php artisan view:cache
+          php artisan queue:restart
+          RELEASE

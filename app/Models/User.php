@@ -10,14 +10,21 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
+use Laravel\Fortify\TwoFactorAuthenticatable;
 
+/**
+ * @property AccountState $account_state
+ * @property Carbon|null $two_factor_confirmed_at
+ */
 class User extends Authenticatable
 {
     /** @use HasFactory<UserFactory> */
     use HasFactory;
 
     use Notifiable;
+    use TwoFactorAuthenticatable;
 
     protected $fillable = [
         'first_name',
@@ -30,8 +37,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
-        'mfa_secret',
-        'mfa_recovery_codes',
+        'two_factor_secret',
+        'two_factor_recovery_codes',
     ];
 
     /**
@@ -47,9 +54,7 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
             'account_state' => AccountState::class,
-            'mfa_secret' => 'encrypted',
-            'mfa_recovery_codes' => 'encrypted:array',
-            'mfa_confirmed_at' => 'datetime',
+            'two_factor_confirmed_at' => 'datetime',
         ];
     }
 
@@ -117,6 +122,6 @@ class User extends Authenticatable
 
     public function hasConfirmedMfa(): bool
     {
-        return $this->mfa_confirmed_at !== null;
+        return $this->two_factor_confirmed_at !== null;
     }
 }

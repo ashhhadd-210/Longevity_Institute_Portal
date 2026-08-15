@@ -31,6 +31,7 @@ class RolePermissionSeeder extends Seeder
         'governance.user.suspend' => 'Suspend or reinstate user accounts',
         'privacy.export.fulfil' => 'Fulfil data export requests',
         'privacy.erasure.fulfil' => 'Fulfil data erasure requests',
+        'platform.admin.access' => 'Access the administrative area',
         'platform.email_log.view' => 'View the outbound email delivery log',
         'platform.settings.manage' => 'Manage platform settings',
     ];

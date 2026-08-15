@@ -15,7 +15,9 @@ return [
     */
 
     'postmark' => [
-        'key' => env('POSTMARK_API_KEY'),
+        'key' => env('POSTMARK_API_KEY', env('POSTMARK_TOKEN')),
+        // Shared token authenticating Postmark delivery webhooks (doc 07 §3).
+        'webhook_token' => env('POSTMARK_WEBHOOK_TOKEN'),
     ],
 
     'resend' => [

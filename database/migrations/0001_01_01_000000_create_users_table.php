@@ -23,11 +23,12 @@ return new class extends Migration
             $table->timestampTz('email_verified_at')->nullable();
             $table->string('password');
 
-            // TOTP multi-factor authentication. Mandatory for admin-tier
-            // roles, enforced by middleware before any admin route.
-            $table->text('mfa_secret')->nullable();
-            $table->timestampTz('mfa_confirmed_at')->nullable();
-            $table->text('mfa_recovery_codes')->nullable();
+            // TOTP multi-factor authentication (Fortify column names).
+            // Mandatory for admin-tier roles, enforced by middleware before
+            // any admin route.
+            $table->text('two_factor_secret')->nullable();
+            $table->text('two_factor_recovery_codes')->nullable();
+            $table->timestampTz('two_factor_confirmed_at')->nullable();
 
             $table->string('account_state')->default('active');
 
