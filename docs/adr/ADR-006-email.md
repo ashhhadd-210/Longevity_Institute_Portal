@@ -3,11 +3,17 @@
 **Status:** Accepted (account created by the Institute, Aug 2026) · **Date:** 2026-08
 
 ## Decision
-Postmark on the Institute's domain for all Portal email. SPF + DKIM + DMARC configured in
-M1 (DMARC begins `p=none` with monitoring, tightened once existing mail flows are confirmed
-clean). All sends queued, logged to `email_messages`, and status-updated via Postmark
-webhooks. Transactional and (future) broadcast traffic use separate message streams.
-Templates live in version control; no admin template editor in the Foundation Release.
+Postmark on the Institute's domain for all Portal email. All sends queued, logged to
+`email_messages`, and status-updated via Postmark webhooks. Transactional and (future)
+broadcast traffic use separate message streams. Templates live in version control; no admin
+template editor in the Foundation Release.
+
+**Amended August 2026 (see ADR-009).** The original plan — begin DMARC at `p=none` and
+tighten later — does not survive contact with the real zone: the domain already publishes
+`p=quarantine` with relaxed alignment, and its mail runs on Google Workspace. Portal
+authentication is therefore established *before* the first send, and purely additively: a
+DKIM `TXT` record and a Return-Path `CNAME` on a Portal subdomain. The existing SPF, MX and
+DMARC records are not modified, so no Portal change can affect the Founder's live mail.
 
 ## Context
 Email deliverability is the project's single largest operational risk: the invitation is the

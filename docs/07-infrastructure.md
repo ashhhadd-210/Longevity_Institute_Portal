@@ -15,11 +15,16 @@
 
 ## 2. Target topology
 
+> **Amended August 2026 (ADR-009).** DNS is hosted at GoDaddy, not Cloudflare; the
+> Institute website is on Wix; the domain already publishes `DMARC p=quarantine` over
+> Google Workspace mail. DNS stays at GoDaddy for the Foundation Release and the Portal
+> records are added additively. TLS is issued on the droplet (Let's Encrypt).
+
 ```
-Cloudflare DNS (activelongevityinstitute.org)
- ├── portal.…            → production droplet
- ├── staging.portal.…    → staging droplet          (access-restricted)
- └── Postmark DNS: DKIM (TXT), Return-Path (CNAME), SPF include, DMARC policy
+DNS at GoDaddy (activelongevityinstitute.org)  — unchanged records: MX, SPF, DMARC, Wix
+ ├── portal.…            → production droplet   (new A record)
+ ├── staging.portal.…    → staging droplet      (new A record, access-restricted)
+ └── Postmark: DKIM (TXT) + Return-Path (CNAME) on a Portal subdomain — additive only
 
 DigitalOcean (region: NYC3 — near Chicago; ADR-007)
  ├── droplet: portal-production   (Ubuntu LTS, nginx, PHP-FPM 8.3, queue worker via systemd)
@@ -36,10 +41,11 @@ envelope, billed directly to the Institute.
 ## 3. Email infrastructure (M1's most consequential deliverable)
 
 1. Postmark server per environment (staging sends only to team addresses via allowlist).
-2. Sending domain `activelongevityinstitute.org`: DKIM + Return-Path verified in Cloudflare;
-   SPF include; DMARC starting `p=none` with reports monitored, tightening to `quarantine`
-   once clean (do not jump straight to `reject` on a domain that already sends founder email —
-   verify existing mail flows first).
+2. Sending domain `activelongevityinstitute.org`: DKIM `TXT` and Return-Path `CNAME` added
+   at GoDaddy. The existing SPF, MX and DMARC records are **not** modified — DMARC is
+   already `p=quarantine` with relaxed alignment, so a subdomain Return-Path plus DKIM
+   aligns the Portal without any policy change (ADR-009). Alignment must be verified
+   before the first send, not after.
 3. **Message streams separated:** transactional only for the Portal. Future admin broadcasts
    use a broadcast stream so reputation of invitations is never coupled to bulk sends.
 4. Every send goes through the queue → `EmailMessage` row → Postmark; webhooks update
