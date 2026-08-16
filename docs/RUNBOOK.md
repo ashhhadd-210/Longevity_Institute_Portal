@@ -32,8 +32,24 @@ Two independent paths (doc 07 §5):
    `pg_restore --no-owner --dbname="$DATABASE_URL" portal-<stamp>.dump`
 3. Verify, then repoint the application as above.
 
-Rehearsed on staging as part of the Milestone 1 demonstration; re-rehearse
-after any major schema change.
+### Rehearsal record
+
+Performed on staging, 16 August 2026, using path B exactly as written above:
+
+| Check | Source (`portal_staging`) | Restored copy |
+|-------|---------------------------|---------------|
+| roles | 3 | 3 |
+| permissions | 20 | 20 |
+| users | 1 | 1 |
+| audit events | 2 | 2 |
+
+The restored copy also **retained the append-only protection**: an attempted
+`UPDATE` on `audit_events` in the restored database was refused by the trigger
+(`audit_events is append-only: UPDATE is not permitted`). Institutional history
+survives disaster recovery still un-rewritable, which is the property that
+actually matters.
+
+Re-rehearse after any major schema change.
 
 ## Rotate a credential
 

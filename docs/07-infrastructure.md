@@ -55,6 +55,20 @@ Access control in force:
 - SSH is key-only (`portal-deploy` ed25519); password authentication disabled
   by the provisioning script.
 
+Both environments are deployed and serving from GitHub Actions: staging
+automatically on merge to `main`, production manually from tag `m1.0`.
+
+### Outstanding dependencies
+
+These require credentials or access the developer does not hold:
+
+| Item | Blocked on | Effect until resolved |
+|------|-----------|----------------------|
+| Postmark server, sender domain, DKIM values | Postmark **account** API token (account-owner level) | No Portal email; `MAIL_MAILER=log` |
+| Three DNS records (`portal`, `staging.portal`, DKIM/Return-Path) | GoDaddy access, which the Institute has not delegated (ADR-009) | Environments reachable by IP only |
+| TLS certificates | The DNS records above (Let's Encrypt validates by hostname) | HTTP only; `SESSION_SECURE_COOKIE=false` |
+| Sentry error monitoring | Sentry DSN from the Institute's account | SDK installed, inactive |
+
 Staging mirrors production's shape (same PHP/Postgres versions, same deploy pipeline) so a
 staging pass is meaningful. Estimated running cost stays within the proposal's ~$40–60/month
 envelope, billed directly to the Institute.
