@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 #
-# Provisions a fresh Ubuntu LTS droplet as a Portal application server
+# Provisions a fresh Ubuntu 24.04 LTS droplet as a Portal application server
 # (doc 07 §6). Run once as root on a new droplet, then complete the manual
 # steps printed at the end. Re-running is safe.
+#
+# Ubuntu 24.04 ships PHP 8.3 in its own repositories, so no third-party PPA is
+# required — one fewer external dependency for a platform meant to outlive its
+# first developer.
 #
 # This script is half of the cold-start deployment test: a clean server plus
 # this script plus the documentation must yield a working Portal.
@@ -20,8 +24,6 @@ apt-get upgrade -y
 apt-get install -y software-properties-common curl git unzip ufw fail2ban \
     unattended-upgrades nginx postgresql-client
 
-add-apt-repository -y ppa:ondrej/php
-apt-get update
 apt-get install -y \
     "php${PHP_VERSION}-fpm" "php${PHP_VERSION}-cli" "php${PHP_VERSION}-pgsql" \
     "php${PHP_VERSION}-mbstring" "php${PHP_VERSION}-xml" "php${PHP_VERSION}-curl" \

@@ -27,12 +27,33 @@ DNS at GoDaddy (activelongevityinstitute.org)  — unchanged records: MX, SPF, D
  └── Postmark: DKIM (TXT) + Return-Path (CNAME) on a Portal subdomain — additive only
 
 DigitalOcean (region: NYC3 — near Chicago; ADR-007)
- ├── droplet: portal-production   (Ubuntu LTS, nginx, PHP-FPM 8.3, queue worker via systemd)
+ ├── droplet: portal-production   (Ubuntu 24.04 LTS, nginx, PHP-FPM 8.3, queue worker via systemd)
  ├── droplet: portal-staging      (same shape, smaller)
  ├── Managed PostgreSQL 16        (private networking only; separate staging + production DBs;
  │                                 automated daily backups + PITR; app connects via connection pool)
- └── Spaces bucket: photographs   (private; served via short-lived signed URLs)
+ └── Spaces bucket: photographs   (private; served via short-lived signed URLs — added with M3)
 ```
+
+### Provisioned (16 August 2026)
+
+All resources live in the Institute's **Active Longevity Portal** project, NYC3.
+
+| Resource | Detail | Monthly |
+|----------|--------|---------|
+| `portal-production` droplet | Ubuntu 24.04 LTS, 1 vCPU / 2 GB / 50 GB | $12 |
+| `portal-staging` droplet | Ubuntu 24.04 LTS, 1 vCPU / 1 GB / 25 GB | $6 |
+| `portal-postgres` cluster | PostgreSQL 16, 1 vCPU / 1 GB, databases `portal_production` + `portal_staging` | $15 |
+| | **Total** | **$33** |
+
+Access control in force:
+
+- **Cloud firewall `portal-web`** on both droplets: inbound 22/80/443 only.
+- **Database trusted sources**: the two droplets *only* — the cluster is not
+  reachable from the public internet, including from the developer's machine.
+- Applications connect over the **private** hostname
+  (`private-portal-postgres-…`), so database traffic never leaves the VPC.
+- SSH is key-only (`portal-deploy` ed25519); password authentication disabled
+  by the provisioning script.
 
 Staging mirrors production's shape (same PHP/Postgres versions, same deploy pipeline) so a
 staging pass is meaningful. Estimated running cost stays within the proposal's ~$40–60/month
