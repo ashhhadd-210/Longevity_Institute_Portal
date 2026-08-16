@@ -17,7 +17,9 @@ jobs:
   deploy:
     if: vars.DEPLOY_STAGING_ENABLED == 'true'
     runs-on: ubuntu-latest
-    environment: staging
+    # Repository-level secrets rather than a GitHub Environment: environments
+    # on private repositories require a paid plan, and the Portal should not
+    # depend on one.
 
     steps:
       - uses: actions/checkout@v4

@@ -18,7 +18,8 @@ jobs:
   deploy:
     if: vars.DEPLOY_PRODUCTION_ENABLED == 'true'
     runs-on: ubuntu-latest
-    environment: production
+    # Repository-level secrets rather than a GitHub Environment (see the
+    # staging workflow). Production remains manual and tag-based.
 
     steps:
       - uses: actions/checkout@v4
