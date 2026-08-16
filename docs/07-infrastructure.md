@@ -58,15 +58,30 @@ Access control in force:
 Both environments are deployed and serving from GitHub Actions: staging
 automatically on merge to `main`, production manually from tag `m1.0`.
 
-### Outstanding dependencies
+### Addresses and TLS (completed 16 August 2026)
 
-These require credentials or access the developer does not hold:
+The Institute added the `A` records at the registrar; certificates followed:
+
+| Environment | Address |
+|-------------|---------|
+| Production | `https://portal.activelongevityinstitute.org` |
+| Staging | `https://staging.portal.activelongevityinstitute.org` |
+
+- Let's Encrypt certificates issued per host, valid to 14 November 2026, with
+  the `certbot` renewal timer active on both servers (renewal dry-run verified).
+- Plain HTTP is permanently redirected (301) to HTTPS.
+- `APP_URL` now names the hostname and `SESSION_SECURE_COOKIE=true`, so session
+  cookies are never transmitted without encryption.
+- Email authentication (DKIM, Return-Path) was added by the Institute at the
+  same registrar and is verified by Postmark. MX and DMARC were left untouched,
+  as recommended in ADR-009 — the Institute's own mail was never in scope.
+
+### Outstanding dependencies
 
 | Item | Blocked on | Effect until resolved |
 |------|-----------|----------------------|
-| Postmark server, sender domain, DKIM values | Postmark **account** API token (account-owner level) | No Portal email; `MAIL_MAILER=log` |
-| Three DNS records (`portal`, `staging.portal`, DKIM/Return-Path) | GoDaddy access, which the Institute has not delegated (ADR-009) | Environments reachable by IP only |
-| TLS certificates | The DNS records above (Let's Encrypt validates by hostname) | HTTP only; `SESSION_SECURE_COOKIE=false` |
+| Portal email sending | Postmark account approval, then the Institute's regenerated server token | `MAIL_MAILER=log`; no mail leaves the Portal |
+| Inbox placement testing (Gmail, Outlook, university) | The above | Deliverability unverified |
 | Sentry error monitoring | Sentry DSN from the Institute's account | SDK installed, inactive |
 
 Staging mirrors production's shape (same PHP/Postgres versions, same deploy pipeline) so a

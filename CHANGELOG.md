@@ -50,3 +50,8 @@ Delivered so far:
 - Operations documentation: deployment, runbook (restore, rotation, incident
   response), configuration, database and security references
 - Sentry SDK installed for error monitoring (activates when the DSN is set)
+- The Portal now answers on its own addresses over an encrypted connection:
+  `portal.activelongevityinstitute.org` and
+  `staging.portal.activelongevityinstitute.org`. Certificates renew
+  automatically, plain connections are redirected to the secure address, and
+  session cookies are marked so they can never travel unencrypted
