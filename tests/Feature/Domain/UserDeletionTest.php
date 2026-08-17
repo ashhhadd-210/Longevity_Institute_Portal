@@ -36,6 +36,7 @@ class UserDeletionTest extends TestCase
 
         $user->forceFill([
             'first_name' => 'Removed',
+            'middle_name' => null,
             'last_name' => 'Account',
             'email' => 'removed.'.$user->id.'@example.invalid',
             'account_state' => AccountState::Deactivated->value,

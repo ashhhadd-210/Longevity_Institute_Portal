@@ -14,6 +14,12 @@
                 <p class="text-xs text-stone-500">Collaborator Portal</p>
             </div>
             <div class="flex items-center gap-4 text-sm">
+                @can('platform.admin.access')
+                    <a href="{{ route('admin.dashboard') }}"
+                       class="{{ request()->routeIs('admin.*') ? 'font-medium text-stone-800' : 'text-stone-600' }} underline-offset-2 hover:underline">
+                        Administration
+                    </a>
+                @endcan
                 <span class="text-stone-600">{{ auth()->user()->fullName() }}</span>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
