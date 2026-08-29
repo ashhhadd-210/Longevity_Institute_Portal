@@ -22,3 +22,8 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Working documents shared by the Institute. Reference material for the
+# development team; never part of the application source.
+/*.docx
+/*.pdf
