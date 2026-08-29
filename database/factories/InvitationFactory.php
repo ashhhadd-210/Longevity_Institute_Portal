@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\InvitationChannel;
 use App\Enums\InvitationStatus;
 use App\Models\AdmissionDecision;
 use App\Models\Invitation;
@@ -17,6 +18,7 @@ class InvitationFactory extends Factory
     {
         return [
             'email' => fake()->unique()->safeEmail(),
+            'delivery_channel' => InvitationChannel::Email->value,
             'first_name' => fake()->firstName(),
             'last_name' => fake()->lastName(),
             'token_hash' => Invitation::generateToken()['hash'],
@@ -33,6 +35,18 @@ class InvitationFactory extends Factory
         return $this->state(fn (array $attributes) => [
             'status' => InvitationStatus::Accepted->value,
             'accepted_at' => now(),
+        ]);
+    }
+
+    /**
+     * The LinkedIn route: no email address at all, because the Institute never
+     * had one for this person.
+     */
+    public function copyLink(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'delivery_channel' => InvitationChannel::CopyLink->value,
+            'email' => null,
         ]);
     }
 }

@@ -4,15 +4,19 @@ namespace App\Providers;
 
 use App\Models\AdmissionDecision;
 use App\Models\Application;
+use App\Models\CandidateCase;
 use App\Models\Collaborator;
 use App\Models\Consent;
 use App\Models\DataRequest;
+use App\Models\Discipline;
 use App\Models\EmailMessage;
 use App\Models\ExpertiseArea;
+use App\Models\InformationRequest;
 use App\Models\Invitation;
 use App\Models\Organisation;
 use App\Models\Profile;
 use App\Models\Referral;
+use App\Models\ReferralRelationship;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\Gate;
@@ -51,6 +55,10 @@ class AppServiceProvider extends ServiceProvider
             'consent' => Consent::class,
             'data_request' => DataRequest::class,
             'email_message' => EmailMessage::class,
+            'candidate_case' => CandidateCase::class,
+            'information_request' => InformationRequest::class,
+            'referral_relationship' => ReferralRelationship::class,
+            'discipline' => Discipline::class,
         ]);
     }
 }

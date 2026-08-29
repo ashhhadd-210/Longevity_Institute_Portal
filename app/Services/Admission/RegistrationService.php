@@ -15,16 +15,18 @@ use InvalidArgumentException;
 /**
  * Consumes an accepted invitation and creates the admitted collaborator
  * atomically: User + Collaborator + empty Profile + consent + role, with the
- * invitation marked accepted and the admission recorded (doc 05 §2). The M2
- * registration interface calls this; it is built and tested in M1 because it
- * is foundation, not surface.
+ * invitation marked accepted and the admission recorded (doc 05 §2).
+ *
+ * This is the only place an invitation is spent. Opening the link does not
+ * spend it, because LinkedIn and Outlook open links to scan them and would
+ * otherwise burn invitations before their recipients ever clicked.
  */
 class RegistrationService
 {
     public function __construct(private readonly AuditRecorder $audit) {}
 
     /**
-     * @param  array{first_name: string, middle_name?: string|null, last_name: string, password: string, privacy_consent: bool, ip_address?: string|null}  $data
+     * @param  array{first_name: string, preferred_name?: string|null, middle_name?: string|null, last_name: string, email?: string|null, password: string, privacy_consent: bool, ip_address?: string|null}  $data
      */
     public function register(Invitation $invitation, array $data): Collaborator
     {
@@ -36,18 +38,34 @@ class RegistrationService
             throw new InvalidArgumentException('Registration requires consent to the privacy notice.');
         }
 
-        $collaborator = DB::transaction(function () use ($invitation, $data): Collaborator {
+        // An invitation the Institute posted carries the address it was sent
+        // to. One the Founder pasted into LinkedIn carries no address at all,
+        // so the person supplies their own here.
+        $email = $invitation->email ?? ($data['email'] ?? null);
+
+        if (blank($email)) {
+            throw new InvalidArgumentException('An email address is required to create an account.');
+        }
+
+        // Receiving an invitation at an address the Institute chose proves
+        // control of that address, so no second round-trip is needed (doc 05
+        // §2). An address the person typed in themselves proves nothing of the
+        // kind, and is recorded as unconfirmed rather than quietly trusted.
+        $addressWasProven = $invitation->email !== null;
+
+        $collaborator = DB::transaction(function () use ($invitation, $data, $email, $addressWasProven): Collaborator {
             $user = User::query()->create([
                 'first_name' => $data['first_name'],
+                'preferred_name' => $data['preferred_name'] ?? null,
                 'middle_name' => $data['middle_name'] ?? null,
                 'last_name' => $data['last_name'],
-                'email' => $invitation->email,
+                'email' => $email,
                 'password' => $data['password'],
             ]);
 
-            // The accepted invitation itself proves control of the address —
-            // no second verification round-trip (doc 05 §2).
-            $user->forceFill(['email_verified_at' => now()])->save();
+            if ($addressWasProven) {
+                $user->forceFill(['email_verified_at' => now()])->save();
+            }
 
             $user->roleAssignments()->create([
                 'role_id' => Role::query()->where('name', 'collaborator')->firstOrFail()->id,
@@ -74,7 +92,11 @@ class RegistrationService
 
             $collaborator->profile()->create([]);
 
-            $this->audit->record('admission.invitation.accepted', $user, $invitation);
+            $this->audit->record('admission.invitation.accepted', $user, $invitation, [
+                'delivery_channel' => $invitation->delivery_channel->value,
+                'email_address_proven_by_invitation' => $addressWasProven,
+            ]);
+
             $this->audit->record('admission.collaborator.admitted', $user, $collaborator, [
                 'invitation_id' => $invitation->id,
             ]);

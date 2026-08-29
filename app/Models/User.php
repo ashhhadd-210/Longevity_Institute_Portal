@@ -15,6 +15,12 @@ use Illuminate\Support\Collection;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 
 /**
+ * @property int $id
+ * @property string $first_name
+ * @property string|null $preferred_name
+ * @property string|null $middle_name
+ * @property string $last_name
+ * @property string $email
  * @property AccountState $account_state
  * @property Carbon|null $two_factor_confirmed_at
  */
@@ -28,6 +34,7 @@ class User extends Authenticatable
 
     protected $fillable = [
         'first_name',
+        'preferred_name',
         'middle_name',
         'last_name',
         'email',
@@ -63,6 +70,28 @@ class User extends Authenticatable
         return collect([$this->first_name, $this->middle_name, $this->last_name])
             ->filter()
             ->implode(' ');
+    }
+
+    /**
+     * How this person wishes to be addressed (agreed 28 August 2026): the
+     * preferred name if they gave one, otherwise their first name, otherwise
+     * nothing at all.
+     *
+     * The third step is not decoration. Before registration the Portal may hold
+     * only the name the Founder typed, and in rare cases a single name with no
+     * first name to fall back on. Returning null lets the greeting omit the
+     * name entirely rather than send "Hello ,".
+     *
+     * Being addressed as Bob does not make him Bob: this governs address only.
+     * The name of record is fullName(), and the two are never interchanged.
+     */
+    public function salutationName(): ?string
+    {
+        if (filled($this->preferred_name)) {
+            return $this->preferred_name;
+        }
+
+        return filled($this->first_name) ? $this->first_name : null;
     }
 
     /** @return HasMany<RoleAssignment, $this> */

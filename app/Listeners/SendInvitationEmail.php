@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use App\Enums\EmailMessageStatus;
+use App\Enums\InvitationChannel;
 use App\Enums\InvitationStatus;
 use App\Events\InvitationIssued;
 use App\Mail\InvitationMail;
@@ -25,6 +26,16 @@ class SendInvitationEmail implements ShouldQueue
     {
         $invitation = $event->invitation;
 
+        // A copy-link invitation is carried by the Founder herself, usually
+        // through LinkedIn, and frequently to somebody whose email address the
+        // Institute does not have. The Portal sends nothing and claims nothing:
+        // it will show the invitation as issued, and later as accepted, and
+        // never as delivered, because it did not deliver it (agreed 25 August
+        // 2026).
+        if ($invitation->delivery_channel === InvitationChannel::CopyLink) {
+            return;
+        }
+
         $emailMessage = EmailMessage::query()->create([
             'message_type' => 'invitation',
             'to_email' => $invitation->email,
@@ -35,7 +46,7 @@ class SendInvitationEmail implements ShouldQueue
             'queued_at' => now(),
         ]);
 
-        $acceptanceUrl = rtrim((string) config('app.url'), '/').'/invitations/'.$event->rawToken;
+        $acceptanceUrl = route('invitations.show', ['token' => $event->rawToken]);
 
         try {
             Mail::to($invitation->email)

@@ -3,6 +3,7 @@
 namespace App\Mail;
 
 use App\Models\Invitation;
+use App\Support\Salutation;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
@@ -37,9 +38,13 @@ class InvitationMail extends Mailable
         return new Content(
             markdown: 'mail.invitation',
             with: [
-                'firstName' => $this->invitation->first_name,
+                // One salutation rule, applied everywhere the Portal speaks to
+                // somebody (agreed 28 August 2026).
+                'greeting' => Salutation::greeting($this->invitation, 'Dear'),
                 'acceptanceUrl' => $this->acceptanceUrl,
                 'expiresAt' => $this->invitation->expires_at,
+                'referrerName' => $this->invitation->referrer?->user?->fullName(),
+                'personalMessage' => $this->invitation->personal_message,
             ],
         );
     }

@@ -10,10 +10,19 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Support\Carbon;
 
 /**
  * The recorded judgement. A referral or application receives a decision; a
  * direct invitation carries a decision with no subject record.
+ *
+ * @property int $id
+ * @property string|null $subject_type
+ * @property int|null $subject_id
+ * @property int|null $candidate_case_id
+ * @property DecisionOutcome $decision
+ * @property string|null $rationale
+ * @property Carbon $decided_at
  */
 class AdmissionDecision extends Model
 {
@@ -23,6 +32,7 @@ class AdmissionDecision extends Model
     protected $fillable = [
         'subject_type',
         'subject_id',
+        'candidate_case_id',
         'decision',
         'rationale',
         'decided_by',
@@ -56,6 +66,12 @@ class AdmissionDecision extends Model
     public function decidedBy(): BelongsTo
     {
         return $this->belongsTo(User::class, 'decided_by');
+    }
+
+    /** @return BelongsTo<CandidateCase, $this> */
+    public function candidateCase(): BelongsTo
+    {
+        return $this->belongsTo(CandidateCase::class);
     }
 
     /** @return HasOne<Invitation, $this> */

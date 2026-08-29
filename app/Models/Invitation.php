@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\InvitationChannel;
 use App\Enums\InvitationStatus;
 use Database\Factories\InvitationFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -11,8 +12,23 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Carbon;
 
 /**
+ * @property int $id
+ * @property string|null $email
+ * @property string $first_name
+ * @property string|null $preferred_name
+ * @property string|null $middle_name
+ * @property string $last_name
+ * @property string $token_hash
+ * @property string|null $personal_message
+ * @property int|null $candidate_case_id
+ * @property int|null $referrer_collaborator_id
+ * @property int $send_count
  * @property InvitationStatus $status
+ * @property InvitationChannel $delivery_channel
  * @property Carbon $expires_at
+ * @property Carbon $created_at
+ * @property Carbon|null $accepted_at
+ * @property Carbon|null $revoked_at
  */
 class Invitation extends Model
 {
@@ -21,12 +37,18 @@ class Invitation extends Model
 
     protected $fillable = [
         'email',
+        'delivery_channel',
         'first_name',
+        'preferred_name',
+        'middle_name',
         'last_name',
         'token_hash',
         'expires_at',
         'status',
         'admission_decision_id',
+        'candidate_case_id',
+        'referrer_collaborator_id',
+        'personal_message',
         'issued_by',
         'send_count',
         'last_sent_at',
@@ -38,6 +60,7 @@ class Invitation extends Model
     {
         return [
             'status' => InvitationStatus::class,
+            'delivery_channel' => InvitationChannel::class,
             'expires_at' => 'datetime',
             'last_sent_at' => 'datetime',
             'accepted_at' => 'datetime',
@@ -68,10 +91,62 @@ class Invitation extends Model
         return $this->status->isAcceptable() && ! $this->expires_at->isPast();
     }
 
+    /**
+     * Why an invitation cannot be accepted, in words fit to show the person
+     * holding the link. They are never shown an error: arriving at a link that
+     * has lapsed is not a mistake they made.
+     */
+    public function unacceptableReason(): ?string
+    {
+        if ($this->isAcceptable()) {
+            return null;
+        }
+
+        return match (true) {
+            $this->status === InvitationStatus::Accepted => 'already_registered',
+            $this->status === InvitationStatus::Revoked => 'withdrawn',
+            default => 'lapsed',
+        };
+    }
+
+    /**
+     * How this person should be addressed: preferred name, then first name,
+     * then nothing at all rather than something awkward (agreed 28 August
+     * 2026). The same rule the User model applies, so an invitation and the
+     * account it becomes greet the same person identically.
+     */
+    public function salutationName(): ?string
+    {
+        return filled($this->preferred_name)
+            ? $this->preferred_name
+            : (filled($this->first_name) ? $this->first_name : null);
+    }
+
+    public function fullName(): string
+    {
+        return trim(implode(' ', array_filter([
+            $this->first_name,
+            $this->middle_name,
+            $this->last_name,
+        ])));
+    }
+
     /** @return BelongsTo<AdmissionDecision, $this> */
     public function admissionDecision(): BelongsTo
     {
         return $this->belongsTo(AdmissionDecision::class);
+    }
+
+    /** @return BelongsTo<CandidateCase, $this> */
+    public function candidateCase(): BelongsTo
+    {
+        return $this->belongsTo(CandidateCase::class);
+    }
+
+    /** @return BelongsTo<Collaborator, $this> */
+    public function referrer(): BelongsTo
+    {
+        return $this->belongsTo(Collaborator::class, 'referrer_collaborator_id');
     }
 
     /** @return BelongsTo<User, $this> */
