@@ -1,10 +1,47 @@
 <?php
 
+use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\InvitationAcceptanceController;
 use App\Http\Controllers\MfaSetupController;
+use App\Http\Controllers\ReferralController;
 use App\Http\Controllers\Webhooks\PostmarkWebhookController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn () => redirect()->route('login'));
+
+/*
+|--------------------------------------------------------------------------
+| Public admission routes
+|--------------------------------------------------------------------------
+|
+| Unauthenticated by necessity. An applicant has no account and, if the
+| Institute decides against them, never will.
+*/
+
+Route::get('/apply', [ApplicationController::class, 'create'])->name('applications.create');
+Route::post('/apply', [ApplicationController::class, 'store'])
+    ->middleware('throttle:10,60')
+    ->name('applications.store');
+Route::get('/apply/received', [ApplicationController::class, 'received'])->name('applications.received');
+
+/*
+| The invitation link.
+|
+| GET must never consume the token. LinkedIn and Outlook fetch links to scan
+| them before a human sees them, so a token spent on sight would be spent by a
+| machine (agreed 18 August 2026). Only the POST below spends it.
+*/
+Route::get('/invitations/{token}', [InvitationAcceptanceController::class, 'show'])
+    ->name('invitations.show');
+Route::post('/invitations/{token}', [InvitationAcceptanceController::class, 'accept'])
+    ->middleware('throttle:10,60')
+    ->name('invitations.accept');
+
+/*
+|--------------------------------------------------------------------------
+| Signed-in routes
+|--------------------------------------------------------------------------
+*/
 
 Route::middleware(['auth', 'account.active'])->group(function (): void {
     // MFA enrollment for admin-tier users. Deliberately outside the
@@ -18,6 +55,11 @@ Route::middleware(['auth', 'account.active'])->group(function (): void {
     // factor.
     Route::middleware('mfa.enrolled')->group(function (): void {
         Route::get('/home', fn () => view('home'))->name('home');
+
+        // Referring a professional is a collaborator's act, not the public's.
+        Route::get('/refer', [ReferralController::class, 'create'])->name('referrals.create');
+        Route::post('/refer', [ReferralController::class, 'store'])->name('referrals.store');
+        Route::get('/refer/received', [ReferralController::class, 'received'])->name('referrals.received');
     });
 });
 
