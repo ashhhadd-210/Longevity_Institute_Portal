@@ -74,6 +74,13 @@ jobs:
           # Laravel's scheduler only runs if something calls it every minute.
           # Installed here, idempotently, so a scheduled task can never be
           # shipped in a state where it silently never fires.
-          ( crontab -l 2>/dev/null | grep -v 'artisan schedule:run' ; \
-            echo '* * * * * cd /var/www/portal && php artisan schedule:run >> /dev/null 2>&1' ) | crontab -
+          #
+          # Both `crontab -l` with no crontab and `grep -v` that filters every
+          # line exit non-zero, so each needs neutralising: under pipefail they
+          # would otherwise fail a release that had already succeeded.
+          ( crontab -l 2>/dev/null || true ) | grep -v 'artisan schedule:run' > /tmp/portal-cron || true
+          echo '* * * * * cd /var/www/portal && php artisan schedule:run >> /dev/null 2>&1' >> /tmp/portal-cron
+          crontab /tmp/portal-cron
+          rm -f /tmp/portal-cron
+          crontab -l | grep -c 'artisan schedule:run'
           RELEASE
