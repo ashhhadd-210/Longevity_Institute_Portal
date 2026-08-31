@@ -32,18 +32,27 @@
                     @foreach ($duplicates as $match)
                         <div class="flex flex-wrap items-center justify-between gap-3 rounded-md bg-white px-3 py-2">
                             <div class="text-sm">
-                                <a href="{{ route('admin.cases.show', $match['case']) }}"
-                                   class="font-medium underline underline-offset-2">{{ $match['case']->display_name }}</a>
-                                <span class="text-stone-500">— {{ $match['confidence']->label() }}</span>
-                                <p class="mt-0.5 text-xs text-stone-500">{{ $match['confidence']->explanation() }}</p>
+                                <a href="{{ route('admin.cases.show', $match->case) }}"
+                                   class="font-medium underline underline-offset-2">{{ $match->case->display_name }}</a>
+                                <span class="text-stone-500">, {{ $match->confidence->label() }}</span>
+                                <p class="mt-0.5 text-xs text-stone-500">{{ $match->confidence->explanation() }}</p>
                             </div>
-                            <form method="POST" action="{{ route('admin.cases.join', $case) }}">
-                                @csrf
-                                <input type="hidden" name="absorbed_case_id" value="{{ $match['case']->id }}">
-                                <button type="submit" class="rounded-md border border-stone-300 px-3 py-1.5 text-xs font-medium hover:bg-stone-50">
-                                    These are the same person
-                                </button>
-                            </form>
+                            @if ($match->isJoinable())
+                                <form method="POST" action="{{ route('admin.cases.join', $case) }}">
+                                    @csrf
+                                    <input type="hidden" name="absorbed_case_id" value="{{ $match->case->id }}">
+                                    <button type="submit" class="rounded-md border border-stone-300 px-3 py-1.5 text-xs font-medium hover:bg-stone-50">
+                                        These are the same person
+                                    </button>
+                                </form>
+                            @else
+                                {{-- Already judged, so joining would be refused. Say
+                                     why rather than offer an action that will fail. --}}
+                                <p class="max-w-xs text-xs text-stone-600">
+                                    {{ $match->settled }}
+                                    If they are the same person, work from that case rather than this one.
+                                </p>
+                            @endif
                         </div>
                     @endforeach
                 </div>

@@ -74,5 +74,10 @@ jobs:
           php artisan route:cache
           php artisan view:cache
           php artisan queue:restart
+          # Laravel's scheduler only runs if something calls it every minute.
+          # Installed here, idempotently, so a scheduled task can never be
+          # shipped in a state where it silently never fires.
+          ( crontab -l 2>/dev/null | grep -v 'artisan schedule:run' ; \
+            echo '* * * * * cd /var/www/portal && php artisan schedule:run >> /dev/null 2>&1' ) | crontab -
           php artisan up
           RELEASE

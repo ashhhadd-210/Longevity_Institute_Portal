@@ -20,6 +20,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
  * @property string|null $preferred_name
  * @property string|null $middle_name
  * @property string $last_name
+ * @property string|null $name_suffix
  * @property string $email
  * @property AccountState $account_state
  * @property Carbon|null $two_factor_confirmed_at
@@ -37,6 +38,7 @@ class User extends Authenticatable
         'preferred_name',
         'middle_name',
         'last_name',
+        'name_suffix',
         'email',
         'password',
     ];
@@ -65,9 +67,14 @@ class User extends Authenticatable
         ];
     }
 
+    /**
+     * The name of record. The generational suffix follows the family name and
+     * is deliberately not part of it, so that sorting by family name keeps a
+     * person beside their own namesake rather than scattering them.
+     */
     public function fullName(): string
     {
-        return collect([$this->first_name, $this->middle_name, $this->last_name])
+        return collect([$this->first_name, $this->middle_name, $this->last_name, $this->name_suffix])
             ->filter()
             ->implode(' ');
     }

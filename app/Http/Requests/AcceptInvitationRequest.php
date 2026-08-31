@@ -39,6 +39,10 @@ class AcceptInvitationRequest extends FormRequest
             'middle_name' => ['nullable', 'string', 'max:'.FieldLimits::NAME],
             'last_name' => ['required', 'string', 'max:'.FieldLimits::NAME],
 
+            // Held apart from the family name so that sorting keeps a person
+            // beside their own namesake.
+            'name_suffix' => ['nullable', 'string', 'max:'.FieldLimits::NAME_SUFFIX],
+
             // Required only where the invitation carried no address of its own,
             // which is the copy-link route.
             'email' => [

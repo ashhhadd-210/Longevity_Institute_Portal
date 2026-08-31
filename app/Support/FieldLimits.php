@@ -18,6 +18,13 @@ final class FieldLimits
     /** First, middle, family and preferred names. */
     public const NAME = 100;
 
+    /**
+     * Generational suffixes: Jr., Sr., II, III. Short by nature, so the name
+     * allowance does not apply. A long value here would signal a misunderstood
+     * field rather than a long name.
+     */
+    public const NAME_SUFFIX = 20;
+
     /** Organisation and institution names, and departments. */
     public const ORGANISATION = 200;
 

@@ -26,7 +26,7 @@ class RegistrationService
     public function __construct(private readonly AuditRecorder $audit) {}
 
     /**
-     * @param  array{first_name: string, preferred_name?: string|null, middle_name?: string|null, last_name: string, email?: string|null, password: string, privacy_consent: bool, ip_address?: string|null}  $data
+     * @param  array{first_name: string, preferred_name?: string|null, middle_name?: string|null, last_name: string, name_suffix?: string|null, email?: string|null, password: string, privacy_consent: bool, ip_address?: string|null}  $data
      */
     public function register(Invitation $invitation, array $data): Collaborator
     {
@@ -59,6 +59,7 @@ class RegistrationService
                 'preferred_name' => $data['preferred_name'] ?? null,
                 'middle_name' => $data['middle_name'] ?? null,
                 'last_name' => $data['last_name'],
+                'name_suffix' => $data['name_suffix'] ?? null,
                 'email' => $email,
                 'password' => $data['password'],
             ]);

@@ -62,7 +62,7 @@ class CandidateCaseTest extends TestCase
         $matches = $this->service()->possibleDuplicatesFor($caseA->fresh());
 
         $this->assertCount(1, $matches);
-        $this->assertSame(MatchConfidence::Confident, $matches->first()['confidence']);
+        $this->assertSame(MatchConfidence::Confident, $matches->first()->confidence);
 
         // Suggested, not performed. Two cases still stand.
         $this->assertSame(2, CandidateCase::query()->count());
@@ -87,7 +87,7 @@ class CandidateCaseTest extends TestCase
         $matches = $this->service()->possibleDuplicatesFor($caseA->fresh());
 
         $this->assertCount(1, $matches);
-        $this->assertSame(MatchConfidence::Possible, $matches->first()['confidence']);
+        $this->assertSame(MatchConfidence::Possible, $matches->first()->confidence);
     }
 
     public function test_joining_two_cases_moves_every_submission_onto_one(): void

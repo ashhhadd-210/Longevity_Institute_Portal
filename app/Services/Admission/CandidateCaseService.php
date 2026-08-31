@@ -9,6 +9,7 @@ use App\Models\Invitation;
 use App\Models\Referral;
 use App\Models\User;
 use App\Services\Governance\AuditRecorder;
+use App\Support\DuplicateMatch;
 use DomainException;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -63,7 +64,7 @@ class CandidateCaseService
      * proposing that she join a case she has already judged would invite her to
      * undo a decision by accident.
      *
-     * @return Collection<int, array{case: CandidateCase, confidence: MatchConfidence}>
+     * @return Collection<int, DuplicateMatch>
      */
     public function possibleDuplicatesFor(CandidateCase $case): Collection
     {
@@ -84,14 +85,46 @@ class CandidateCaseService
             ->get();
 
         return $candidates
-            ->map(fn (CandidateCase $other): array => [
-                'case' => $other,
-                'confidence' => (filled($email) && $other->email !== null && strcasecmp($other->email, $email) === 0)
-                    ? MatchConfidence::Confident
-                    : MatchConfidence::Possible,
-            ])
-            ->sortBy(fn (array $match): int => $match['confidence'] === MatchConfidence::Confident ? 0 : 1)
+            ->map(fn (CandidateCase $other): DuplicateMatch => new DuplicateMatch(
+                case: $other,
+                confidence: $this->confidenceFor($other, $email),
+                settled: $this->settledReason($other),
+            ))
+            ->sortBy(fn (DuplicateMatch $match): int => $match->confidence === MatchConfidence::Confident ? 0 : 1)
             ->values();
+    }
+
+    /**
+     * How strongly this other case resembles the one being examined.
+     *
+     * A shared email address is strong evidence; a shared name is weak, because
+     * common names are common. Neither is proof, and neither ever joins
+     * anything on its own.
+     */
+    private function confidenceFor(CandidateCase $other, ?string $email): MatchConfidence
+    {
+        $sameAddress = filled($email)
+            && $other->email !== null
+            && strcasecmp($other->email, (string) $email) === 0;
+
+        return $sameAddress ? MatchConfidence::Confident : MatchConfidence::Possible;
+    }
+
+    /**
+     * Why a match cannot be joined, in words fit to show a reviewer.
+     *
+     * A case that has already been judged cannot absorb another, because doing
+     * so would fold a decision into a case it was never made about. Saying so
+     * is more use than offering an action that is going to be refused.
+     */
+    private function settledReason(CandidateCase $case): ?string
+    {
+        return match (true) {
+            $case->isAdmitted() => 'This person is already an admitted collaborator.',
+            $case->liveInvitation() !== null => 'This person already has an invitation outstanding.',
+            $case->decisions()->exists() => 'This person has already been decided upon.',
+            default => null,
+        };
     }
 
     /**

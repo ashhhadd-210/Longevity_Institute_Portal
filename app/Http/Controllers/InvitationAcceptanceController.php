@@ -64,7 +64,7 @@ class InvitationAcceptanceController extends Controller
 
         $collaborator = $this->registrations->register($invitation, [
             ...$request->safe()->only([
-                'first_name', 'preferred_name', 'middle_name', 'last_name', 'email', 'password',
+                'first_name', 'preferred_name', 'middle_name', 'last_name', 'name_suffix', 'email', 'password',
             ]),
             'privacy_consent' => true,
             'ip_address' => $request->ip(),

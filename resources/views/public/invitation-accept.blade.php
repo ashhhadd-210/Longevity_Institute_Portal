@@ -59,6 +59,19 @@
             </div>
         </div>
 
+        {{-- Kept apart from the family name so the directory sorts correctly
+             and a person stays beside their own namesake. --}}
+        <div class="sm:w-1/3">
+            <label for="name_suffix" class="block text-sm font-medium">
+                Suffix <span class="font-normal text-stone-400">(optional)</span>
+            </label>
+            <input id="name_suffix" name="name_suffix" type="text"
+                   maxlength="{{ \App\Support\FieldLimits::NAME_SUFFIX }}"
+                   placeholder="Jr., Sr., III"
+                   value="{{ old('name_suffix', $invitation->name_suffix) }}"
+                   class="mt-1 w-full rounded-md border-stone-300 text-sm shadow-sm">
+        </div>
+
         {{-- Never phrased as "if different from your first name". --}}
         <div>
             <label for="preferred_name" class="block text-sm font-medium">

@@ -18,6 +18,7 @@ use Illuminate\Support\Carbon;
  * @property string|null $preferred_name
  * @property string|null $middle_name
  * @property string $last_name
+ * @property string|null $name_suffix
  * @property string $token_hash
  * @property string|null $personal_message
  * @property int|null $candidate_case_id
@@ -42,6 +43,7 @@ class Invitation extends Model
         'preferred_name',
         'middle_name',
         'last_name',
+        'name_suffix',
         'token_hash',
         'expires_at',
         'status',
@@ -128,6 +130,7 @@ class Invitation extends Model
             $this->first_name,
             $this->middle_name,
             $this->last_name,
+            $this->name_suffix,
         ])));
     }
 
