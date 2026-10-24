@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Milestone 3 — Scope and Quote — Institute Collaborator Portal</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; color: #292524; margin: 48px 56px; line-height: 1.55; }
+  h1 { font-size: 26px; margin-bottom: 2px; }
+  h2 { font-size: 17px; border-bottom: 1px solid #d6d3d1; padding-bottom: 5px; margin-top: 34px; }
+  h3 { font-size: 15px; margin-top: 22px; margin-bottom: 6px; }
+  .sub { color: #78716c; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid #d6d3d1; padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #f5f5f4; }
+  td.num { text-align: right; white-space: nowrap; }
+  .tot { background: #f5f5f4; font-weight: bold; }
+  code { font-family: Consolas, monospace; font-size: 12.5px; background: #f5f5f4; padding: 1px 4px; }
+  .footer { margin-top: 40px; color: #78716c; font-size: 13px; border-top: 1px solid #d6d3d1; padding-top: 12px; }
+  li { margin-bottom: 4px; }
+  .note { background: #f5f5f4; border-left: 3px solid #a8a29e; padding: 10px 14px; margin: 16px 0; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<h1>Institute Collaborator Portal</h1>
+<p class="sub">Milestone 3 — Profiles, Directory and Identity · Scope and Quote · Waga C, Pronto Digital · September 2026</p>
+
+<p>This document sets out exactly what Milestone 3 delivers, what it deliberately
+does not, what it costs, and what I need from you. Everything in it follows from
+decisions already agreed between us during August; nothing here is new thinking
+introduced at quoting time.</p>
+
+<h2>1. What Milestone 3 is for</h2>
+<p>Milestone 1 built the foundation. Milestone 2 opened the door and lets a person
+become an admitted collaborator. Milestone 3 answers the question that follows:
+<strong>what is a collaborator, once they are one?</strong></p>
+<p>It gives each collaborator a profile they own and control, gives the Institute a
+directory in which those people can be found, and settles for good who is allowed
+to see what.</p>
+
+<h2>2. The collaborator profile</h2>
+
+<h3>Name and how a person is addressed</h3>
+<ul>
+  <li>First name, optional middle name, family name, each holding 100 characters and full international characters throughout.</li>
+  <li>Generational suffix (Jr., Sr., II, III) held separately from the family name, so that sorting keeps a person beside their own namesake. <em>Already built during Milestone 2.</em></li>
+  <li>Up to three credentials shown after the name. No prefixes, as agreed.</li>
+  <li>Preferred name, asked as "How would you like the Portal to address you?", shown near the formal name as secondary information, for example "Addressed as Khim Tong". It falls back to the first name and disappears entirely when blank. <em>The underlying rule was already built during Milestone 2.</em></li>
+</ul>
+
+<h3>Professional standing</h3>
+<ul>
+  <li>Professional title, up to 300 characters, displayed in full and wrapped, never truncated.</li>
+  <li>Organisation, drawn from the structured organisation records rather than typed free-hand, so that two collaborators at the same institution are genuinely at the same institution.</li>
+  <li>A one-line summary, and a longer "about" section in the collaborator's own words.</li>
+  <li>Structured sections for education, appointments and publications, standardised in shape but unrestricted in quantity.</li>
+</ul>
+
+<h3>Up to three current positions (the addition you approved)</h3>
+<p>Senior people frequently hold more than one appointment at once: a university
+chair, a hospital role, a government advisory seat. Each position carries its own
+title, organisation and department.</p>
+<p>The structure and the limit of three were built during Milestone 2 and are
+enforced by the database itself. What Milestone 3 adds is the screens through
+which a collaborator enters and reorders them, and the way they are displayed.</p>
+
+<h3>Location</h3>
+<ul>
+  <li>Country, visible to other collaborators.</li>
+  <li>City and state or region, visible to the Institute alone, and stated as such at the moment they are collected.</li>
+</ul>
+
+<h3>Links, up to five</h3>
+<ul>
+  <li>Each link is a label of about 50 characters written by the collaborator, plus the address itself.</li>
+  <li>The profile shows the label only, as a clickable link. The address is not printed, though the browser reveals it on hover, which is why this is safe.</li>
+  <li>Only <code>http</code> and <code>https</code> are accepted. Links open in a new tab, isolated from the Portal.</li>
+  <li>The collaborator sets the order. Unused slots vanish from the published profile.</li>
+</ul>
+
+<h3>Throughout</h3>
+<p>Any optional field left blank disappears from the published profile rather than
+showing as an empty label. A profile with three things filled in looks deliberate,
+not unfinished.</p>
+
+<h2>3. Photographs</h2>
+<ul>
+  <li>Upload, with the software enforcing what software can judge: accepted formats, maximum size, not animated, and the rectangular crop we agreed.</li>
+  <li>A cropping step, so a collaborator is not asked to prepare an image correctly before uploading it.</li>
+  <li>Guidance text at the point of upload covering head and shoulders, no hats, and recency, since those are judgements a person makes and not a machine.</li>
+  <li>Your review of the photograph itself sits within the existing visibility gate.</li>
+  <li>Storage on the Institute's own DigitalOcean space, with the profile carrying the reference.</li>
+</ul>
+
+<h2>4. The expertise structure</h2>
+<p>Two levels, discipline and specialty, exactly as agreed.</p>
+<ul>
+  <li>The collaborator selects specialties only. The discipline follows from the specialty, so the two levels cannot contradict one another and nobody answers the same question twice.</li>
+  <li>Searching a discipline returns everyone in any of its specialties.</li>
+  <li>A collaborator may hold specialties across several disciplines, which is the interdisciplinary point of the Institute.</li>
+  <li>Each discipline carries a short line explaining why longer lives raise questions in that field.</li>
+  <li>Administrative screens so that you can add, rename, reorder and retire disciplines and specialties yourself, permanently, without development work.</li>
+</ul>
+<p>The <em>shape</em> is delivered here. The <em>contents</em> are yours to grow for as
+long as the Institute exists.</p>
+
+<h2>5. The directory and search</h2>
+<ul>
+  <li>Browse the community, with a calm, readable listing.</li>
+  <li>Search by name.</li>
+  <li>Search by expertise, at either level: a discipline returns everyone within it.</li>
+  <li>Search by country.</li>
+  <li>An individual profile page, which is the page a collaborator is looking at when they have found somebody.</li>
+</ul>
+<div class="note">
+  Richer filtering is deliberately not included. We agreed to wait for evidence of
+  what people actually search for, at roughly 150 collaborators, rather than
+  guessing now and building filters nobody uses.
+</div>
+
+<h3>Registering an interest in working with someone</h3>
+<p>Finding a person is only half of a directory. We agreed there would be no
+messaging between collaborators for the first Beta, and that collaborators would
+register an interest in working together instead, which the Institute sees.</p>
+<p>That belongs here, with the directory, and it is included at no additional
+charge. In practice: a collaborator viewing a profile can register an interest,
+the interest is recorded against both people, and you can see it. Whether a
+collaborator accepts such approaches at all is one of the settings they control
+under the visibility rules you approved.</p>
+<p>Deliberately simple. It is a record and a note, not a conversation. Threads,
+replies and notification preferences are not included and are not needed before a
+community exists.</p>
+<div class="note">
+  A note on why this appears here. This was agreed in principle but never written
+  into a milestone, and the visibility architecture you approved on 29 August
+  already refers to it. Rather than let you discover that halfway through, I have
+  put it where it belongs and absorbed it.
+</div>
+
+<h2>6. Visibility</h2>
+<p>The architecture you approved on 29 August, implemented and enforced.</p>
+<ul>
+  <li><strong>Four audiences:</strong> the Institute only; the collaborator and the Institute; admitted collaborators; and anyone on the web. Nothing is placed in the fourth. It exists so that if the Institute ever decides something should be publicly visible, that is a setting rather than a rebuild.</li>
+  <li><strong>Two locks:</strong> the Institute sets a ceiling for each field, and the collaborator chooses within it. The effective visibility is always the more restrictive of the two, so a collaborator may narrow but never widen.</li>
+  <li><strong>Ceilings come from the promise made at collection.</strong> A field is never later shown to a wider audience than the person was told when they gave it.</li>
+  <li><strong>It fails safe.</strong> A field whose visibility has not been declared is Institute-only, and the Portal refuses to build until someone states an intention. Its mistakes always err toward privacy.</li>
+  <li><strong>A field-by-field table in plain English</strong>, showing every piece of information the Portal holds, who may see it and who decides, for your approval <em>before</em> any of it is built. It is produced from the same definitions the software obeys, so the written policy and the actual behaviour cannot drift apart.</li>
+  <li>Admitted is still not the same as visible. A profile enters the directory when it is complete, and you hold an override that is recorded.</li>
+</ul>
+
+<h2>7. Visual identity</h2>
+<p>The calm, professional treatment applied consistently across the Portal: normal
+capitalisation, rectangular photographs, no social-media badges or stars, and a
+directory and profile that look like an institution rather than a network.</p>
+
+<h2>8. Included, though you might expect to pay for it</h2>
+<ul>
+  <li><strong>Previewing your own profile before publishing it.</strong> This was the fourth item in the group of additions quoted in August. Building the profile page means building the page that displays a profile, so showing that same page to its owner costs very little. I would rather include it than quote you for something you are about to receive anyway. <strong>You can remove it from your list.</strong></li>
+  <li><strong>A simple version of the publication gate.</strong> A profile does not appear in the directory until it is complete, and your override is recorded. The fuller two-step review remains available as a separate item if this proves insufficient in practice.</li>
+  <li><strong>The one-time load of your founding collaborator spreadsheet</strong>, as agreed, absorbed at no charge. It happens once the profile structure exists, which is this milestone.</li>
+  <li><strong>Registering an interest in working with someone</strong>, described in section 5. Agreed in principle, never assigned to a milestone, and absorbed here.</li>
+  <li>Correcting the profile link field to the 50-character label standard we settled after the original schema was written.</li>
+</ul>
+
+<h3>And some of Milestone 3 is already built</h3>
+<p>Several things belonging to this milestone were settled during August and built
+while Milestone 2 was underway, at no charge and without changing that milestone's
+price. They are the reason this one stays at $600 despite having grown:</p>
+<ul>
+  <li>The preferred name, and the rule that governs how the Portal addresses everybody, already used by every message it sends.</li>
+  <li>Generational suffixes, held apart from the family name so the directory sorts correctly.</li>
+  <li>The two-level shape of the expertise structure, disciplines and specialties, ready for your contents.</li>
+  <li>The agreed character limits, applied across the whole system.</li>
+  <li>The structure and the enforced limit of three for the positions addition, which is why only its screens remain.</li>
+</ul>
+
+<h2>9. Deliberately not in Milestone 3</h2>
+<ul>
+  <li>Announcements to collaborators. Quoted separately below; its natural moment is after this milestone, because it reuses the directory's filtering.</li>
+  <li>The preview for prospective collaborators. Quoted separately below.</li>
+  <li>The controlled credential library, and the two-step administrative review. Quoted separately below.</li>
+  <li>Messaging between collaborators. The first Beta uses the interest records described in section 5 instead.</li>
+  <li>The feedback mechanism you wanted in place before the Alpha group. That belongs with Milestone 4, alongside launch readiness, and is absorbed there at no additional charge. Flagging it here because it was agreed without ever being written into a milestone.</li>
+  <li>A public organisation directory.</li>
+  <li>Richer directory filtering, pending evidence.</li>
+  <li>The analytics dashboard. Events continue to be recorded, since they cannot be backfilled, but the dashboard itself remains deferred.</li>
+</ul>
+
+<h2>10. What I need from you</h2>
+<ul>
+  <li><strong>The discipline and specialty contents.</strong> This is the one place where the milestone waits on you rather than the reverse. I will send it as a set of questions rather than a finished list, and you can work through it at your own pace. Starting it early costs nothing and keeps it off the critical path.</li>
+  <li><strong>Your approval of the visibility table</strong>, which arrives early in the milestone, before the profile is built.</li>
+  <li><strong>The founding collaborator spreadsheet</strong>, whenever convenient.</li>
+  <li>A decision, at some point, on the optional courteous reply when you decline an application. It remains unbuilt because you had not confirmed it.</li>
+</ul>
+
+<h2>11. The quote</h2>
+<table>
+  <tr><th>Item</th><th>Status</th><td class="num"><strong>Price</strong></td></tr>
+  <tr><td>Milestone 3 — Profiles, Directory and Identity</td><td>As contracted, unchanged</td><td class="num">$600</td></tr>
+  <tr><td>Up to three positions per collaborator — entry screens</td><td>Approved August; structure already built</td><td class="num">$350</td></tr>
+  <tr class="tot"><td colspan="2">Milestone 3 total</td><td class="num">$950</td></tr>
+</table>
+
+<p>Duration: 3.5 weeks, as contracted.</p>
+
+<h3>On timing, since you raised it</h3>
+<p>These do not need to be paid together. The position screens are built late in the
+milestone, so the $600 can begin the work whenever you are ready and the $350 can
+follow a few weeks later, when it is actually being built. That costs me nothing to
+arrange and may help you.</p>
+
+<h3>Your total remaining commitment</h3>
+<table>
+  <tr><td>Milestone 3</td><td class="num">$600</td></tr>
+  <tr><td>Milestone 4 — Production Readiness and Handover</td><td class="num">$700</td></tr>
+  <tr><td>The approved addition</td><td class="num">$350</td></tr>
+  <tr class="tot"><td>To a finished, launched, handed-over Portal</td><td class="num">$1,650</td></tr>
+</table>
+<p>Nothing beyond that figure is obligatory.</p>
+
+<h2>12. Optional additions, priced</h2>
+<p>You asked me to quote these, so here they are properly. None is required, and
+none has a deadline.</p>
+<table>
+  <tr><th>Item</th><td class="num"><strong>Price</strong></td><th>My recommendation</th></tr>
+  <tr><td>Controlled credential library, with submit-for-approval</td><td class="num">$220</td><td>Wait. Easier to judge once you have seen real profiles.</td></tr>
+  <tr><td>Two-step administrative profile review and publication</td><td class="num">$180</td><td>Wait. A simpler version is included in Milestone 3.</td></tr>
+  <tr><td>Announcements to all collaborators or a selected group</td><td class="num">$300</td><td>Wait. You need a community before you have anything to announce, and it is cheaper after Milestone 3.</td></tr>
+  <tr><td>Preview of the Portal for prospective collaborators</td><td class="num">$250</td><td>Wait. A recruitment tool, useful when recruiting at scale.</td></tr>
+  <tr><td>Exact profile preview before publication</td><td class="num">Removed</td><td>Included in Milestone 3 at no charge.</td></tr>
+</table>
+
+<div class="note">
+  My recommendation is that you buy none of these yet. Not one is needed to launch,
+  and most become easier to judge, and cheaper to build, after Milestone 3 exists.
+</div>
+
+<h2>13. How Milestone 3 will run</h2>
+<ol>
+  <li>A design package, including the field-by-field visibility table, for you to read and approve before any code is written. No additional cost.</li>
+  <li>The expertise structure, with your discipline contents.</li>
+  <li>The profile: fields, positions, photographs, links.</li>
+  <li>The directory and search.</li>
+  <li>Visibility enforced and proven by automated tests.</li>
+  <li>Delivery on staging, with a written report, screenshots and a walkthrough, as with Milestones 1 and 2.</li>
+</ol>
+
+<p class="footer">Waga C · Pronto Digital — Full-Stack Engineering &amp; Platform Architecture · Milestone 3 of 4, Profiles, Directory and Identity</p>
+
+</body>
+</html>

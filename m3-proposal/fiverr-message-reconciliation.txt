@@ -1,0 +1,16 @@
+Dear Linas,
+
+The reconciliation is attached. Your thirty three points, in your order, each placed in one of the three columns, with the detailed specifications for sections nine to nineteen and your credential note taken into account.
+
+The shape of it, so you know what you are opening.
+
+Eleven points are already covered, and the document says where to see each. Eight are covered differently, and for each I say what the Portal does, why I chose it, and what changing it involves. All eight are wording, limits, one rule and one screen layout, and they are listed together in section three as a set of adjustments I will make within Milestone 3 at no charge, on your word. Thirteen items are genuinely new: the eleven richer profile sections, the Directory Review step, and the credential panel. Each is described and priced on its own, and the eleven sections are also priced as a group, in section four. Nothing in that column has been started.
+
+Two things are already done because they were Milestone 3 work. The v1.0 Registers are loaded and live: sixty seven Fields, all twenty nine distinguishing lines, four hundred and nineteen Specialties with four hundred and thirty four relationships, and one hundred and forty four aliases, with the six that were waiting now resolved. And the credential record now has a place for the issuing body and a plain language explanation, so the panel you described can be built later without touching the data.
+
+One place I have not been neutral. In section six I give my own view on which three of the new sections do most to make a long career legible and an early one look complete, because you asked what the Portal needs to test the concept at Alpha. It is offered as an opinion about your people, and it is yours to disregard.
+
+What I need from you is in section seven, and it is short: a word on the adjustments, any column placement you disagree with, and a time for the walkthrough. On section four, nothing until you are ready.
+
+Best regards,
+Waga

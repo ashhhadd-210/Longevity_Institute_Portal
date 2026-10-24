@@ -1,0 +1,14 @@
+Dear Linas,
+
+Thank you, and well spotted. You are right, and it was not the only one.
+
+I have been through the whole Portal rather than fixing the single word. Every screen, every email, every error message, the credential library and the administrative pages now use American English: program, judgment, recognize, organization, center, favor, neighbor, aging, license and the rest. It is live on staging now.
+
+So that it stays that way, the Portal's automated tests now include a check that reads every screen and email and fails if a British spelling appears. A future change cannot quietly bring one back.
+
+One deliberate exception. The search still understands British spellings when a collaborator types them, so someone in London who searches for "ageing" or "organisation" still finds the right Field. That affects only what people can type, never what the Portal shows.
+
+On the video, that is fair feedback and I will take it on board. Reviewing at your own pace through the screenshots and the Portal itself is exactly the right way to do it, and the screenshot numbers in my last message map each adjustment to where you can see it. If anything else catches your eye, send it over and I will correct it the same way.
+
+Best regards,
+Waga

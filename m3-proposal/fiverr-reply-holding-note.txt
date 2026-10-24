@@ -1,0 +1,17 @@
+Hi Linas,
+
+No apology needed. What you are doing is the opposite of a delay.
+
+Reconciling the earlier decisions against the Milestone 3 scope before you write is exactly the work that prevents expensive corrections later. A considered note that arrives next week is worth a great deal more to me than a quick one today that has to be unpicked in November. Nothing is waiting on it and nothing is blocked.
+
+Two small things to make the writing easier.
+
+Do not worry about staying consistent with what we settled earlier. If your thinking has moved, simply say so. You have changed your mind on this structure twice now, and on both occasions the new version was better than the one it replaced.
+
+And when the note arrives I will do what I did last time: go through it properly and tell you which parts the architecture already accommodates, which need a small change, and which are genuinely new. You will not have to work out which is which, or wonder whether something is being quietly absorbed or quietly charged for.
+
+Take the time you need.
+
+Warm regards,
+
+Waga

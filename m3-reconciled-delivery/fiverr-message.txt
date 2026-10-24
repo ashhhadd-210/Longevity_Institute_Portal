@@ -1,0 +1,32 @@
+Dear Linas,
+
+Thank you for checking in, and you were right to. I told you a few days and it took longer. The delay was mine.
+
+The eight adjustments are done and live, as one release with tests behind each, on staging and on the live Portal. So that you can review them at your own pace rather than on a call, I have recorded the walkthrough instead. Attached are a video of about eight minutes, with subtitles, recorded on the live staging Portal, and twenty eight screenshots taken along the way. It follows a new collaborator, an actuary named Ingrid Halvorsen, from invitation to a finished profile in the directory, then a geriatrician who finds her, and your side of the Portal throughout.
+
+Here is where each adjustment appears.
+
+1. Orientation and Profile Standards, screenshots 5 and 11. The Standards appear once, at the top of the profile page, the first time a collaborator opens it. There is no checkbox: the Portal records that they were shown, with the version, date and time, and they stay readable from Profile Standards at the top of the page. The orientation is in your own four sentences.
+
+2. Professional Identity, screenshot 9. Renamed throughout, with your prompt, and a line saying that credentials, Fields, Specialties, interests and achievements each have their own place.
+
+3. About Your Work, screenshot 8. Your prompt word for word, up to 500 characters, required for readiness, and shown on the profile directly beneath the name rather than on the directory card.
+
+4. About, screenshot 9. Optional, up to 2,000 characters.
+
+5. Current Positions, screenshots 10 and 20. Country and start year, both optional. Only the title is required, so the third position in the video, an independent adviser, has no organisation at all.
+
+6. Photograph, screenshot 7. Your guidance, including that cultural and religious dress is entirely welcome. It is now part of readiness.
+
+7. Directory readiness, screenshots 6 and 16. Name, Professional Identity, About Your Work, a Field or a pending Field proposal, country and photograph. When all six are present she sees "Your profile is ready for Directory Review" with Preview my profile beside it.
+
+8. Directory card, screenshot 21. Photograph, name with credentials, Professional Identity and country, and nothing else.
+
+Two things from the v1.0 Registers are also visible: the twenty nine distinguishing lines in the Registers screen, screenshot 2, and screenshot 12, where typing Longevity in the Field search explains that it spans the Institute rather than listing everything longevity related, as your Field Register asks.
+
+One thing you will notice. Every existing profile was judged again under the new readiness rule, so earlier demonstration profiles without a photograph have left the directory. That is the rule doing its job.
+
+The staging Portal is yours to try whenever you like, signed in as the Founder, with the reconciliation beside you. If anything in the video or on the screen differs from what you expected, tell me and I will look at it. If it all matches, I would be grateful if you would confirm that the reconciled Milestone 3 is complete. Milestone 4 is then ready to begin whenever you choose to start it, and nothing moves on that, or on the additional items, until you say so.
+
+Best regards,
+Waga

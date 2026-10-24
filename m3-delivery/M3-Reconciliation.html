@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Milestone 3 Reconciliation — Institute Collaborator Portal</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; color: #292524; margin: 48px 56px; line-height: 1.55; }
+  h1 { font-size: 26px; margin-bottom: 2px; }
+  h2 { font-size: 17px; border-bottom: 1px solid #d6d3d1; padding-bottom: 5px; margin-top: 34px; }
+  h3 { font-size: 15px; margin-top: 24px; margin-bottom: 6px; }
+  .sub { color: #78716c; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13px; page-break-inside: auto; }
+  tr { page-break-inside: avoid; }
+  th, td { border: 1px solid #d6d3d1; padding: 6px 9px; text-align: left; vertical-align: top; }
+  th { background: #f5f5f4; }
+  .A { color: #166534; font-weight: bold; }
+  .B { color: #92400e; font-weight: bold; }
+  .C { color: #7f1d1d; font-weight: bold; }
+  .tag { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 3px; margin-left: 6px; vertical-align: middle; font-family: Arial, sans-serif; }
+  .tagA { background: #dcfce7; color: #166534; } .tagB { background: #fef3c7; color: #92400e; } .tagC { background: #fee2e2; color: #7f1d1d; }
+  .point { margin-top: 22px; page-break-inside: avoid; }
+  .point p { margin: 6px 0; }
+  .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: #78716c; font-family: Arial, sans-serif; }
+  code { font-family: Consolas, monospace; font-size: 12.5px; background: #f5f5f4; padding: 1px 4px; }
+  .footer { margin-top: 40px; color: #78716c; font-size: 13px; border-top: 1px solid #d6d3d1; padding-top: 12px; }
+  li { margin-bottom: 4px; }
+  .box { background: #f5f5f4; border-left: 3px solid #a8a29e; padding: 10px 14px; margin: 16px 0; font-size: 14px; }
+  .money { text-align: right; white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<h1>Institute Collaborator Portal</h1>
+<p class="sub">Milestone 3 Reconciliation — the delivered Portal against the Profile and Directory Architecture · Waga C, Pronto Digital · 27 September 2026</p>
+
+<p>This document compares the Milestone 3 Portal, as delivered and running today, with the
+thirty three point architecture of 21 September and the detailed specifications for
+sections 9 to 19 that followed it. Each point is placed in one of three columns:</p>
+
+<table>
+  <tr><th style="width:22%">Column</th><th>Meaning</th><th style="width:22%">What happens next</th></tr>
+  <tr><td class="A">A. Already covered</td><td>The Portal does this now. Where to see it is given.</td><td>Nothing. It is done.</td></tr>
+  <tr><td class="B">B. Covered differently</td><td>The Portal does something close. What it does, why I chose that, and what changing it involves.</td><td>Adjusted within Milestone 3 on your word. No charge.</td></tr>
+  <tr><td class="C">C. Genuinely new</td><td>Capability the milestone did not contain. What it involves technically and what it would cost.</td><td>Nothing until you authorize it. Costs in section 4.</td></tr>
+</table>
+
+<p>Two notes before the detail. First, the v1.0 Registers you sent on 23 September are loaded
+and live: sixty seven Fields, all twenty nine distinguishing lines, four hundred and nineteen
+Specialties with four hundred and thirty four Field relationships, and one hundred and forty
+four aliases. The six aliases that were waiting on the Pensions, Insurance and Psychometrics
+Specialties now resolve. Second, nothing in column C has been started, and nothing in column
+B has been changed yet either: the adjustments are listed in section 3 so you can approve them
+as a set, or strike any you would rather keep as built.</p>
+
+<h2>1. Summary</h2>
+<table>
+  <tr><th style="width:5%">#</th><th style="width:30%">Point</th><th style="width:9%">Column</th><th>In one line</th></tr>
+  <tr><td>1</td><td>Orientation and Profile Standards</td><td class="B">B</td><td>Orientation exists, opens once; your four sentences replace mine. A Standards notice with recorded version and time is added.</td></tr>
+  <tr><td>2</td><td>Professional Identity</td><td class="B">B</td><td>Exists as "Professional title", 300 characters, never auto-generated. Renamed and re-prompted in your words.</td></tr>
+  <tr><td>3</td><td>Credentials</td><td class="A">A</td><td>Three postnominals, chosen and ordered by the collaborator, from the library; terminology validated, entitlement not.</td></tr>
+  <tr><td>4</td><td>About Your Work</td><td class="B">B</td><td>Exists as the 160 character summary. Becomes 500 characters, your prompt, and required for readiness.</td></tr>
+  <tr><td>5</td><td>About</td><td class="B">B</td><td>Exists as "About your work", long text. Becomes "About", optional, 2,000 characters.</td></tr>
+  <tr><td>6</td><td>Fields and Specialties</td><td class="A">A</td><td>Independent, no Primary, no ceiling on Specialties, relationships serve search only.</td></tr>
+  <tr><td>7</td><td>Missing Fields and Specialties</td><td class="A">A</td><td>Save and continue; the term is nobody else's until the Institute decides.</td></tr>
+  <tr><td>8</td><td>Current Positions</td><td class="B">B</td><td>Three exist with title, organization, department. Country and start year added; organization already optional.</td></tr>
+  <tr><td>9</td><td>Selected Professional Experience</td><td class="C">C</td><td>Not in M3. First of the selected list sections; carries the shared structure.</td></tr>
+  <tr><td>10</td><td>Education and Professional Development</td><td class="C">C</td><td>Not in M3. Three areas, with the in-progress rule enforced by the structure.</td></tr>
+  <tr><td>11</td><td>Licenses and Professional Certifications</td><td class="C">C</td><td>Not in M3. No numbers collected, no Active status shown.</td></tr>
+  <tr><td>12</td><td>Selected Professional and Intellectual Work</td><td class="C">C</td><td>Not in M3. Six types, each with its own central fields; empty types vanish.</td></tr>
+  <tr><td>13</td><td>Current or Recent Research</td><td class="C">C</td><td>Not in M3.</td></tr>
+  <tr><td>14</td><td>Professional and Research Interests</td><td class="C">C</td><td>Not in M3. A single optional text.</td></tr>
+  <tr><td>15</td><td>What I Welcome Conversations About</td><td class="C">C</td><td>Not in M3. A single optional text. "Questions I would like to explore" is dropped, as you asked.</td></tr>
+  <tr><td>16</td><td>Honors, Awards and Recognition</td><td class="C">C</td><td>Not in M3.</td></tr>
+  <tr><td>17</td><td>Selected Boards and Advisory Roles</td><td class="C">C</td><td>Not in M3.</td></tr>
+  <tr><td>18</td><td>Selected Professional Associations</td><td class="C">C</td><td>Not in M3.</td></tr>
+  <tr><td>19</td><td>Languages</td><td class="C">C</td><td>A free field exists from M2 but is not structured or searchable, and has no proficiency. Counted as new.</td></tr>
+  <tr><td>20</td><td>Links</td><td class="A">A</td><td>Five, label shown, address never printed.</td></tr>
+  <tr><td>21</td><td>Photograph</td><td class="B">B</td><td>Upload and portrait crop exist. Becomes required for readiness; guidance reworded for cultural and religious flexibility.</td></tr>
+  <tr><td>22</td><td>Absence Is Not Deficiency</td><td class="A">A</td><td>Empty sections vanish; no scores, badges, percentages or per profile counts anywhere.</td></tr>
+  <tr><td>23</td><td>No logos, no artificial affiliations</td><td class="A">A</td><td>No logos exist; organization is optional on a position.</td></tr>
+  <tr><td>24</td><td>Directory readiness</td><td class="B">B</td><td>Rule exists with a narrower list. Becomes your six items, including a pending Field proposal counting as a Field.</td></tr>
+  <tr><td>25</td><td>Preview, review and publication</td><td class="C">C</td><td>Readiness and the Institute's switch exist; the Submit, Approve, Return step between them does not. Small; costed separately from the earlier quote. "View as others see it" exists.</td></tr>
+  <tr><td>26</td><td>Directory presentation</td><td class="B">B</td><td>Card shows title, summary and Field badges. Becomes photograph, name with credentials, Professional Identity, country.</td></tr>
+  <tr><td>27</td><td>Search</td><td class="A">A</td><td>As delivered. No full text search has been built or is planned without authorization.</td></tr>
+  <tr><td>28</td><td>Visibility</td><td class="A">A</td><td>Four audiences, fail safe, enforced in one place. Placement of any new section is given in section 5.</td></tr>
+  <tr><td>29</td><td>Feedback and contact</td><td class="A">A</td><td>Page level feedback stays; nothing else is added.</td></tr>
+  <tr><td>30</td><td>Vocabulary administration</td><td class="A">A</td><td>Registers screen as delivered; v1.0 loaded and live.</td></tr>
+  <tr><td>31</td><td>Referrals and admission</td><td class="A">A</td><td>Unchanged. Admission and Directory visibility are separate states.</td></tr>
+  <tr><td>32</td><td>Alpha principle</td><td>—</td><td>What Alpha can test today, and what needs column C, is set out in section 6.</td></tr>
+  <tr><td>33</td><td>Scope and reconciliation</td><td>—</td><td>This document.</td></tr>
+  <tr><td>+</td><td>Credential explanatory panel (your later note)</td><td class="C">C</td><td>The record now carries issuer and explanation. The hover or tap panel itself is new and small.</td></tr>
+</table>
+
+<h2>2. Point by point</h2>
+
+<div class="point">
+<h3>1. Orientation and Profile Standards <span class="tag tagB">Covered differently</span></h3>
+<p><span class="lbl">What the Portal does</span><br>The orientation opens by itself the first time a collaborator reaches "Where your work belongs", records that it was seen, and never opens itself again. It stays available from that screen. Its wording is mine: it makes the same points as yours but not in your sentences.</p>
+<p><span class="lbl">Why</span><br>I wrote it before your language was settled, from the principles in the Field Register.</p>
+<p><span class="lbl">What changing it involves</span><br>Replace the wording with your four sentences, verbatim. Add a short Collaborator Profile Standards notice on the first entry, before the profile, covering accuracy, professional presentation, the photograph, legitimate credentials, and the profile as a selected representation. No checkbox: the Portal records that it was shown, with its version and the date and time, in the same way it records the orientation. The Standards are reachable afterwards from the profile page. Adjustment within M3.</p>
+</div>
+
+<div class="point">
+<h3>2. Professional Identity <span class="tag tagB">Covered differently</span></h3>
+<p><span class="lbl">What the Portal does</span><br>A "Professional title" of up to 300 characters, written by the collaborator, shown beneath the name in the directory and on the profile. It is never generated from a position, and there is no Role taxonomy.</p>
+<p><span class="lbl">What changing it involves</span><br>Rename it Professional Identity everywhere it appears, use your prompt word for word, and add a line under the field saying what does not belong there: credentials, Fields, Specialties, interests, achievements. Adjustment within M3.</p>
+</div>
+
+<div class="point">
+<h3>3. Credentials <span class="tag tagA">Already covered</span></h3>
+<p>Up to three, no prefixes, chosen from the controlled library and ordered by the collaborator (profile page, "Credentials after your name"). Search by letters or by full meaning; jurisdiction where it matters; the same letters as several records; near matches shown before a request; a request route that never blocks. The library validates terminology only. Since 27 September each record can also carry the issuing body and a plain language explanation, both optional; see the last point in this section.</p>
+</div>
+
+<div class="point">
+<h3>4. About Your Work <span class="tag tagB">Covered differently</span></h3>
+<p><span class="lbl">What the Portal does</span><br>A "One line about your work" of up to 160 characters, shown in the directory card, and required for readiness if the longer text is empty.</p>
+<p><span class="lbl">Why</span><br>It was designed as a directory line. Your About Your Work is a different thing: a short passage written for people outside the profession.</p>
+<p><span class="lbl">What changing it involves</span><br>Widen it to 500 characters, use your prompt verbatim, make it required for readiness on its own, and move it off the directory card and onto the profile as the first thing under the name and identity. Adjustment within M3.</p>
+</div>
+
+<div class="point">
+<h3>5. About <span class="tag tagB">Covered differently</span></h3>
+<p><span class="lbl">What the Portal does</span><br>"About your work (in your own words)", a long optional text, currently allowed up to 5,000 characters.</p>
+<p><span class="lbl">What changing it involves</span><br>Rename it About, limit it to 2,000 characters, and reword its guidance as broader professional context. Adjustment within M3. Nothing needs to be built.</p>
+</div>
+
+<div class="point">
+<h3>6. Fields and Specialties <span class="tag tagA">Already covered</span></h3>
+<p>Fields and Specialties are separate claims on the profile. There is no Primary Field. There is no ceiling on Specialties. A Specialty's relationships to Fields exist in a separate table used only by search, and a test proves that choosing a Specialty assigns no Field. Search first, aliases, punctuation and spelling normalized on both sides, every result labeled. Since 27 September, typing "Longevity" explains that it spans the Institute rather than listing everything longevity related, as the Field Register asks.</p>
+</div>
+
+<div class="point">
+<h3>7. Missing Fields and Specialties <span class="tag tagA">Already covered</span></h3>
+<p>The collaborator writes the term, the profile saves, they continue. The term is shown on their own profile page as awaiting review and is offered to nobody else until the Institute approves, maps or declines it (Proposals screen).</p>
+</div>
+
+<div class="point">
+<h3>8. Current Positions <span class="tag tagB">Covered differently</span></h3>
+<p><span class="lbl">What the Portal does</span><br>Up to three, each with title (required), organization (optional) and department (optional). The limit is enforced by the database. Positions are independent of the Professional Identity.</p>
+<p><span class="lbl">What changing it involves</span><br>Add country and start year, both optional. Adjustment within M3.</p>
+<p><span class="lbl">Your technical question</span><br>Yes. If Selected Professional Experience is built (point 9), ending a position becomes one action, "this has ended", which asks for the end year and moves the entry across intact. It is included in the cost of point 9 rather than priced separately.</p>
+</div>
+
+<div class="point">
+<h3>9. Selected Professional Experience <span class="tag tagC">Genuinely new</span></h3>
+<p><span class="lbl">What it involves</span><br>A new profile section: up to ten entries, each with title (required), organization (optional; an independent role needs none), department, country, start year and end year (encouraged, not required), and a description of up to 1,000 characters. Entries at the same organization are grouped under it on the profile rather than listed as unrelated employers. The section vanishes when empty. Includes the "this has ended" action from point 8. Visibility: admitted collaborators, the collaborator may show less.</p>
+<p><span class="lbl">Why it carries more than its share</span><br>All eleven sections in points 9 to 19 share one shape: a selected list with a ceiling, a few required fields, and a short description. That shape is built once, here. Every section after it pays only for its own fields and wording.</p>
+</div>
+
+<div class="point">
+<h3>10. Education and Professional Development <span class="tag tagC">Genuinely new</span></h3>
+<p><span class="lbl">What it involves</span><br>Three areas on one screen. Education, up to five: degree, field of study, institution, school or faculty, department, country, completion year, thesis, additional information. Postdoctoral Training, up to three: type, program, institution, department, country, dates, description. Professional Education and Development, up to five: program or provider, area, completion year, description. Each area vanishes when empty.</p>
+<p><span class="lbl">The integrity rule</span><br>A degree is either completed with a year, or marked in progress with an expected year; the structure allows nothing else, and an in progress degree is always shown as such. The three areas are stored as three kinds so that a program attended can never be presented as a degree or as an appointment.</p>
+</div>
+
+<div class="point">
+<h3>11. Licenses and Professional Certifications <span class="tag tagC">Genuinely new</span></h3>
+<p>Up to five: credential name and issuing body (required), jurisdiction, year received, expiration, comment of up to 300 characters. No license number is collected, so none can leak. No Active status is stored or shown; the Portal states what the collaborator said and nothing it cannot verify. Honorary doctorates are directed to Honors by the guidance text.</p>
+</div>
+
+<div class="point">
+<h3>12. Selected Professional and Intellectual Work <span class="tag tagC">Genuinely new</span></h3>
+<p>Six optional types, up to five entries each, each type with its own central fields: Books and Major Publications (title, type, authors, publisher, year, description, link); Journal Articles (title, journal, co-authors, year, DOI or link, description; no volume, issue or pages); Reports and Essays (with the seven report kinds you list); Film and Media; Patents and Innovations (with the six kinds, no patent number required); Other Selected Work. An empty type does not appear. Entry order is the collaborator's. This is the largest of the sections because the six types differ in their fields.</p>
+</div>
+
+<div class="point">
+<h3>13. Current or Recent Research <span class="tag tagC">Genuinely new</span></h3>
+<p>Up to five: project or topic (required), organization, role, dates, collaborators or partners, description of up to 750 characters, link. Presented without any implication that every collaborator conducts research: it simply is not there for those who do not fill it.</p>
+</div>
+
+<div class="point">
+<h3>14. Professional and Research Interests <span class="tag tagC">Genuinely new</span></h3>
+<p>One optional text, 1,000 characters, with your prompt. Small: a field and its placement on the profile.</p>
+</div>
+
+<div class="point">
+<h3>15. What I Welcome Conversations About <span class="tag tagC">Genuinely new</span></h3>
+<p>One optional text, 500 characters, with your prompt. Small. "Questions I would like to explore" is not built. Note that the profile already has "Open to approaches", the switch that governs whether somebody may register an interest; this text sits naturally beside it.</p>
+</div>
+
+<div class="point">
+<h3>16. Honors, Awards and Professional Recognition <span class="tag tagC">Genuinely new</span></h3>
+<p>Up to five: designation (required), awarding organization, year, description, link. Honorary degrees belong here and the guidance says so.</p>
+</div>
+
+<div class="point">
+<h3>17. Selected Boards and Advisory Roles <span class="tag tagC">Genuinely new</span></h3>
+<p>Up to five: organization and role (required), type from Board, Advisory, Scientific Advisory, Committee, Council, Other; dates encouraged; description optional.</p>
+</div>
+
+<div class="point">
+<h3>18. Selected Professional Associations <span class="tag tagC">Genuinely new</span></h3>
+<p>Up to five: organization or society (required), membership or designation, years.</p>
+</div>
+
+<div class="point">
+<h3>19. Languages <span class="tag tagC">Genuinely new</span></h3>
+<p><span class="lbl">What the Portal has</span><br>A languages field from Milestone 2 that is free text, not shown, not searchable and without proficiency.</p>
+<p><span class="lbl">What it involves</span><br>A structured list of up to ten languages from a controlled list, each with optional proficiency from your four levels, shown on the profile and searchable in the directory ("collaborators who speak Portuguese"). Counted as new because the searchable, structured part is the whole value.</p>
+</div>
+
+<div class="point">
+<h3>20. Links <span class="tag tagA">Already covered</span></h3>
+<p>Up to five, label shown, address never printed, order chosen by the collaborator.</p>
+</div>
+
+<div class="point">
+<h3>21. Photograph <span class="tag tagB">Covered differently</span></h3>
+<p><span class="lbl">What the Portal does</span><br>Upload, center crop to one portrait rectangle, still images only, up to 8 MB. Optional: a profile can be ready without one.</p>
+<p><span class="lbl">What changing it involves</span><br>Make the photograph part of readiness (point 24). Reword the guidance to your standard: an individual professional image, head and shoulders, no logos, avatars, group photographs or organizational graphics, with room for cultural and religious dress. The software continues to enforce only what software can judge. Adjustment within M3.</p>
+</div>
+
+<div class="point">
+<h3>22. Absence Is Not Deficiency <span class="tag tagA">Already covered</span></h3>
+<p>Empty sections do not render, on the profile or the directory. There is no completion percentage, strength score, badge, star or per profile count anywhere in the Portal, and I will keep it that way in anything built later. The one notice that exists, "Not yet in the directory", states what readiness needs and disappears the moment it is met; it says nothing about optional sections. Directory counts are off.</p>
+</div>
+
+<div class="point">
+<h3>23. No logos and no artificial affiliations <span class="tag tagA">Already covered</span></h3>
+<p>No logos are collected or shown. Organization is optional on a position. The same rule will hold in every column C section.</p>
+</div>
+
+<div class="point">
+<h3>24. Directory readiness <span class="tag tagB">Covered differently</span></h3>
+<p><span class="lbl">What the Portal does</span><br>Ready when it has a name, a professional title, at least one Field, and either the summary or the long text.</p>
+<p><span class="lbl">What changing it involves</span><br>Ready when it has a name, a Professional Identity, About Your Work, at least one Field or a pending Field proposal, a country, and a photograph. The notice becomes "Your profile is ready for Directory Review" with Preview beside it. Adjustment within M3. The Submit button on that notice belongs to point 25.</p>
+</div>
+
+<div class="point">
+<h3>25. Preview, review and publication <span class="tag tagC">Genuinely new, small</span></h3>
+<p><span class="lbl">What the Portal does</span><br>The two halves of the gate exist. On the collaborator's side, readiness. On the Institute's side, a recorded switch per collaborator that withholds a profile from the directory. A ready profile currently becomes visible on its own, and "See it as others will" is on the profile page today.</p>
+<p><span class="lbl">What is missing</span><br>The moment between the halves: the collaborator submits, the profile waits, and the Institute approves or returns it for revision with a note. That is one status on the profile, one Submit action, one short screen for you listing profiles awaiting review with Approve and Return for Revision, a message to the collaborator on each decision, and the audit record. It is not the two step feature quoted earlier, which included re-review of every later edit; here a published profile stays published when edited, which is the simpler sequence you describe.</p>
+<p><span class="lbl">Cost</span><br>Section 4. If you would rather not spend it now, the Portal keeps the automatic behavior and your switch, which already gives you the ability to withhold anyone.</p>
+</div>
+
+<div class="point">
+<h3>26. Directory presentation <span class="tag tagB">Covered differently</span></h3>
+<p><span class="lbl">What the Portal does</span><br>The card shows name, country, professional title, the one line summary, and Field and Specialty badges.</p>
+<p><span class="lbl">Why</span><br>The badges made the search results explain themselves while the profiles were thin.</p>
+<p><span class="lbl">What changing it involves</span><br>Card becomes photograph, name with credentials, Professional Identity, country. Badges and the summary come off the card; they remain on the profile and in search. Adjustment within M3.</p>
+</div>
+
+<div class="point">
+<h3>27. Search <span class="tag tagA">Already covered</span></h3>
+<p>Search by name, professional identity, Field, Specialty and country, with the alias and normalization rules. No full text search across profile text exists, and none will be built without your authorization. Directory identifies, profile explains, search discovers: that is how the three screens are divided today.</p>
+</div>
+
+<div class="point">
+<h3>28. Visibility <span class="tag tagA">Already covered</span></h3>
+<p>As approved on 29 August and as printed in "Who can see what": four audiences, the Institute sets the ceiling, the collaborator may show less, an undeclared field fails the build, administrative notes and contact details private, country visible, city and region Institute only, nothing on the open web, search results obeying the same rules as the pages. Placement of every column C section is given in section 5 so that nothing is left to be decided later.</p>
+</div>
+
+<div class="point">
+<h3>29. Feedback and contact <span class="tag tagA">Already covered</span></h3>
+<p>Page level feedback from the footer, read by you in one place. No Report Concern or Suggestion Box exists or is proposed.</p>
+</div>
+
+<div class="point">
+<h3>30. Vocabulary administration <span class="tag tagA">Already covered</span></h3>
+<p>Registers screen: add, rename, reorder, retire Fields, Specialties and aliases; distinguishing lines. The v1.0 Registers are loaded: Fields 67, distinguishing lines 29, Specialties 419 with 434 relationships, aliases 144. "Pensions &amp; Retirement Benefits" existed as a Specialty from v0.1 and is a Field in v1.0; the Specialty is retired, not deleted. The Alias Register's "do not force" list is honored by omission, and a test proves Kinesiology does not surface Exercise Science.</p>
+</div>
+
+<div class="point">
+<h3>31. Referrals and admission <span class="tag tagA">Already covered</span></h3>
+<p>Nothing changed. Admission and Directory visibility are separate states; a profile that says too little is not listed however long ago the person was admitted. With point 25, visibility would additionally wait for your approval.</p>
+</div>
+
+<div class="point">
+<h3>Credential explanatory panel <span class="tag tagC">Genuinely new, small</span></h3>
+<p><span class="lbl">What the Portal does</span><br>A credential record carries letters, full name, jurisdiction and, since 27 September, an optional issuing body and a plain language explanation. Approval of a requested credential can supply both; the library can be enriched from a list you send. Nothing is displayed yet beyond letters and full name.</p>
+<p><span class="lbl">What it involves</span><br>A restrained panel on hover for desktop and on tap for a phone, showing only what the record holds and omitting what it does not. Small, because the data question is already answered.</p>
+</div>
+
+<h2>3. Adjustments within Milestone 3, at no charge</h2>
+<p>These are the column B items as concrete changes. On your word I make them as a set; strike any you prefer as built. None of them needs a decision on column C first, and none is blocked by anything.</p>
+<table>
+  <tr><th style="width:5%">#</th><th>Change</th></tr>
+  <tr><td>1</td><td>Orientation wording replaced with your four sentences. Profile Standards notice added at first entry, recorded with version, date and time, reachable afterwards from the profile page.</td></tr>
+  <tr><td>2</td><td>"Professional title" becomes Professional Identity, with your prompt and a line on what does not belong in it.</td></tr>
+  <tr><td>4</td><td>The 160 character line becomes About Your Work, 500 characters, your prompt, required for readiness, shown on the profile rather than the card.</td></tr>
+  <tr><td>5</td><td>The long text becomes About, optional, 2,000 characters.</td></tr>
+  <tr><td>8</td><td>Current Positions gain country and start year, optional.</td></tr>
+  <tr><td>21</td><td>Photograph guidance reworded to your standard, and the photograph becomes part of readiness.</td></tr>
+  <tr><td>24</td><td>Readiness becomes: name, Professional Identity, About Your Work, a Field or a pending Field proposal, country, photograph. Notice reads "Your profile is ready for Directory Review", with Preview.</td></tr>
+  <tr><td>26</td><td>Directory card becomes photograph, name with credentials, Professional Identity, country.</td></tr>
+</table>
+<p>Everything above is wording, limits, one rule and one screen layout. I would expect to have it on staging within a few days of your word, and every change is covered by the existing tests or a new one.</p>
+
+<h2>4. Column C: what is new, and what it would cost</h2>
+<p>Each item is priced on its own so that the cost of leaving one out is visible. The group price
+for the eleven profile sections reflects that the shared structure is built once. Prices are in
+US dollars, fixed, and include tests, the visibility placement in section 5, the administrative
+side where one is needed, and deployment. Nothing is started until you authorize it in writing,
+and each item can be authorized separately and at any time.</p>
+<table>
+  <tr><th style="width:5%">#</th><th>Section</th><th style="width:34%">Scale</th><th class="money" style="width:12%">On its own</th></tr>
+  <tr><td>9</td><td>Selected Professional Experience</td><td>New section, ten entries, grouping by organization, "this has ended" from Current Positions. Carries the shared structure.</td><td class="money">$220</td></tr>
+  <tr><td>10</td><td>Education and Professional Development</td><td>Three areas on one screen, the in progress rule enforced.</td><td class="money">$260</td></tr>
+  <tr><td>11</td><td>Licenses and Professional Certifications</td><td>One list, five entries, no numbers, no status.</td><td class="money">$120</td></tr>
+  <tr><td>12</td><td>Selected Professional and Intellectual Work</td><td>Six types with differing fields, five entries each.</td><td class="money">$260</td></tr>
+  <tr><td>13</td><td>Current or Recent Research</td><td>One list, five entries.</td><td class="money">$120</td></tr>
+  <tr><td>14</td><td>Professional and Research Interests</td><td>One text field, 1,000 characters.</td><td class="money">$40</td></tr>
+  <tr><td>15</td><td>What I Welcome Conversations About</td><td>One text field, 500 characters.</td><td class="money">$40</td></tr>
+  <tr><td>16</td><td>Honors, Awards and Recognition</td><td>One list, five entries.</td><td class="money">$90</td></tr>
+  <tr><td>17</td><td>Selected Boards and Advisory Roles</td><td>One list, five entries, a type.</td><td class="money">$90</td></tr>
+  <tr><td>18</td><td>Selected Professional Associations</td><td>One list, five entries.</td><td class="money">$80</td></tr>
+  <tr><td>19</td><td>Languages</td><td>Controlled list, proficiency, searchable in the directory.</td><td class="money">$140</td></tr>
+  <tr><th colspan="3">Sections 9 to 19 taken one by one</th><th class="money">$1,460</th></tr>
+  <tr><th colspan="3">Sections 9 to 19 as one group</th><th class="money">$1,190</th></tr>
+  <tr><td>25</td><td>Directory Review step</td><td>Submit, Approve, Return for Revision, messages, audit, your review screen.</td><td class="money">$180</td></tr>
+  <tr><td>+</td><td>Credential explanatory panel</td><td>Hover on desktop, tap on a phone, shows only what the record holds.</td><td class="money">$90</td></tr>
+  <tr><th colspan="3">Everything in column C, as one group</th><th class="money">$1,460</th></tr>
+</table>
+<p>Time, should you authorize it: the eleven sections as a group take about two working weeks
+from the word go to deployed and tested, because the shared structure comes first and the
+sections then follow quickly. Any single section on its own takes a few days. The Directory
+Review step and the credential panel take a day or two each.</p>
+
+<h2>5. Where each new section sits in the visibility architecture</h2>
+<p>So that nothing is placed later by accident: every section in column C is declared at the
+ceiling "Admitted collaborators", and the collaborator shows less simply by leaving it empty,
+which is the same rule as Links and the photograph. Three specifics. Licenses never carry a
+number, so there is nothing to protect. Languages are searchable by other collaborators, like
+Fields. The Directory Review note you write when returning a profile is seen by the
+collaborator and the Institute, and never by anybody else. The printed "Who can see what"
+table gains a row for each section the day it is built, generated as before from the same
+declarations the Portal enforces.</p>
+
+<h2>6. What Alpha can test today, and what needs column C</h2>
+<p>With the column B adjustments made and nothing from column C, an Alpha participant can:
+enter the Portal, read the orientation and the Standards, build a profile with identity, About
+Your Work, About, up to three positions, credentials, Fields, Specialties, links and a
+photograph, classify themselves without an artificial taxonomy, propose a missing term, preview
+the profile, become visible on readiness, find other collaborators, register an interest, and
+give feedback. That is the whole loop in your point 32, except the explicit submit and approve
+moment, which is point 25.</p>
+<p>What it cannot yet do is represent a long career in its own terms. A participant with decades
+of work has three positions, one long text and a list of links to say it in. That is where the
+richer sections matter, and it is why I have priced them so that you can choose the few that
+carry the most weight for your particular Alpha group. If it is useful, my own view: Selected
+Professional Experience, Professional and Research Interests, and What I Welcome Conversations
+About do most of the work of making a rich career legible and an early career look complete,
+and the rest can follow when funds allow. But that is a judgment about your people, and it is
+yours.</p>
+
+<h2>7. What I need from you</h2>
+<ul>
+  <li>A word on section 3: make the adjustments as listed, or tell me which to leave.</li>
+  <li>Any correction to a column placement you disagree with. Where I placed something in A or B and you see it differently, say so and I will look again rather than defend it.</li>
+  <li>Nothing on section 4 until you are ready. The prices stand.</li>
+  <li>A time for the walkthrough, with this document beside you.</li>
+</ul>
+
+<p class="footer">Waga C · Pronto Digital · Milestone 3 reconciliation, 27 September 2026</p>
+
+</body>
+</html>

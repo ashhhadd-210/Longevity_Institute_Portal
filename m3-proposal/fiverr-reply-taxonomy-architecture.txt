@@ -1,0 +1,83 @@
+Hi Linas,
+
+This is a good piece of thinking, and most of what you describe is either already accommodated or is a small addition rather than a redesign. Let me take your questions in order, and be clear about the one place where you have changed something real.
+
+Fields selectable directly, Specialty optional
+
+Yes, and I think you are right to have changed it.
+
+We originally agreed the opposite: that a collaborator would select specialties only and the Field would follow automatically. The reason was to stop the two levels contradicting each other. Your version is better, and your reason is the correct one. Actuarial Science, Human Resources and Venture Capital are complete professional identities on their own, and inventing specialties beneath them purely to keep the structure symmetrical would mean manufacturing vocabulary that nobody uses.
+
+The contradiction problem still needs solving, and it does so neatly. Fields become a union rather than a constraint. A collaborator may select Fields directly. If they also select a Specialty, that Specialty quietly brings its own Field or Fields with it. Nothing is ever checked against anything, so nothing can disagree. Somebody who selects Nutritional Epidemiology is simply recorded as belonging to Epidemiology and Nutrition Science too, whether or not they thought to add them.
+
+No Primary Field and no fixed maximum is fine. One observation rather than an objection: a profile listing three Fields says considerably more than one listing fifteen. I would not enforce that, but I would say it gently in the orientation, because people classify themselves more thoughtfully when told that precision is the point rather than coverage.
+
+A Specialty belonging to more than one Field
+
+Today a Specialty links to a single Field. That is the structural groundwork laid during Milestone 2, before you had tested the model against real professional identities.
+
+The change to many is genuinely small. It is a linking table rather than a rewrite, and it is already in the Milestone 3 plan because we agreed this on the twenty-seventh of August when you raised the same point about interdisciplinary overlap. So it is planned rather than merely possible, and nothing about it is substantial.
+
+The effect is the one you want. Health Policy sits under both Public Policy and Public Health. Someone searching either Field finds the person, and the collaborator never had to guess which cupboard the Institute filed their work in.
+
+Aliases
+
+The simplest approach is also the right one: a small table of alternative terms, each pointing at a Field or a Specialty.
+
+Two properties make it work. Search looks at the real names and the aliases together, so Actuary, Geriatrician, Health Economist, Demographer and Physiotherapist all lead where you intend. But aliases are never displayed. The profile shows Actuarial Science, not Actuary. So the vocabulary stays controlled and consistent while the search behaves like a person rather than a filing system.
+
+And an alias may point at more than one entry, which matters for your next question.
+
+Longevity
+
+You do not need to decide this now, and I want to explain why, because it is the sort of thing that can feel like it is blocking everything else.
+
+Because an alias can point at several entries, Longevity can surface geroscience, demography, actuarial science, architecture and the rest without being forced to sit inside the professional taxonomy as though it were a profession. If you later conclude it should be a Field in its own right, that remains open too. If you conclude it is something else again, a theme running across Fields, that can be added without disturbing what exists.
+
+So the architecture leaves the question open in every direction. Take the time you want on it. Nothing waits.
+
+No classification dead end
+
+Yes, and it is the same pattern we already agreed for credentials, which is convenient.
+
+If nobody can find the right term, they enter the words they use, their profile saves, and they carry on. Their wording is recorded against them and visible to you. Whether it eventually becomes a Field, a Specialty, an alias or simply remains their own description is a decision you make later, at leisure.
+
+For Alpha I agree entirely: no moderation machinery for eight people. You will read them yourself in a few minutes.
+
+The orientation screen
+
+Straightforward, and worth doing. Shown automatically the first time, dismissed once read, and always reachable afterwards without interrupting anybody.
+
+I think the most valuable line in it will be the one telling people they are not being asked to describe everything they know. The commonest failure in classification is not that people cannot find a term. It is that they try to be comprehensive and end up describing nobody in particular.
+
+The vocabulary evolving
+
+Renaming an entry corrects every profile using it at once, and retiring one leaves existing holders untouched while simply not offering it to anybody new. That is a consequence of people selecting entries rather than typing text, and it is the same engine as the credential library. Ordinary maintenance is yours, permanently, without development work.
+
+The mini app, which is the happy part
+
+You have arrived at the right conclusion, and you are further along than you realise.
+
+The public application already lives in the Portal. It is served at the Portal's own address, not from the website, and it always has been. What you are describing as the mini app is, architecturally, what Milestone 2 delivered. The website's part in it is a link.
+
+It already shares the vocabulary too. The application form already offers the same controlled expertise list and validates against it, so there was never a risk of two structures. Whatever Field, Specialty and alias vocabulary we settle for profiles is the same vocabulary the application will use.
+
+So: no, moving the applicant facing part into the Portal creates no technical issue, because it is already there. And yes, the same structure carries straight across.
+
+There is one genuine gap, and it is the thing you actually care about. Today, nothing an applicant writes carries forward into their profile when they register. If they are approved and join, they would be asked some of it twice, which is exactly what you want to avoid.
+
+That is real work rather than nothing, but it is modest, and it can only be built once profiles exist. My approximate figure is $150, to be done after Milestone 3. It would carry forward the things that belong on a profile, keep the things you were given for your decision alone, such as their reasons for applying, out of public view permanently, and present the rest to the person as something to confirm rather than retype.
+
+Everything else in your mini app description is already delivered.
+
+Where that leaves us
+
+Of your eight questions, one requires a small structural change that was already planned, one is a small new table for aliases, one is a $150 addition after Milestone 3, and the rest are already accommodated.
+
+Nothing here expands Milestone 3 or its price.
+
+Please send the vocabulary and the alias set whenever you are ready.
+
+Warm regards,
+
+Waga

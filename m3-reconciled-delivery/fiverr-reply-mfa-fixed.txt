@@ -1,0 +1,22 @@
+Dear Linas,
+
+Thank you for telling me straight away, and I am sorry you were held up at the very first step.
+
+I have found the cause and fixed it. Your account on staging had been created during earlier testing, and it still carried an old two-step setup, so instead of showing you a QR code, the Portal asked for a code from an app you had never been given. While tracing it I also found two smaller obstacles in the setup itself: the QR code only appeared after an extra button, and saving the setup asked for your password a second time. All three are corrected, and the whole first sign-in is now checked automatically every time the Portal changes, from password to QR code to the Admin area.
+
+Your account has been reset to start from the beginning, and I am sending your new temporary password on WhatsApp now.
+
+This is what you will see:
+
+1. Go to https://staging.portal.activelongevityinstitute.org and sign in with linas@activelongevityinstitute.org and the new password.
+2. The next screen shows a QR code straight away, with three short steps beside it.
+3. On your phone, open an authenticator app such as Google Authenticator or Microsoft Authenticator (both free), choose to add an account, and scan the QR code.
+4. The app shows a six-digit code for the Collaborator Portal. Type it into the box on the screen and press Confirm.
+5. The Portal then shows a short list of recovery codes. Please keep these somewhere safe; any one of them lets you sign in if you ever lose your phone. Then press Continue, and you are in.
+
+From then on, signing in is simply your password followed by the current six-digit code from the app.
+
+If anything at all does not look as described, send me a screenshot and I will sort it out immediately.
+
+Best regards,
+Waga

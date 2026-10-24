@@ -1,0 +1,3359 @@
+{
+  "_source": "Master Field Register v1.0, Master Specialty Register v1.0, Master Alias Register v1.0 (Active Longevity Institute, September 2026). Supersedes v0.2/v0.1. Regenerated from the documents; edit the documents, not this file.",
+  "fields": [
+    "Actuarial Science",
+    "Aging Biology",
+    "Anthropology",
+    "Architecture & Urban Design",
+    "Artificial Intelligence",
+    "Audiology",
+    "Behavioral Science",
+    "Bioengineering",
+    "Bioethics",
+    "Bioinformatics",
+    "Biology",
+    "Biostatistics",
+    "Business & Management",
+    "Communication",
+    "Computer Science",
+    "Demography",
+    "Dentistry",
+    "Development Studies",
+    "Dietetics",
+    "Economics",
+    "Education",
+    "Employment, Labor & Industrial Relations",
+    "Engineering",
+    "Entrepreneurship",
+    "Epidemiology",
+    "Exercise Science",
+    "Family Studies",
+    "Finance",
+    "Financial Planning",
+    "Genetics & Genomics",
+    "Geography",
+    "Gerontology",
+    "Health Administration & Management",
+    "Health Policy",
+    "Housing",
+    "Human Factors & Ergonomics",
+    "Human Resources",
+    "Immunology",
+    "Insurance",
+    "International Relations",
+    "Investment Management",
+    "Journalism",
+    "Law",
+    "Marketing",
+    "Medicine",
+    "Neuroscience",
+    "Nursing",
+    "Nutrition Science",
+    "Occupational Therapy",
+    "Organizational Behavior",
+    "Pensions & Retirement Benefits",
+    "Pharmacy",
+    "Philosophy",
+    "Physical Therapy",
+    "Political Science",
+    "Psychology",
+    "Public Administration",
+    "Public Health",
+    "Public Policy",
+    "Social Care",
+    "Social Work",
+    "Sociology",
+    "Speech-Language Pathology",
+    "Statistics",
+    "Technology",
+    "Transport & Mobility",
+    "Venture Capital"
+  ],
+  "descriptors": {
+    "Actuarial Science": "For actuarial work applying quantitative methods to risk, uncertainty, insurance, pensions and related financial questions.",
+    "Aging Biology": "For biological research focused specifically on the mechanisms, processes and consequences of biological aging.",
+    "Architecture & Urban Design": "For professional and scholarly work focused on the design of buildings, places and the physical form of communities.",
+    "Artificial Intelligence": "For work specifically focused on the development, study or technical advancement of artificial intelligence and machine-learning systems.",
+    "Bioinformatics": "For computational work focused on the analysis and interpretation of biological and biomedical data.",
+    "Biology": "For work broadly centered on living organisms, biological processes and biological systems.",
+    "Biostatistics": "For statistical work specifically applied to health, medicine, biology and related life sciences.",
+    "Business & Management": "For work concerned broadly with the leadership, management, strategy and operation of organizations.",
+    "Computer Science": "For work grounded in computing, including algorithms, software, computational systems and the theory of computation.",
+    "Dietetics": "For the professional practice of applying nutrition knowledge to the dietary care and guidance of individuals and populations.",
+    "Finance": "For work concerned broadly with financial systems, institutions, markets, corporate finance and the management of financial resources.",
+    "Financial Planning": "For professional work helping individuals or households plan and manage their personal financial lives.",
+    "Gerontology": "For interdisciplinary work focused broadly on aging, later life and the experience of growing older.",
+    "Health Administration & Management": "For work focused on the leadership, management and operation of healthcare organizations and health services.",
+    "Health Policy": "For work focused on the development, analysis or evaluation of policies affecting health and healthcare.",
+    "Housing": "For work focused on housing systems, provision, development, management, affordability and access to housing.",
+    "Human Resources": "For professional work focused on managing and supporting people within organizations, including talent, workforce development and the employee experience.",
+    "Insurance": "For work within insurance and reinsurance, including underwriting, products, claims, operations and regulation.",
+    "Investment Management": "For professional work focused on managing investments, portfolios and investment strategies.",
+    "Nutrition Science": "For scientific work focused on nutrition, nutrients, diet and their relationships with health and human biology.",
+    "Organizational Behavior": "For work focused on how individuals, groups and organizational systems behave within workplaces and organizations.",
+    "Pensions & Retirement Benefits": "For work focused on pension systems, retirement benefits and the provision of income in retirement.",
+    "Public Administration": "For work focused on the administration, management and functioning of government and public institutions.",
+    "Public Health": "For work focused on the health of populations, including prevention, health promotion and population-level health outcomes.",
+    "Public Policy": "For work focused broadly on the development, analysis or evaluation of government and public policies across policy areas.",
+    "Social Care": "For work focused on the provision, organization or study of care and support services for people who need assistance in daily life.",
+    "Social Work": "For the professional discipline and practice of social work and the work of social work practitioners.",
+    "Statistics": "For work centered on statistical theory, methods, analysis and inference across areas of application.",
+    "Technology": "For professional work centered on the development, implementation or strategic use of technology that is not more accurately represented by a more specific Field."
+  },
+  "specialties": [
+    {
+      "name": "Life & Health Actuarial Science",
+      "fields": [
+        "Actuarial Science"
+      ]
+    },
+    {
+      "name": "Pension Actuarial Science",
+      "fields": [
+        "Actuarial Science"
+      ]
+    },
+    {
+      "name": "Insurance Risk",
+      "fields": [
+        "Actuarial Science"
+      ]
+    },
+    {
+      "name": "Longevity Risk",
+      "fields": [
+        "Actuarial Science"
+      ]
+    },
+    {
+      "name": "Mortality & Survival Modeling",
+      "fields": [
+        "Actuarial Science"
+      ]
+    },
+    {
+      "name": "Social Insurance",
+      "fields": [
+        "Actuarial Science"
+      ]
+    },
+    {
+      "name": "Cellular Senescence",
+      "fields": [
+        "Aging Biology"
+      ]
+    },
+    {
+      "name": "Cellular & Molecular Aging",
+      "fields": [
+        "Aging Biology"
+      ]
+    },
+    {
+      "name": "Cellular Reprogramming",
+      "fields": [
+        "Aging Biology"
+      ]
+    },
+    {
+      "name": "Epigenetics of Aging",
+      "fields": [
+        "Aging Biology"
+      ]
+    },
+    {
+      "name": "Geroscience",
+      "fields": [
+        "Aging Biology"
+      ]
+    },
+    {
+      "name": "Mitochondrial Biology of Aging",
+      "fields": [
+        "Aging Biology"
+      ]
+    },
+    {
+      "name": "Regenerative Biology",
+      "fields": [
+        "Aging Biology"
+      ]
+    },
+    {
+      "name": "Stem Cell Biology",
+      "fields": [
+        "Aging Biology"
+      ]
+    },
+    {
+      "name": "Systems Biology of Aging",
+      "fields": [
+        "Aging Biology"
+      ]
+    },
+    {
+      "name": "Biological Anthropology",
+      "fields": [
+        "Anthropology"
+      ]
+    },
+    {
+      "name": "Cultural Anthropology",
+      "fields": [
+        "Anthropology"
+      ]
+    },
+    {
+      "name": "Medical Anthropology",
+      "fields": [
+        "Anthropology"
+      ]
+    },
+    {
+      "name": "Social Anthropology",
+      "fields": [
+        "Anthropology"
+      ]
+    },
+    {
+      "name": "Architecture",
+      "fields": [
+        "Architecture & Urban Design"
+      ]
+    },
+    {
+      "name": "Urban Design",
+      "fields": [
+        "Architecture & Urban Design"
+      ]
+    },
+    {
+      "name": "Urban Planning",
+      "fields": [
+        "Architecture & Urban Design"
+      ]
+    },
+    {
+      "name": "Housing Design",
+      "fields": [
+        "Architecture & Urban Design"
+      ]
+    },
+    {
+      "name": "Accessible & Inclusive Design",
+      "fields": [
+        "Architecture & Urban Design",
+        "Human Factors & Ergonomics"
+      ]
+    },
+    {
+      "name": "Machine Learning",
+      "fields": [
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "name": "Natural Language Processing",
+      "fields": [
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "name": "Computer Vision",
+      "fields": [
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "name": "Generative AI",
+      "fields": [
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "name": "Human-Centered AI",
+      "fields": [
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "name": "AI Safety",
+      "fields": [
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "name": "AI Governance",
+      "fields": [
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "name": "Clinical Audiology",
+      "fields": [
+        "Audiology"
+      ]
+    },
+    {
+      "name": "Diagnostic Audiology",
+      "fields": [
+        "Audiology"
+      ]
+    },
+    {
+      "name": "Hearing Rehabilitation",
+      "fields": [
+        "Audiology"
+      ]
+    },
+    {
+      "name": "Vestibular Assessment & Rehabilitation",
+      "fields": [
+        "Audiology"
+      ]
+    },
+    {
+      "name": "Hearing Devices & Technology",
+      "fields": [
+        "Audiology"
+      ]
+    },
+    {
+      "name": "Behavioral Economics",
+      "fields": [
+        "Behavioral Science",
+        "Economics"
+      ]
+    },
+    {
+      "name": "Behavior Change",
+      "fields": [
+        "Behavioral Science"
+      ]
+    },
+    {
+      "name": "Decision Science",
+      "fields": [
+        "Behavioral Science"
+      ]
+    },
+    {
+      "name": "Biomedical Engineering",
+      "fields": [
+        "Bioengineering"
+      ]
+    },
+    {
+      "name": "Biomechanics",
+      "fields": [
+        "Bioengineering"
+      ]
+    },
+    {
+      "name": "Biomaterials",
+      "fields": [
+        "Bioengineering"
+      ]
+    },
+    {
+      "name": "Tissue Engineering",
+      "fields": [
+        "Bioengineering"
+      ]
+    },
+    {
+      "name": "Medical Devices",
+      "fields": [
+        "Bioengineering"
+      ]
+    },
+    {
+      "name": "Rehabilitation Engineering",
+      "fields": [
+        "Bioengineering"
+      ]
+    },
+    {
+      "name": "Neural Engineering",
+      "fields": [
+        "Bioengineering"
+      ]
+    },
+    {
+      "name": "Clinical Ethics",
+      "fields": [
+        "Bioethics"
+      ]
+    },
+    {
+      "name": "Research Ethics",
+      "fields": [
+        "Bioethics"
+      ]
+    },
+    {
+      "name": "Public Health Ethics",
+      "fields": [
+        "Bioethics"
+      ]
+    },
+    {
+      "name": "Neuroethics",
+      "fields": [
+        "Bioethics"
+      ]
+    },
+    {
+      "name": "Technology Ethics",
+      "fields": [
+        "Bioethics"
+      ]
+    },
+    {
+      "name": "Genomic Bioinformatics",
+      "fields": [
+        "Bioinformatics"
+      ]
+    },
+    {
+      "name": "Proteomic Bioinformatics",
+      "fields": [
+        "Bioinformatics"
+      ]
+    },
+    {
+      "name": "Systems Bioinformatics",
+      "fields": [
+        "Bioinformatics"
+      ]
+    },
+    {
+      "name": "Computational Genomics",
+      "fields": [
+        "Bioinformatics"
+      ]
+    },
+    {
+      "name": "Biomedical Data Science",
+      "fields": [
+        "Bioinformatics"
+      ]
+    },
+    {
+      "name": "Cell Biology",
+      "fields": [
+        "Biology"
+      ]
+    },
+    {
+      "name": "Molecular Biology",
+      "fields": [
+        "Biology"
+      ]
+    },
+    {
+      "name": "Developmental Biology",
+      "fields": [
+        "Biology"
+      ]
+    },
+    {
+      "name": "Evolutionary Biology",
+      "fields": [
+        "Biology"
+      ]
+    },
+    {
+      "name": "Systems Biology",
+      "fields": [
+        "Biology"
+      ]
+    },
+    {
+      "name": "Integrative Biology",
+      "fields": [
+        "Biology"
+      ]
+    },
+    {
+      "name": "Clinical Biostatistics",
+      "fields": [
+        "Biostatistics"
+      ]
+    },
+    {
+      "name": "Epidemiologic Biostatistics",
+      "fields": [
+        "Biostatistics"
+      ]
+    },
+    {
+      "name": "Survival Analysis",
+      "fields": [
+        "Biostatistics"
+      ]
+    },
+    {
+      "name": "Longitudinal Data Analysis",
+      "fields": [
+        "Biostatistics",
+        "Statistics"
+      ]
+    },
+    {
+      "name": "Clinical Trials Methodology",
+      "fields": [
+        "Biostatistics"
+      ]
+    },
+    {
+      "name": "Statistical Genetics",
+      "fields": [
+        "Biostatistics",
+        "Genetics & Genomics"
+      ]
+    },
+    {
+      "name": "Strategic Management",
+      "fields": [
+        "Business & Management"
+      ]
+    },
+    {
+      "name": "International Business",
+      "fields": [
+        "Business & Management"
+      ]
+    },
+    {
+      "name": "Operations Management",
+      "fields": [
+        "Business & Management"
+      ]
+    },
+    {
+      "name": "Innovation Management",
+      "fields": [
+        "Business & Management"
+      ]
+    },
+    {
+      "name": "Corporate Governance",
+      "fields": [
+        "Business & Management"
+      ]
+    },
+    {
+      "name": "Health Communication",
+      "fields": [
+        "Communication"
+      ]
+    },
+    {
+      "name": "Science Communication",
+      "fields": [
+        "Communication"
+      ]
+    },
+    {
+      "name": "Strategic Communication",
+      "fields": [
+        "Communication"
+      ]
+    },
+    {
+      "name": "Organizational Communication",
+      "fields": [
+        "Communication"
+      ]
+    },
+    {
+      "name": "Interpersonal Communication",
+      "fields": [
+        "Communication"
+      ]
+    },
+    {
+      "name": "Software Engineering",
+      "fields": [
+        "Computer Science"
+      ]
+    },
+    {
+      "name": "Data Science",
+      "fields": [
+        "Computer Science"
+      ]
+    },
+    {
+      "name": "Human-Computer Interaction",
+      "fields": [
+        "Computer Science",
+        "Human Factors & Ergonomics"
+      ]
+    },
+    {
+      "name": "Computational Modeling",
+      "fields": [
+        "Computer Science"
+      ]
+    },
+    {
+      "name": "Cybersecurity",
+      "fields": [
+        "Computer Science"
+      ]
+    },
+    {
+      "name": "Distributed Systems",
+      "fields": [
+        "Computer Science"
+      ]
+    },
+    {
+      "name": "Population Aging",
+      "fields": [
+        "Demography"
+      ]
+    },
+    {
+      "name": "Population Dynamics",
+      "fields": [
+        "Demography"
+      ]
+    },
+    {
+      "name": "Fertility & Family Demography",
+      "fields": [
+        "Demography"
+      ]
+    },
+    {
+      "name": "Mortality & Longevity",
+      "fields": [
+        "Demography"
+      ]
+    },
+    {
+      "name": "Migration & Population Mobility",
+      "fields": [
+        "Demography"
+      ]
+    },
+    {
+      "name": "Social Demography",
+      "fields": [
+        "Demography"
+      ]
+    },
+    {
+      "name": "Life Course Demography",
+      "fields": [
+        "Demography"
+      ]
+    },
+    {
+      "name": "Geriatric Dentistry",
+      "fields": [
+        "Dentistry"
+      ]
+    },
+    {
+      "name": "Prosthodontics",
+      "fields": [
+        "Dentistry"
+      ]
+    },
+    {
+      "name": "Periodontics",
+      "fields": [
+        "Dentistry"
+      ]
+    },
+    {
+      "name": "Oral & Maxillofacial Surgery",
+      "fields": [
+        "Dentistry"
+      ]
+    },
+    {
+      "name": "Oral Medicine",
+      "fields": [
+        "Dentistry"
+      ]
+    },
+    {
+      "name": "Dental Public Health",
+      "fields": [
+        "Dentistry"
+      ]
+    },
+    {
+      "name": "Special Care Dentistry",
+      "fields": [
+        "Dentistry"
+      ]
+    },
+    {
+      "name": "International Development",
+      "fields": [
+        "Development Studies"
+      ]
+    },
+    {
+      "name": "Human Development",
+      "fields": [
+        "Development Studies"
+      ]
+    },
+    {
+      "name": "Social Development",
+      "fields": [
+        "Development Studies"
+      ]
+    },
+    {
+      "name": "Economic Development",
+      "fields": [
+        "Development Studies"
+      ]
+    },
+    {
+      "name": "Sustainable Development",
+      "fields": [
+        "Development Studies"
+      ]
+    },
+    {
+      "name": "Clinical Dietetics",
+      "fields": [
+        "Dietetics"
+      ]
+    },
+    {
+      "name": "Community Dietetics",
+      "fields": [
+        "Dietetics"
+      ]
+    },
+    {
+      "name": "Public Health Nutrition",
+      "fields": [
+        "Dietetics",
+        "Nutrition Science",
+        "Public Health"
+      ]
+    },
+    {
+      "name": "Food Service Management",
+      "fields": [
+        "Dietetics"
+      ]
+    },
+    {
+      "name": "Sports Dietetics",
+      "fields": [
+        "Dietetics"
+      ]
+    },
+    {
+      "name": "Health Economics",
+      "fields": [
+        "Economics"
+      ]
+    },
+    {
+      "name": "Labor Economics",
+      "fields": [
+        "Economics"
+      ]
+    },
+    {
+      "name": "Public Economics",
+      "fields": [
+        "Economics"
+      ]
+    },
+    {
+      "name": "Development Economics",
+      "fields": [
+        "Economics"
+      ]
+    },
+    {
+      "name": "Economics of Aging",
+      "fields": [
+        "Economics"
+      ]
+    },
+    {
+      "name": "Pension Economics",
+      "fields": [
+        "Economics"
+      ]
+    },
+    {
+      "name": "Adult Education",
+      "fields": [
+        "Education"
+      ]
+    },
+    {
+      "name": "Higher Education",
+      "fields": [
+        "Education"
+      ]
+    },
+    {
+      "name": "Continuing Education",
+      "fields": [
+        "Education"
+      ]
+    },
+    {
+      "name": "Educational Psychology",
+      "fields": [
+        "Education"
+      ]
+    },
+    {
+      "name": "Educational Technology",
+      "fields": [
+        "Education",
+        "Technology"
+      ]
+    },
+    {
+      "name": "Lifelong Learning",
+      "fields": [
+        "Education"
+      ]
+    },
+    {
+      "name": "Industrial Relations",
+      "fields": [
+        "Employment, Labor & Industrial Relations"
+      ]
+    },
+    {
+      "name": "Labor & Employment Relations",
+      "fields": [
+        "Employment, Labor & Industrial Relations"
+      ]
+    },
+    {
+      "name": "Labor Markets",
+      "fields": [
+        "Employment, Labor & Industrial Relations"
+      ]
+    },
+    {
+      "name": "Employment Policy",
+      "fields": [
+        "Employment, Labor & Industrial Relations",
+        "Public Policy"
+      ]
+    },
+    {
+      "name": "Civil Engineering",
+      "fields": [
+        "Engineering"
+      ]
+    },
+    {
+      "name": "Electrical Engineering",
+      "fields": [
+        "Engineering"
+      ]
+    },
+    {
+      "name": "Mechanical Engineering",
+      "fields": [
+        "Engineering"
+      ]
+    },
+    {
+      "name": "Systems Engineering",
+      "fields": [
+        "Engineering"
+      ]
+    },
+    {
+      "name": "Industrial Engineering",
+      "fields": [
+        "Engineering"
+      ]
+    },
+    {
+      "name": "Environmental Engineering",
+      "fields": [
+        "Engineering"
+      ]
+    },
+    {
+      "name": "Social Entrepreneurship",
+      "fields": [
+        "Entrepreneurship"
+      ]
+    },
+    {
+      "name": "Technology Entrepreneurship",
+      "fields": [
+        "Entrepreneurship"
+      ]
+    },
+    {
+      "name": "Healthcare Entrepreneurship",
+      "fields": [
+        "Entrepreneurship"
+      ]
+    },
+    {
+      "name": "Aging Epidemiology",
+      "fields": [
+        "Epidemiology"
+      ]
+    },
+    {
+      "name": "Chronic Disease Epidemiology",
+      "fields": [
+        "Epidemiology"
+      ]
+    },
+    {
+      "name": "Clinical Epidemiology",
+      "fields": [
+        "Epidemiology"
+      ]
+    },
+    {
+      "name": "Genetic Epidemiology",
+      "fields": [
+        "Epidemiology"
+      ]
+    },
+    {
+      "name": "Infectious Disease Epidemiology",
+      "fields": [
+        "Epidemiology"
+      ]
+    },
+    {
+      "name": "Social Epidemiology",
+      "fields": [
+        "Epidemiology"
+      ]
+    },
+    {
+      "name": "Environmental Epidemiology",
+      "fields": [
+        "Epidemiology"
+      ]
+    },
+    {
+      "name": "Nutritional Epidemiology",
+      "fields": [
+        "Epidemiology",
+        "Nutrition Science"
+      ]
+    },
+    {
+      "name": "Cardiovascular Epidemiology",
+      "fields": [
+        "Epidemiology"
+      ]
+    },
+    {
+      "name": "Exercise Physiology",
+      "fields": [
+        "Exercise Science"
+      ]
+    },
+    {
+      "name": "Clinical Exercise Physiology",
+      "fields": [
+        "Exercise Science"
+      ]
+    },
+    {
+      "name": "Strength & Conditioning",
+      "fields": [
+        "Exercise Science"
+      ]
+    },
+    {
+      "name": "Motor Control",
+      "fields": [
+        "Exercise Science"
+      ]
+    },
+    {
+      "name": "Family Relationships",
+      "fields": [
+        "Family Studies"
+      ]
+    },
+    {
+      "name": "Family Development",
+      "fields": [
+        "Family Studies"
+      ]
+    },
+    {
+      "name": "Marriage & Couple Studies",
+      "fields": [
+        "Family Studies"
+      ]
+    },
+    {
+      "name": "Intergenerational Relationships",
+      "fields": [
+        "Family Studies"
+      ]
+    },
+    {
+      "name": "Family Caregiving",
+      "fields": [
+        "Family Studies"
+      ]
+    },
+    {
+      "name": "Family Policy",
+      "fields": [
+        "Family Studies"
+      ]
+    },
+    {
+      "name": "Corporate Finance",
+      "fields": [
+        "Finance"
+      ]
+    },
+    {
+      "name": "Household Finance",
+      "fields": [
+        "Finance"
+      ]
+    },
+    {
+      "name": "Public Finance",
+      "fields": [
+        "Finance",
+        "Public Administration"
+      ]
+    },
+    {
+      "name": "International Finance",
+      "fields": [
+        "Finance"
+      ]
+    },
+    {
+      "name": "Sustainable Finance",
+      "fields": [
+        "Finance"
+      ]
+    },
+    {
+      "name": "Financial Risk Management",
+      "fields": [
+        "Finance"
+      ]
+    },
+    {
+      "name": "Retirement Planning",
+      "fields": [
+        "Financial Planning"
+      ]
+    },
+    {
+      "name": "Estate Planning",
+      "fields": [
+        "Financial Planning"
+      ]
+    },
+    {
+      "name": "Tax Planning",
+      "fields": [
+        "Financial Planning"
+      ]
+    },
+    {
+      "name": "Insurance Planning",
+      "fields": [
+        "Financial Planning"
+      ]
+    },
+    {
+      "name": "Investment Planning",
+      "fields": [
+        "Financial Planning"
+      ]
+    },
+    {
+      "name": "Wealth Planning",
+      "fields": [
+        "Financial Planning"
+      ]
+    },
+    {
+      "name": "Human Genetics",
+      "fields": [
+        "Genetics & Genomics"
+      ]
+    },
+    {
+      "name": "Medical Genetics",
+      "fields": [
+        "Genetics & Genomics"
+      ]
+    },
+    {
+      "name": "Population Genetics",
+      "fields": [
+        "Genetics & Genomics"
+      ]
+    },
+    {
+      "name": "Functional Genomics",
+      "fields": [
+        "Genetics & Genomics"
+      ]
+    },
+    {
+      "name": "Epigenomics",
+      "fields": [
+        "Genetics & Genomics"
+      ]
+    },
+    {
+      "name": "Pharmacogenomics",
+      "fields": [
+        "Genetics & Genomics"
+      ]
+    },
+    {
+      "name": "Genomic Medicine",
+      "fields": [
+        "Genetics & Genomics"
+      ]
+    },
+    {
+      "name": "Human Geography",
+      "fields": [
+        "Geography"
+      ]
+    },
+    {
+      "name": "Population Geography",
+      "fields": [
+        "Geography"
+      ]
+    },
+    {
+      "name": "Health Geography",
+      "fields": [
+        "Geography"
+      ]
+    },
+    {
+      "name": "Urban Geography",
+      "fields": [
+        "Geography"
+      ]
+    },
+    {
+      "name": "Economic Geography",
+      "fields": [
+        "Geography"
+      ]
+    },
+    {
+      "name": "Social Geography",
+      "fields": [
+        "Geography"
+      ]
+    },
+    {
+      "name": "Social Gerontology",
+      "fields": [
+        "Gerontology"
+      ]
+    },
+    {
+      "name": "Behavioral Gerontology",
+      "fields": [
+        "Gerontology"
+      ]
+    },
+    {
+      "name": "Environmental Gerontology",
+      "fields": [
+        "Gerontology"
+      ]
+    },
+    {
+      "name": "Educational Gerontology",
+      "fields": [
+        "Gerontology"
+      ]
+    },
+    {
+      "name": "Financial Gerontology",
+      "fields": [
+        "Gerontology"
+      ]
+    },
+    {
+      "name": "Applied Gerontology",
+      "fields": [
+        "Gerontology"
+      ]
+    },
+    {
+      "name": "Healthcare Management",
+      "fields": [
+        "Health Administration & Management"
+      ]
+    },
+    {
+      "name": "Health Services Management",
+      "fields": [
+        "Health Administration & Management"
+      ]
+    },
+    {
+      "name": "Hospital Administration",
+      "fields": [
+        "Health Administration & Management"
+      ]
+    },
+    {
+      "name": "Healthcare Operations",
+      "fields": [
+        "Health Administration & Management"
+      ]
+    },
+    {
+      "name": "Healthcare Quality Management",
+      "fields": [
+        "Health Administration & Management"
+      ]
+    },
+    {
+      "name": "Long-Term Care Administration",
+      "fields": [
+        "Health Administration & Management"
+      ]
+    },
+    {
+      "name": "Health Systems Policy",
+      "fields": [
+        "Health Policy"
+      ]
+    },
+    {
+      "name": "Healthcare Financing Policy",
+      "fields": [
+        "Health Policy"
+      ]
+    },
+    {
+      "name": "Health Insurance Policy",
+      "fields": [
+        "Health Policy"
+      ]
+    },
+    {
+      "name": "Pharmaceutical Policy",
+      "fields": [
+        "Health Policy"
+      ]
+    },
+    {
+      "name": "Long-Term Care Policy",
+      "fields": [
+        "Health Policy"
+      ]
+    },
+    {
+      "name": "Global Health Policy",
+      "fields": [
+        "Health Policy"
+      ]
+    },
+    {
+      "name": "Housing Development",
+      "fields": [
+        "Housing"
+      ]
+    },
+    {
+      "name": "Housing Management",
+      "fields": [
+        "Housing"
+      ]
+    },
+    {
+      "name": "Affordable Housing",
+      "fields": [
+        "Housing"
+      ]
+    },
+    {
+      "name": "Social Housing",
+      "fields": [
+        "Housing"
+      ]
+    },
+    {
+      "name": "Senior Housing",
+      "fields": [
+        "Housing"
+      ]
+    },
+    {
+      "name": "Housing Finance",
+      "fields": [
+        "Housing"
+      ]
+    },
+    {
+      "name": "Housing Policy",
+      "fields": [
+        "Housing",
+        "Public Policy"
+      ]
+    },
+    {
+      "name": "Cognitive Ergonomics",
+      "fields": [
+        "Human Factors & Ergonomics"
+      ]
+    },
+    {
+      "name": "Physical Ergonomics",
+      "fields": [
+        "Human Factors & Ergonomics"
+      ]
+    },
+    {
+      "name": "Organizational Ergonomics",
+      "fields": [
+        "Human Factors & Ergonomics"
+      ]
+    },
+    {
+      "name": "Occupational Ergonomics",
+      "fields": [
+        "Human Factors & Ergonomics"
+      ]
+    },
+    {
+      "name": "Talent Management",
+      "fields": [
+        "Human Resources"
+      ]
+    },
+    {
+      "name": "Compensation & Benefits",
+      "fields": [
+        "Human Resources"
+      ]
+    },
+    {
+      "name": "Learning & Development",
+      "fields": [
+        "Human Resources"
+      ]
+    },
+    {
+      "name": "Organizational Development",
+      "fields": [
+        "Human Resources",
+        "Organizational Behavior"
+      ]
+    },
+    {
+      "name": "Workforce Planning",
+      "fields": [
+        "Human Resources"
+      ]
+    },
+    {
+      "name": "Employee Experience",
+      "fields": [
+        "Human Resources"
+      ]
+    },
+    {
+      "name": "People Analytics",
+      "fields": [
+        "Human Resources"
+      ]
+    },
+    {
+      "name": "Employee Relations",
+      "fields": [
+        "Human Resources"
+      ]
+    },
+    {
+      "name": "Cellular Immunology",
+      "fields": [
+        "Immunology"
+      ]
+    },
+    {
+      "name": "Molecular Immunology",
+      "fields": [
+        "Immunology"
+      ]
+    },
+    {
+      "name": "Clinical Immunology",
+      "fields": [
+        "Immunology"
+      ]
+    },
+    {
+      "name": "Immunogenetics",
+      "fields": [
+        "Immunology"
+      ]
+    },
+    {
+      "name": "Immunometabolism",
+      "fields": [
+        "Immunology"
+      ]
+    },
+    {
+      "name": "Immunosenescence",
+      "fields": [
+        "Immunology"
+      ]
+    },
+    {
+      "name": "Life Insurance",
+      "fields": [
+        "Insurance"
+      ]
+    },
+    {
+      "name": "Health Insurance",
+      "fields": [
+        "Insurance"
+      ]
+    },
+    {
+      "name": "Long-Term Care Insurance",
+      "fields": [
+        "Insurance"
+      ]
+    },
+    {
+      "name": "Reinsurance",
+      "fields": [
+        "Insurance"
+      ]
+    },
+    {
+      "name": "Underwriting",
+      "fields": [
+        "Insurance"
+      ]
+    },
+    {
+      "name": "Claims Management",
+      "fields": [
+        "Insurance"
+      ]
+    },
+    {
+      "name": "Insurance Product Management",
+      "fields": [
+        "Insurance"
+      ]
+    },
+    {
+      "name": "Insurance Regulation",
+      "fields": [
+        "Insurance"
+      ]
+    },
+    {
+      "name": "Global Governance",
+      "fields": [
+        "International Relations"
+      ]
+    },
+    {
+      "name": "International Organizations",
+      "fields": [
+        "International Relations"
+      ]
+    },
+    {
+      "name": "International Political Economy",
+      "fields": [
+        "International Relations"
+      ]
+    },
+    {
+      "name": "International Cooperation",
+      "fields": [
+        "International Relations"
+      ]
+    },
+    {
+      "name": "Foreign Policy",
+      "fields": [
+        "International Relations"
+      ]
+    },
+    {
+      "name": "Global Security",
+      "fields": [
+        "International Relations"
+      ]
+    },
+    {
+      "name": "Asset Management",
+      "fields": [
+        "Investment Management"
+      ]
+    },
+    {
+      "name": "Portfolio Management",
+      "fields": [
+        "Investment Management"
+      ]
+    },
+    {
+      "name": "Institutional Investment",
+      "fields": [
+        "Investment Management"
+      ]
+    },
+    {
+      "name": "Retirement Investment",
+      "fields": [
+        "Investment Management"
+      ]
+    },
+    {
+      "name": "Sustainable Investing",
+      "fields": [
+        "Investment Management"
+      ]
+    },
+    {
+      "name": "Alternative Investments",
+      "fields": [
+        "Investment Management"
+      ]
+    },
+    {
+      "name": "Health Journalism",
+      "fields": [
+        "Journalism"
+      ]
+    },
+    {
+      "name": "Science Journalism",
+      "fields": [
+        "Journalism"
+      ]
+    },
+    {
+      "name": "Business Journalism",
+      "fields": [
+        "Journalism"
+      ]
+    },
+    {
+      "name": "Data Journalism",
+      "fields": [
+        "Journalism"
+      ]
+    },
+    {
+      "name": "Investigative Journalism",
+      "fields": [
+        "Journalism"
+      ]
+    },
+    {
+      "name": "Policy Journalism",
+      "fields": [
+        "Journalism"
+      ]
+    },
+    {
+      "name": "Health Law",
+      "fields": [
+        "Law"
+      ]
+    },
+    {
+      "name": "Employment & Labor Law",
+      "fields": [
+        "Law"
+      ]
+    },
+    {
+      "name": "Elder Law",
+      "fields": [
+        "Law"
+      ]
+    },
+    {
+      "name": "Corporate Law",
+      "fields": [
+        "Law"
+      ]
+    },
+    {
+      "name": "Public Law",
+      "fields": [
+        "Law"
+      ]
+    },
+    {
+      "name": "International Law",
+      "fields": [
+        "Law"
+      ]
+    },
+    {
+      "name": "Technology Law",
+      "fields": [
+        "Law"
+      ]
+    },
+    {
+      "name": "Data Privacy & Protection Law",
+      "fields": [
+        "Law"
+      ]
+    },
+    {
+      "name": "Marketing Strategy",
+      "fields": [
+        "Marketing"
+      ]
+    },
+    {
+      "name": "Consumer Behavior",
+      "fields": [
+        "Marketing"
+      ]
+    },
+    {
+      "name": "Digital Marketing",
+      "fields": [
+        "Marketing"
+      ]
+    },
+    {
+      "name": "Market Research",
+      "fields": [
+        "Marketing"
+      ]
+    },
+    {
+      "name": "Brand Management",
+      "fields": [
+        "Marketing"
+      ]
+    },
+    {
+      "name": "Social Marketing",
+      "fields": [
+        "Marketing"
+      ]
+    },
+    {
+      "name": "Cardiology",
+      "fields": [
+        "Medicine"
+      ]
+    },
+    {
+      "name": "Endocrinology",
+      "fields": [
+        "Medicine"
+      ]
+    },
+    {
+      "name": "Family Medicine",
+      "fields": [
+        "Medicine"
+      ]
+    },
+    {
+      "name": "Geriatric Medicine",
+      "fields": [
+        "Medicine"
+      ]
+    },
+    {
+      "name": "Internal Medicine",
+      "fields": [
+        "Medicine"
+      ]
+    },
+    {
+      "name": "Neurology",
+      "fields": [
+        "Medicine"
+      ]
+    },
+    {
+      "name": "Oncology",
+      "fields": [
+        "Medicine"
+      ]
+    },
+    {
+      "name": "Physical Medicine & Rehabilitation",
+      "fields": [
+        "Medicine"
+      ]
+    },
+    {
+      "name": "Preventive Medicine",
+      "fields": [
+        "Medicine"
+      ]
+    },
+    {
+      "name": "Psychiatry",
+      "fields": [
+        "Medicine"
+      ]
+    },
+    {
+      "name": "Sleep Medicine",
+      "fields": [
+        "Medicine"
+      ]
+    },
+    {
+      "name": "Cognitive Neuroscience",
+      "fields": [
+        "Neuroscience"
+      ]
+    },
+    {
+      "name": "Behavioral Neuroscience",
+      "fields": [
+        "Neuroscience"
+      ]
+    },
+    {
+      "name": "Clinical Neuroscience",
+      "fields": [
+        "Neuroscience"
+      ]
+    },
+    {
+      "name": "Computational Neuroscience",
+      "fields": [
+        "Neuroscience"
+      ]
+    },
+    {
+      "name": "Neurobiology",
+      "fields": [
+        "Neuroscience"
+      ]
+    },
+    {
+      "name": "Neurodegeneration",
+      "fields": [
+        "Neuroscience"
+      ]
+    },
+    {
+      "name": "Neuroimaging",
+      "fields": [
+        "Neuroscience"
+      ]
+    },
+    {
+      "name": "Social Neuroscience",
+      "fields": [
+        "Neuroscience"
+      ]
+    },
+    {
+      "name": "Affective Neuroscience",
+      "fields": [
+        "Neuroscience"
+      ]
+    },
+    {
+      "name": "Adult Health Nursing",
+      "fields": [
+        "Nursing"
+      ]
+    },
+    {
+      "name": "Gerontological Nursing",
+      "fields": [
+        "Nursing"
+      ]
+    },
+    {
+      "name": "Community Health Nursing",
+      "fields": [
+        "Nursing"
+      ]
+    },
+    {
+      "name": "Public Health Nursing",
+      "fields": [
+        "Nursing"
+      ]
+    },
+    {
+      "name": "Mental Health Nursing",
+      "fields": [
+        "Nursing"
+      ]
+    },
+    {
+      "name": "Critical Care Nursing",
+      "fields": [
+        "Nursing"
+      ]
+    },
+    {
+      "name": "Advanced Practice Nursing",
+      "fields": [
+        "Nursing"
+      ]
+    },
+    {
+      "name": "Nursing Education",
+      "fields": [
+        "Nursing"
+      ]
+    },
+    {
+      "name": "Clinical Nutrition",
+      "fields": [
+        "Nutrition Science"
+      ]
+    },
+    {
+      "name": "Nutritional Biochemistry",
+      "fields": [
+        "Nutrition Science"
+      ]
+    },
+    {
+      "name": "Nutrigenomics",
+      "fields": [
+        "Nutrition Science"
+      ]
+    },
+    {
+      "name": "Metabolic Nutrition",
+      "fields": [
+        "Nutrition Science"
+      ]
+    },
+    {
+      "name": "Sports Nutrition",
+      "fields": [
+        "Nutrition Science"
+      ]
+    },
+    {
+      "name": "Adult Rehabilitation",
+      "fields": [
+        "Occupational Therapy"
+      ]
+    },
+    {
+      "name": "Geriatric Occupational Therapy",
+      "fields": [
+        "Occupational Therapy"
+      ]
+    },
+    {
+      "name": "Neurological Rehabilitation",
+      "fields": [
+        "Occupational Therapy"
+      ]
+    },
+    {
+      "name": "Cognitive Rehabilitation",
+      "fields": [
+        "Occupational Therapy"
+      ]
+    },
+    {
+      "name": "Mental Health Occupational Therapy",
+      "fields": [
+        "Occupational Therapy"
+      ]
+    },
+    {
+      "name": "Community-Based Occupational Therapy",
+      "fields": [
+        "Occupational Therapy"
+      ]
+    },
+    {
+      "name": "Assistive Technology",
+      "fields": [
+        "Occupational Therapy",
+        "Technology"
+      ]
+    },
+    {
+      "name": "Leadership Studies",
+      "fields": [
+        "Organizational Behavior"
+      ]
+    },
+    {
+      "name": "Organizational Culture",
+      "fields": [
+        "Organizational Behavior"
+      ]
+    },
+    {
+      "name": "Teams & Group Dynamics",
+      "fields": [
+        "Organizational Behavior"
+      ]
+    },
+    {
+      "name": "Organizational Change",
+      "fields": [
+        "Organizational Behavior"
+      ]
+    },
+    {
+      "name": "Organizational Decision-Making",
+      "fields": [
+        "Organizational Behavior"
+      ]
+    },
+    {
+      "name": "Occupational Pensions",
+      "fields": [
+        "Pensions & Retirement Benefits"
+      ]
+    },
+    {
+      "name": "Public Pensions",
+      "fields": [
+        "Pensions & Retirement Benefits"
+      ]
+    },
+    {
+      "name": "Pension Administration",
+      "fields": [
+        "Pensions & Retirement Benefits"
+      ]
+    },
+    {
+      "name": "Pension Governance",
+      "fields": [
+        "Pensions & Retirement Benefits"
+      ]
+    },
+    {
+      "name": "Retirement Income",
+      "fields": [
+        "Pensions & Retirement Benefits"
+      ]
+    },
+    {
+      "name": "Defined Benefit Pensions",
+      "fields": [
+        "Pensions & Retirement Benefits"
+      ]
+    },
+    {
+      "name": "Defined Contribution Pensions",
+      "fields": [
+        "Pensions & Retirement Benefits"
+      ]
+    },
+    {
+      "name": "Clinical Pharmacy",
+      "fields": [
+        "Pharmacy"
+      ]
+    },
+    {
+      "name": "Geriatric Pharmacy",
+      "fields": [
+        "Pharmacy"
+      ]
+    },
+    {
+      "name": "Community Pharmacy",
+      "fields": [
+        "Pharmacy"
+      ]
+    },
+    {
+      "name": "Hospital Pharmacy",
+      "fields": [
+        "Pharmacy"
+      ]
+    },
+    {
+      "name": "Pharmacotherapy",
+      "fields": [
+        "Pharmacy"
+      ]
+    },
+    {
+      "name": "Medication Management",
+      "fields": [
+        "Pharmacy"
+      ]
+    },
+    {
+      "name": "Pharmaceutical Sciences",
+      "fields": [
+        "Pharmacy"
+      ]
+    },
+    {
+      "name": "Ethics",
+      "fields": [
+        "Philosophy"
+      ]
+    },
+    {
+      "name": "Applied Ethics",
+      "fields": [
+        "Philosophy"
+      ]
+    },
+    {
+      "name": "Philosophy of Science",
+      "fields": [
+        "Philosophy"
+      ]
+    },
+    {
+      "name": "Political Philosophy",
+      "fields": [
+        "Philosophy"
+      ]
+    },
+    {
+      "name": "Philosophy of Mind",
+      "fields": [
+        "Philosophy"
+      ]
+    },
+    {
+      "name": "Social Philosophy",
+      "fields": [
+        "Philosophy"
+      ]
+    },
+    {
+      "name": "Geriatric Physical Therapy",
+      "fields": [
+        "Physical Therapy"
+      ]
+    },
+    {
+      "name": "Neurological Physical Therapy",
+      "fields": [
+        "Physical Therapy"
+      ]
+    },
+    {
+      "name": "Orthopedic Physical Therapy",
+      "fields": [
+        "Physical Therapy"
+      ]
+    },
+    {
+      "name": "Cardiopulmonary Physical Therapy",
+      "fields": [
+        "Physical Therapy"
+      ]
+    },
+    {
+      "name": "Vestibular Rehabilitation",
+      "fields": [
+        "Physical Therapy"
+      ]
+    },
+    {
+      "name": "Sports Physical Therapy",
+      "fields": [
+        "Physical Therapy"
+      ]
+    },
+    {
+      "name": "Balance & Falls Rehabilitation",
+      "fields": [
+        "Physical Therapy"
+      ]
+    },
+    {
+      "name": "Comparative Politics",
+      "fields": [
+        "Political Science"
+      ]
+    },
+    {
+      "name": "Political Institutions",
+      "fields": [
+        "Political Science"
+      ]
+    },
+    {
+      "name": "Political Economy",
+      "fields": [
+        "Political Science"
+      ]
+    },
+    {
+      "name": "Public Opinion",
+      "fields": [
+        "Political Science"
+      ]
+    },
+    {
+      "name": "Political Behavior",
+      "fields": [
+        "Political Science"
+      ]
+    },
+    {
+      "name": "Governance",
+      "fields": [
+        "Political Science"
+      ]
+    },
+    {
+      "name": "Social Policy",
+      "fields": [
+        "Political Science",
+        "Public Policy"
+      ]
+    },
+    {
+      "name": "Clinical Psychology",
+      "fields": [
+        "Psychology"
+      ]
+    },
+    {
+      "name": "Cognitive Psychology",
+      "fields": [
+        "Psychology"
+      ]
+    },
+    {
+      "name": "Developmental Psychology",
+      "fields": [
+        "Psychology"
+      ]
+    },
+    {
+      "name": "Health Psychology",
+      "fields": [
+        "Psychology"
+      ]
+    },
+    {
+      "name": "Industrial-Organizational Psychology",
+      "fields": [
+        "Psychology"
+      ]
+    },
+    {
+      "name": "Neuropsychology",
+      "fields": [
+        "Psychology"
+      ]
+    },
+    {
+      "name": "Social Psychology",
+      "fields": [
+        "Psychology"
+      ]
+    },
+    {
+      "name": "Counseling Psychology",
+      "fields": [
+        "Psychology"
+      ]
+    },
+    {
+      "name": "Geropsychology",
+      "fields": [
+        "Psychology"
+      ]
+    },
+    {
+      "name": "Behavioral Psychology",
+      "fields": [
+        "Psychology"
+      ]
+    },
+    {
+      "name": "Psychometrics",
+      "fields": [
+        "Psychology"
+      ]
+    },
+    {
+      "name": "Public Management",
+      "fields": [
+        "Public Administration"
+      ]
+    },
+    {
+      "name": "Public Service Delivery",
+      "fields": [
+        "Public Administration"
+      ]
+    },
+    {
+      "name": "Local Government Administration",
+      "fields": [
+        "Public Administration"
+      ]
+    },
+    {
+      "name": "Public Sector Innovation",
+      "fields": [
+        "Public Administration"
+      ]
+    },
+    {
+      "name": "Global Health",
+      "fields": [
+        "Public Health"
+      ]
+    },
+    {
+      "name": "Community Health",
+      "fields": [
+        "Public Health"
+      ]
+    },
+    {
+      "name": "Environmental Health",
+      "fields": [
+        "Public Health"
+      ]
+    },
+    {
+      "name": "Health Promotion",
+      "fields": [
+        "Public Health"
+      ]
+    },
+    {
+      "name": "Health Equity",
+      "fields": [
+        "Public Health"
+      ]
+    },
+    {
+      "name": "Maternal & Child Health",
+      "fields": [
+        "Public Health"
+      ]
+    },
+    {
+      "name": "Occupational Health",
+      "fields": [
+        "Public Health"
+      ]
+    },
+    {
+      "name": "Health Services Research",
+      "fields": [
+        "Public Health"
+      ]
+    },
+    {
+      "name": "Economic Policy",
+      "fields": [
+        "Public Policy"
+      ]
+    },
+    {
+      "name": "Pension & Retirement Policy",
+      "fields": [
+        "Public Policy"
+      ]
+    },
+    {
+      "name": "Technology Policy",
+      "fields": [
+        "Public Policy"
+      ]
+    },
+    {
+      "name": "Regulatory Policy",
+      "fields": [
+        "Public Policy"
+      ]
+    },
+    {
+      "name": "Adult Social Care",
+      "fields": [
+        "Social Care"
+      ]
+    },
+    {
+      "name": "Older Adult Care",
+      "fields": [
+        "Social Care"
+      ]
+    },
+    {
+      "name": "Community-Based Care",
+      "fields": [
+        "Social Care"
+      ]
+    },
+    {
+      "name": "Home & Community Care",
+      "fields": [
+        "Social Care"
+      ]
+    },
+    {
+      "name": "Long-Term Care",
+      "fields": [
+        "Social Care"
+      ]
+    },
+    {
+      "name": "Care Coordination",
+      "fields": [
+        "Social Care"
+      ]
+    },
+    {
+      "name": "Carer & Caregiver Support",
+      "fields": [
+        "Social Care"
+      ]
+    },
+    {
+      "name": "Clinical Social Work",
+      "fields": [
+        "Social Work"
+      ]
+    },
+    {
+      "name": "Gerontological Social Work",
+      "fields": [
+        "Social Work"
+      ]
+    },
+    {
+      "name": "Medical Social Work",
+      "fields": [
+        "Social Work"
+      ]
+    },
+    {
+      "name": "Community Social Work",
+      "fields": [
+        "Social Work"
+      ]
+    },
+    {
+      "name": "Family Social Work",
+      "fields": [
+        "Social Work"
+      ]
+    },
+    {
+      "name": "Social Work Policy & Advocacy",
+      "fields": [
+        "Social Work"
+      ]
+    },
+    {
+      "name": "Case Management",
+      "fields": [
+        "Social Work"
+      ]
+    },
+    {
+      "name": "Sociology of Aging",
+      "fields": [
+        "Sociology"
+      ]
+    },
+    {
+      "name": "Medical Sociology",
+      "fields": [
+        "Sociology"
+      ]
+    },
+    {
+      "name": "Family Sociology",
+      "fields": [
+        "Sociology"
+      ]
+    },
+    {
+      "name": "Economic Sociology",
+      "fields": [
+        "Sociology"
+      ]
+    },
+    {
+      "name": "Sociology of Work",
+      "fields": [
+        "Sociology"
+      ]
+    },
+    {
+      "name": "Social Inequality",
+      "fields": [
+        "Sociology"
+      ]
+    },
+    {
+      "name": "Sociology of Health",
+      "fields": [
+        "Sociology"
+      ]
+    },
+    {
+      "name": "Life Course Sociology",
+      "fields": [
+        "Sociology"
+      ]
+    },
+    {
+      "name": "Adult Speech-Language Pathology",
+      "fields": [
+        "Speech-Language Pathology"
+      ]
+    },
+    {
+      "name": "Cognitive-Communication Disorders",
+      "fields": [
+        "Speech-Language Pathology"
+      ]
+    },
+    {
+      "name": "Aphasia",
+      "fields": [
+        "Speech-Language Pathology"
+      ]
+    },
+    {
+      "name": "Dysphagia",
+      "fields": [
+        "Speech-Language Pathology"
+      ]
+    },
+    {
+      "name": "Motor Speech Disorders",
+      "fields": [
+        "Speech-Language Pathology"
+      ]
+    },
+    {
+      "name": "Neurogenic Communication Disorders",
+      "fields": [
+        "Speech-Language Pathology"
+      ]
+    },
+    {
+      "name": "Voice Disorders",
+      "fields": [
+        "Speech-Language Pathology"
+      ]
+    },
+    {
+      "name": "Applied Statistics",
+      "fields": [
+        "Statistics"
+      ]
+    },
+    {
+      "name": "Bayesian Statistics",
+      "fields": [
+        "Statistics"
+      ]
+    },
+    {
+      "name": "Computational Statistics",
+      "fields": [
+        "Statistics"
+      ]
+    },
+    {
+      "name": "Survey Statistics",
+      "fields": [
+        "Statistics"
+      ]
+    },
+    {
+      "name": "Causal Inference",
+      "fields": [
+        "Statistics"
+      ]
+    },
+    {
+      "name": "Multilevel & Hierarchical Modeling",
+      "fields": [
+        "Statistics"
+      ]
+    },
+    {
+      "name": "Statistical Machine Learning",
+      "fields": [
+        "Statistics"
+      ]
+    },
+    {
+      "name": "Digital Transformation",
+      "fields": [
+        "Technology"
+      ]
+    },
+    {
+      "name": "Health Technology",
+      "fields": [
+        "Technology"
+      ]
+    },
+    {
+      "name": "Technology Adoption",
+      "fields": [
+        "Technology"
+      ]
+    },
+    {
+      "name": "Technology Strategy",
+      "fields": [
+        "Technology"
+      ]
+    },
+    {
+      "name": "Transport Planning",
+      "fields": [
+        "Transport & Mobility"
+      ]
+    },
+    {
+      "name": "Urban Mobility",
+      "fields": [
+        "Transport & Mobility"
+      ]
+    },
+    {
+      "name": "Public Transportation",
+      "fields": [
+        "Transport & Mobility"
+      ]
+    },
+    {
+      "name": "Accessible Transportation",
+      "fields": [
+        "Transport & Mobility"
+      ]
+    },
+    {
+      "name": "Active Transportation",
+      "fields": [
+        "Transport & Mobility"
+      ]
+    },
+    {
+      "name": "Mobility Systems",
+      "fields": [
+        "Transport & Mobility"
+      ]
+    },
+    {
+      "name": "Transport Policy",
+      "fields": [
+        "Transport & Mobility"
+      ]
+    },
+    {
+      "name": "Early-Stage Investment",
+      "fields": [
+        "Venture Capital"
+      ]
+    },
+    {
+      "name": "Growth-Stage Investment",
+      "fields": [
+        "Venture Capital"
+      ]
+    },
+    {
+      "name": "Healthcare Venture Capital",
+      "fields": [
+        "Venture Capital"
+      ]
+    },
+    {
+      "name": "Technology Venture Capital",
+      "fields": [
+        "Venture Capital"
+      ]
+    },
+    {
+      "name": "Life Sciences Venture Capital",
+      "fields": [
+        "Venture Capital"
+      ]
+    },
+    {
+      "name": "Impact Investing",
+      "fields": [
+        "Venture Capital"
+      ]
+    }
+  ],
+  "retired_specialties": [
+    "Pensions & Retirement Benefits"
+  ],
+  "aliases": [
+    {
+      "term": "Actuarial Studies",
+      "target": "Actuarial Science",
+      "ambiguous": false
+    },
+    {
+      "term": "Biology of Aging",
+      "target": "Aging Biology",
+      "ambiguous": false
+    },
+    {
+      "term": "Biological Sciences",
+      "target": "Biology",
+      "ambiguous": false
+    },
+    {
+      "term": "Communication Studies",
+      "target": "Communication",
+      "ambiguous": false
+    },
+    {
+      "term": "Communications",
+      "target": "Communication",
+      "ambiguous": false
+    },
+    {
+      "term": "Population Studies",
+      "target": "Demography",
+      "ambiguous": false
+    },
+    {
+      "term": "Dental Medicine",
+      "target": "Dentistry",
+      "ambiguous": false
+    },
+    {
+      "term": "Family Science",
+      "target": "Family Studies",
+      "ambiguous": false
+    },
+    {
+      "term": "Family Sciences",
+      "target": "Family Studies",
+      "ambiguous": false
+    },
+    {
+      "term": "Healthcare Administration",
+      "target": "Health Administration & Management",
+      "ambiguous": false
+    },
+    {
+      "term": "Health Services Administration",
+      "target": "Health Administration & Management",
+      "ambiguous": false
+    },
+    {
+      "term": "Human Factors",
+      "target": "Human Factors & Ergonomics",
+      "ambiguous": false
+    },
+    {
+      "term": "Ergonomics",
+      "target": "Human Factors & Ergonomics",
+      "ambiguous": false
+    },
+    {
+      "term": "Human Factors Engineering",
+      "target": "Human Factors & Ergonomics",
+      "ambiguous": false
+    },
+    {
+      "term": "Human Resource Management",
+      "target": "Human Resources",
+      "ambiguous": false
+    },
+    {
+      "term": "Human Resources Management",
+      "target": "Human Resources",
+      "ambiguous": false
+    },
+    {
+      "term": "HR Management",
+      "target": "Human Resources",
+      "ambiguous": false
+    },
+    {
+      "term": "Personnel Management",
+      "target": "Human Resources",
+      "ambiguous": false
+    },
+    {
+      "term": "Healthcare Policy",
+      "target": "Health Policy",
+      "ambiguous": false
+    },
+    {
+      "term": "International Affairs",
+      "target": "International Relations",
+      "ambiguous": false
+    },
+    {
+      "term": "Global Affairs",
+      "target": "International Relations",
+      "ambiguous": false
+    },
+    {
+      "term": "Asset & Investment Management",
+      "target": "Investment Management",
+      "ambiguous": false
+    },
+    {
+      "term": "Nutritional Science",
+      "target": "Nutrition Science",
+      "ambiguous": false
+    },
+    {
+      "term": "Physiotherapy",
+      "target": "Physical Therapy",
+      "ambiguous": false
+    },
+    {
+      "term": "Politics",
+      "target": "Political Science",
+      "ambiguous": false
+    },
+    {
+      "term": "Political Studies",
+      "target": "Political Science",
+      "ambiguous": false
+    },
+    {
+      "term": "Government Administration",
+      "target": "Public Administration",
+      "ambiguous": false
+    },
+    {
+      "term": "Policy Studies",
+      "target": "Public Policy",
+      "ambiguous": false
+    },
+    {
+      "term": "Public Policy Studies",
+      "target": "Public Policy",
+      "ambiguous": false
+    },
+    {
+      "term": "Speech and Language Therapy",
+      "target": "Speech-Language Pathology",
+      "ambiguous": false
+    },
+    {
+      "term": "Speech-Language Therapy",
+      "target": "Speech-Language Pathology",
+      "ambiguous": false
+    },
+    {
+      "term": "Speech Therapy",
+      "target": "Speech-Language Pathology",
+      "ambiguous": false
+    },
+    {
+      "term": "Speech Pathology",
+      "target": "Speech-Language Pathology",
+      "ambiguous": false
+    },
+    {
+      "term": "Statistical Science",
+      "target": "Statistics",
+      "ambiguous": false
+    },
+    {
+      "term": "Transportation & Mobility",
+      "target": "Transport & Mobility",
+      "ambiguous": false
+    },
+    {
+      "term": "Venture Investing",
+      "target": "Venture Capital",
+      "ambiguous": false
+    },
+    {
+      "term": "Pensions",
+      "target": "Pensions & Retirement Benefits",
+      "ambiguous": false
+    },
+    {
+      "term": "Retirement Benefits",
+      "target": "Pensions & Retirement Benefits",
+      "ambiguous": false
+    },
+    {
+      "term": "Cell Senescence",
+      "target": "Cellular Senescence",
+      "ambiguous": false
+    },
+    {
+      "term": "Neuroengineering",
+      "target": "Neural Engineering",
+      "ambiguous": false
+    },
+    {
+      "term": "Town Planning",
+      "target": "Urban Planning",
+      "ambiguous": false
+    },
+    {
+      "term": "City Planning",
+      "target": "Urban Planning",
+      "ambiguous": false
+    },
+    {
+      "term": "Town and Regional Planning",
+      "target": "Urban Planning",
+      "ambiguous": false
+    },
+    {
+      "term": "Gerodontology",
+      "target": "Geriatric Dentistry",
+      "ambiguous": false
+    },
+    {
+      "term": "Gerodontics",
+      "target": "Geriatric Dentistry",
+      "ambiguous": false
+    },
+    {
+      "term": "Special Needs Dentistry",
+      "target": "Special Care Dentistry",
+      "ambiguous": false
+    },
+    {
+      "term": "Adult Learning",
+      "target": "Adult Education",
+      "ambiguous": false
+    },
+    {
+      "term": "Tertiary Education",
+      "target": "Higher Education",
+      "ambiguous": false
+    },
+    {
+      "term": "Family Relations",
+      "target": "Family Relationships",
+      "ambiguous": false
+    },
+    {
+      "term": "Intergenerational Relations",
+      "target": "Intergenerational Relationships",
+      "ambiguous": false
+    },
+    {
+      "term": "Medical Geography",
+      "target": "Health Geography",
+      "ambiguous": false
+    },
+    {
+      "term": "Hospital Management",
+      "target": "Hospital Administration",
+      "ambiguous": false
+    },
+    {
+      "term": "Medicines Policy",
+      "target": "Pharmaceutical Policy",
+      "ambiguous": false
+    },
+    {
+      "term": "Workplace Ergonomics",
+      "target": "Occupational Ergonomics",
+      "ambiguous": false
+    },
+    {
+      "term": "Industrial Ergonomics",
+      "target": "Occupational Ergonomics",
+      "ambiguous": false
+    },
+    {
+      "term": "HR Analytics",
+      "target": "People Analytics",
+      "ambiguous": false
+    },
+    {
+      "term": "Workforce Analytics",
+      "target": "People Analytics",
+      "ambiguous": false
+    },
+    {
+      "term": "Immune Senescence",
+      "target": "Immunosenescence",
+      "ambiguous": false
+    },
+    {
+      "term": "Institutional Investing",
+      "target": "Institutional Investment",
+      "ambiguous": false
+    },
+    {
+      "term": "Sustainable Investment",
+      "target": "Sustainable Investing",
+      "ambiguous": false
+    },
+    {
+      "term": "Company Law",
+      "target": "Corporate Law",
+      "ambiguous": false
+    },
+    {
+      "term": "Healthcare Law",
+      "target": "Health Law",
+      "ambiguous": false
+    },
+    {
+      "term": "Marketing Research",
+      "target": "Market Research",
+      "ambiguous": false
+    },
+    {
+      "term": "Family Practice",
+      "target": "Family Medicine",
+      "ambiguous": false
+    },
+    {
+      "term": "Geriatrics",
+      "target": "Geriatric Medicine",
+      "ambiguous": false
+    },
+    {
+      "term": "General Internal Medicine",
+      "target": "Internal Medicine",
+      "ambiguous": false
+    },
+    {
+      "term": "Physiatry",
+      "target": "Physical Medicine & Rehabilitation",
+      "ambiguous": false
+    },
+    {
+      "term": "Rehabilitation Medicine",
+      "target": "Physical Medicine & Rehabilitation",
+      "ambiguous": false
+    },
+    {
+      "term": "Brain Imaging",
+      "target": "Neuroimaging",
+      "ambiguous": false
+    },
+    {
+      "term": "Psychiatric Nursing",
+      "target": "Mental Health Nursing",
+      "ambiguous": false
+    },
+    {
+      "term": "Intensive Care Nursing",
+      "target": "Critical Care Nursing",
+      "ambiguous": false
+    },
+    {
+      "term": "Nutritional Genomics",
+      "target": "Nutrigenomics",
+      "ambiguous": false
+    },
+    {
+      "term": "Neurophysiotherapy",
+      "target": "Neurological Physical Therapy",
+      "ambiguous": false
+    },
+    {
+      "term": "Moral Philosophy",
+      "target": "Ethics",
+      "ambiguous": false
+    },
+    {
+      "term": "Occupational Psychology",
+      "target": "Industrial-Organizational Psychology",
+      "ambiguous": false
+    },
+    {
+      "term": "Work and Organizational Psychology",
+      "target": "Industrial-Organizational Psychology",
+      "ambiguous": false
+    },
+    {
+      "term": "Municipal Administration",
+      "target": "Local Government Administration",
+      "ambiguous": false
+    },
+    {
+      "term": "Medicines Management",
+      "target": "Medication Management",
+      "ambiguous": false
+    },
+    {
+      "term": "Medicines Optimisation",
+      "target": "Medication Management",
+      "ambiguous": false
+    },
+    {
+      "term": "Swallowing Disorders",
+      "target": "Dysphagia",
+      "ambiguous": false
+    },
+    {
+      "term": "Community Care",
+      "target": "Community-Based Care",
+      "ambiguous": false
+    },
+    {
+      "term": "Eldercare",
+      "target": "Older Adult Care",
+      "ambiguous": false
+    },
+    {
+      "term": "Geriatric Social Work",
+      "target": "Gerontological Social Work",
+      "ambiguous": false
+    },
+    {
+      "term": "Healthcare Social Work",
+      "target": "Medical Social Work",
+      "ambiguous": false
+    },
+    {
+      "term": "Sociology of Medicine",
+      "target": "Medical Sociology",
+      "ambiguous": false
+    },
+    {
+      "term": "Sociology of the Family",
+      "target": "Family Sociology",
+      "ambiguous": false
+    },
+    {
+      "term": "Health Sociology",
+      "target": "Sociology of Health",
+      "ambiguous": false
+    },
+    {
+      "term": "Active Travel",
+      "target": "Active Transportation",
+      "ambiguous": false
+    },
+    {
+      "term": "Public Transport",
+      "target": "Public Transportation",
+      "ambiguous": false
+    },
+    {
+      "term": "Mass Transit",
+      "target": "Public Transportation",
+      "ambiguous": false
+    },
+    {
+      "term": "Genomics Bioinformatics",
+      "target": "Genomic Bioinformatics",
+      "ambiguous": false
+    },
+    {
+      "term": "Proteomics Bioinformatics",
+      "target": "Proteomic Bioinformatics",
+      "ambiguous": false
+    },
+    {
+      "term": "Clinical Trial Methodology",
+      "target": "Clinical Trials Methodology",
+      "ambiguous": false
+    },
+    {
+      "term": "Longitudinal Analysis",
+      "target": "Longitudinal Data Analysis",
+      "ambiguous": false
+    },
+    {
+      "term": "Foodservice Management",
+      "target": "Food Service Management",
+      "ambiguous": false
+    },
+    {
+      "term": "Sport Dietetics",
+      "target": "Sports Dietetics",
+      "ambiguous": false
+    },
+    {
+      "term": "Healthcare Economics",
+      "target": "Health Economics",
+      "ambiguous": false
+    },
+    {
+      "term": "Aging Economics",
+      "target": "Economics of Aging",
+      "ambiguous": false
+    },
+    {
+      "term": "Tech Entrepreneurship",
+      "target": "Technology Entrepreneurship",
+      "ambiguous": false
+    },
+    {
+      "term": "Health Entrepreneurship",
+      "target": "Healthcare Entrepreneurship",
+      "ambiguous": false
+    },
+    {
+      "term": "Infectious Diseases Epidemiology",
+      "target": "Infectious Disease Epidemiology",
+      "ambiguous": false
+    },
+    {
+      "term": "Nutrition Epidemiology",
+      "target": "Nutritional Epidemiology",
+      "ambiguous": false
+    },
+    {
+      "term": "Private Wealth Planning",
+      "target": "Wealth Planning",
+      "ambiguous": false
+    },
+    {
+      "term": "Healthcare Quality",
+      "target": "Healthcare Quality Management",
+      "ambiguous": false
+    },
+    {
+      "term": "Long-Term Care Management",
+      "target": "Long-Term Care Administration",
+      "ambiguous": false
+    },
+    {
+      "term": "Health Financing Policy",
+      "target": "Healthcare Financing Policy",
+      "ambiguous": false
+    },
+    {
+      "term": "Cognitive Human Factors",
+      "target": "Cognitive Ergonomics",
+      "ambiguous": false
+    },
+    {
+      "term": "Strategic Workforce Planning",
+      "target": "Workforce Planning",
+      "ambiguous": false
+    },
+    {
+      "term": "Healthcare Journalism",
+      "target": "Health Journalism",
+      "ambiguous": false
+    },
+    {
+      "term": "Public Policy Journalism",
+      "target": "Policy Journalism",
+      "ambiguous": false
+    },
+    {
+      "term": "Employment Law",
+      "target": "Employment & Labor Law",
+      "ambiguous": false
+    },
+    {
+      "term": "Labor Law",
+      "target": "Employment & Labor Law",
+      "ambiguous": false
+    },
+    {
+      "term": "Tech Law",
+      "target": "Technology Law",
+      "ambiguous": false
+    },
+    {
+      "term": "Data Protection Law",
+      "target": "Data Privacy & Protection Law",
+      "ambiguous": false
+    },
+    {
+      "term": "Privacy Law",
+      "target": "Data Privacy & Protection Law",
+      "ambiguous": false
+    },
+    {
+      "term": "Data Privacy Law",
+      "target": "Data Privacy & Protection Law",
+      "ambiguous": false
+    },
+    {
+      "term": "Strategic Marketing",
+      "target": "Marketing Strategy",
+      "ambiguous": false
+    },
+    {
+      "term": "Pension Fund Administration",
+      "target": "Pension Administration",
+      "ambiguous": false
+    },
+    {
+      "term": "Pension Fund Governance",
+      "target": "Pension Governance",
+      "ambiguous": false
+    },
+    {
+      "term": "Psychometric Science",
+      "target": "Psychometrics",
+      "ambiguous": false
+    },
+    {
+      "term": "Pension Actuary",
+      "target": "Pension Actuarial Science",
+      "ambiguous": false
+    },
+    {
+      "term": "Pensions Actuary",
+      "target": "Pension Actuarial Science",
+      "ambiguous": false
+    },
+    {
+      "term": "AI",
+      "target": "Artificial Intelligence",
+      "ambiguous": false
+    },
+    {
+      "term": "ML",
+      "target": "Machine Learning",
+      "ambiguous": false
+    },
+    {
+      "term": "NLP",
+      "target": "Natural Language Processing",
+      "ambiguous": false
+    },
+    {
+      "term": "HCI",
+      "target": "Human-Computer Interaction",
+      "ambiguous": false
+    },
+    {
+      "term": "HR",
+      "target": "Human Resources",
+      "ambiguous": false
+    },
+    {
+      "term": "L&D",
+      "target": "Learning & Development",
+      "ambiguous": false
+    },
+    {
+      "term": "IPE",
+      "target": "International Political Economy",
+      "ambiguous": false
+    },
+    {
+      "term": "GenAI",
+      "target": "Generative AI",
+      "ambiguous": false
+    },
+    {
+      "term": "OT",
+      "target": "Occupational Therapy",
+      "ambiguous": false
+    },
+    {
+      "term": "SLP",
+      "target": "Speech-Language Pathology",
+      "ambiguous": false
+    },
+    {
+      "term": "SLT",
+      "target": "Speech-Language Pathology",
+      "ambiguous": false
+    },
+    {
+      "term": "PM&R",
+      "target": "Physical Medicine & Rehabilitation",
+      "ambiguous": false
+    },
+    {
+      "term": "APN",
+      "target": "Advanced Practice Nursing",
+      "ambiguous": false
+    },
+    {
+      "term": "MCH",
+      "target": "Maternal & Child Health",
+      "ambiguous": false
+    },
+    {
+      "term": "HSR",
+      "target": "Health Services Research",
+      "ambiguous": false
+    },
+    {
+      "term": "LTC",
+      "target": "Long-Term Care",
+      "ambiguous": false
+    },
+    {
+      "term": "EdTech",
+      "target": "Educational Technology",
+      "ambiguous": false
+    },
+    {
+      "term": "HealthTech",
+      "target": "Health Technology",
+      "ambiguous": false
+    },
+    {
+      "term": "VC",
+      "target": "Venture Capital",
+      "ambiguous": false
+    },
+    {
+      "term": "DB Pensions",
+      "target": "Defined Benefit Pensions",
+      "ambiguous": false
+    },
+    {
+      "term": "DC Pensions",
+      "target": "Defined Contribution Pensions",
+      "ambiguous": false
+    },
+    {
+      "term": "LTC Insurance",
+      "target": "Long-Term Care Insurance",
+      "ambiguous": false
+    }
+  ]
+}

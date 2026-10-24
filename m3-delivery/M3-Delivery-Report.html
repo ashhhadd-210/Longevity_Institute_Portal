@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Milestone 3 Delivery — Institute Collaborator Portal</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; color: #292524; margin: 48px 56px; line-height: 1.55; }
+  h1 { font-size: 26px; margin-bottom: 2px; }
+  h2 { font-size: 17px; border-bottom: 1px solid #d6d3d1; padding-bottom: 5px; margin-top: 34px; }
+  h3 { font-size: 15px; margin-top: 22px; margin-bottom: 6px; }
+  .sub { color: #78716c; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid #d6d3d1; padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #f5f5f4; }
+  .ok { color: #166534; font-weight: bold; }
+  .wait { color: #9a3412; font-weight: bold; }
+  .shot { width: 100%; border: 1px solid #d6d3d1; margin: 10px 0 4px; }
+  .cap { font-size: 12.5px; color: #78716c; margin: 0 0 18px; }
+  code { font-family: Consolas, monospace; font-size: 12.5px; background: #f5f5f4; padding: 1px 4px; }
+  .footer { margin-top: 40px; color: #78716c; font-size: 13px; border-top: 1px solid #d6d3d1; padding-top: 12px; }
+  li { margin-bottom: 4px; }
+  .note { background: #f5f5f4; border-left: 3px solid #a8a29e; padding: 10px 14px; margin: 16px 0; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<h1>Institute Collaborator Portal</h1>
+<p class="sub">Milestone 3 Delivery — Profiles, Directory and Identity · Waga C, Pronto Digital · September 2026</p>
+
+<p>Milestone 2 let a person into the Institute. Milestone 3 gives them somewhere to
+stand once they are in, and lets the community find them. Everything in it was
+built from the three Registers the Institute wrote in September, loaded exactly as
+written, and every screenshot below was taken from the live system.</p>
+
+<h2>1. What was delivered</h2>
+<table>
+  <tr><th>Committed for Milestone 3</th><th>Status</th></tr>
+  <tr><td>Collaborator profiles</td><td class="ok">Delivered — title, summary, about, country, links, three positions, credentials, Fields and Specialties; each section saves on its own</td></tr>
+  <tr><td>Photographs</td><td class="ok">Delivered — center-cropped to one portrait rectangle; format, size and animation enforced by software, the rest by the Institute's eye</td></tr>
+  <tr><td>Directory</td><td class="ok">Delivered — browse and search by name, expertise at either level, and country; only occupied Fields offered; counts off until they flatter</td></tr>
+  <tr><td>Search</td><td class="ok">Delivered — search-first selection everywhere, ranked, labeled, alias-aware, punctuation and spelling normalized on both sides</td></tr>
+  <tr><td>Visibility</td><td class="ok">Delivered — four audiences enforced in one place; the approval table is generated from the enforced rules (section 6)</td></tr>
+  <tr><td>Visual identity</td><td class="ok">Delivered — the calm institutional treatment applied consistently across every new screen, on desktop and phone</td></tr>
+  <tr><td>Three positions per collaborator (approved addition)</td><td class="ok">Delivered — structure in Milestone 2, screens here; the limit is enforced by the database</td></tr>
+  <tr><td>Credential library (approved addition)</td><td class="ok">Delivered — 114 starter records for review; meaning searchable; near matches before a request; three per profile</td></tr>
+  <tr><td>Registering an interest in working together</td><td class="ok">Delivered — absorbed; what the first Beta uses instead of messaging</td></tr>
+  <tr><td>Feedback mechanism before Alpha</td><td class="ok">Delivered — absorbed; footer of every page, read in one place</td></tr>
+  <tr><td>One-time load of the founding collaborator spreadsheet</td><td class="wait">Waiting on the spreadsheet</td></tr>
+</table>
+
+<h2>2. The Registers, loaded as written</h2>
+<table>
+  <tr><th>Register</th><th>Loaded</th><th>Note</th></tr>
+  <tr><td>Master Field Register v0.2</td><td>67 Fields</td><td>Including Insurance, Pensions &amp; Retirement Benefits and Housing, added after review</td></tr>
+  <tr><td>Master Specialty Register v0.1</td><td>410 Specialties, 411 Field relationships</td><td>13 Specialties span more than one Field, exactly as your section six listed</td></tr>
+  <tr><td>Master Alias Register v0.1</td><td>133 aliases</td><td>6 more await the Pensions, Insurance and Psychometrics Specialties still being reconciled</td></tr>
+  <tr><td>Credential library</td><td>114 records</td><td>A starter set for your review. FRCP appears three times, by jurisdiction, because those are three different credentials</td></tr>
+</table>
+<p>A Specialty's relationships to its Fields exist for search and discovery only.
+Selecting a Specialty never assigns a Field, so a journalist who writes about
+health policy remains a journalist while still being found by somebody searching
+Public Health.</p>
+
+<h2>3. The decisions this milestone implements</h2>
+
+<h3>Search first, never scroll</h3>
+<p>Sixty seven Fields and four hundred Specialties are nothing to a search and
+unbearable as a list, and that is truest on a phone. Every result is labeled Field
+or Specialty, because similar wording exists at both levels. Ampersands, hyphens
+and British or American spellings are normalized on both sides, so nobody fails to
+find a term because of punctuation they did not copy exactly.</p>
+
+<h3>No dead end</h3>
+<p>If no Field, Specialty or credential fits, the collaborator writes the term they
+use, their profile saves, and they carry on. The term belongs to them while it
+waits and is offered to nobody else. The Institute decides later: approve, correct
+the wording first, decline, or match to an existing term. A decision is final.</p>
+
+<h3>Credentials are records, not acronyms</h3>
+<p>MD is Doctor of Medicine in most of the world and Managing Director in others.
+Because each credential is its own record, the same letters can appear several
+times with different meanings, and the meaning shown beside each is how a person
+picks the one they hold. Correcting the wording of one record corrects every profile
+using it at once.</p>
+
+<h3>Admitted is not the same as visible</h3>
+<p>A profile joins the directory once it carries a name, a title, at least one Field
+and something in the collaborator's own words. The bar is recognition, not
+completeness. A profile that is not listable returns not found rather than
+forbidden, so guessing at addresses reveals nothing about who is a collaborator.</p>
+
+<h3>The promise made at collection holds</h3>
+<p>City and region are collected, shown to the Institute, and never rendered on any
+profile or directory page. A test asserts this specifically.</p>
+
+<h3>The Institute maintains its own vocabulary</h3>
+<p>Renaming a term changes every profile that uses it at once. Retiring a term stops
+offering it to anybody new and leaves it exactly where it is on the profiles that
+already hold it. Building this exposed a fault in the release process, which would
+have restored the original wording on every deployment and silently undone any
+rename. That is fixed, and a test proves a rename survives a release.</p>
+
+<h2>4. The walkthrough</h2>
+<p>A recorded walkthrough accompanies this report: <code>video/M3-Walkthrough.mp4</code>,
+about seven minutes, with subtitles burned in and also supplied as <code>.srt</code> and
+<code>.vtt</code>. It follows two collaborators from admission to finding one another, and
+the Institute deciding a proposed term along the way. It was recorded against the
+live staging system, not staged.</p>
+
+<h2>5. Evidence, from the live system</h2>
+
+<img class="shot" src="screenshots/01-registers.png">
+<p class="cap">The Registers screen: your Fields, with the distinguishing lines, ready to be
+maintained without a developer.</p>
+
+<img class="shot" src="screenshots/02-registers-neighbors.png">
+<p class="cap">Narrowed to "public": the crowded neighbors, and the line beside each that helps
+somebody choose between them.</p>
+
+<img class="shot" src="screenshots/04-home-with-profile-and-directory.png">
+<p class="cap">What a newly admitted collaborator now sees: their profile and the community, one
+click away.</p>
+
+<img class="shot" src="screenshots/05-profile-not-yet-listed.png">
+<p class="cap">The profile, not yet in the directory, with a plain statement of what would put it
+there. Nothing is urgent.</p>
+
+<img class="shot" src="screenshots/06-photo.png">
+<p class="cap">A photograph, cropped to the center and held to the agreed portrait rectangle.</p>
+
+<img class="shot" src="screenshots/08-positions.png">
+<p class="cap">Two of three current positions, each with its own organization and department.</p>
+
+<img class="shot" src="screenshots/09-orientation.png">
+<p class="cap">The orientation, open the first time only. Classify lightly, describe richly.</p>
+
+<img class="shot" src="screenshots/10-field-search.png">
+<p class="cap">Search-first selection. Every result labeled Field or Specialty.</p>
+
+<img class="shot" src="screenshots/11-alias-explained.png">
+<p class="cap">Typing Physiotherapy surfaces Physical Therapy, and the screen quietly says why.</p>
+
+<img class="shot" src="screenshots/12-term-proposed.png">
+<p class="cap">A term the vocabulary lacked, sent to the Institute. The profile is already saved
+and nothing waits.</p>
+
+<img class="shot" src="screenshots/13-frcp-three-records.png">
+<p class="cap">FRCP, three records, three jurisdictions. The meaning beside each is how a person
+picks the one they hold.</p>
+
+<img class="shot" src="screenshots/14-meaning-searchable.png">
+<p class="cap">"public health" finds MPH. The meaning is searchable as well as the letters.</p>
+
+<img class="shot" src="screenshots/16-profile-as-others-see-it.png">
+<p class="cap">The profile as another collaborator sees it. Credentials after the name, the full
+title wrapped rather than cut, links by label only, and no city anywhere.</p>
+
+<img class="shot" src="screenshots/17-directory.png">
+<p class="cap">The directory. Only Fields containing somebody are offered; counts are off while
+the community is small.</p>
+
+<img class="shot" src="screenshots/19-proposals-queue.png">
+<p class="cap">The Proposals queue, with near matches the vocabulary already holds and the
+wording open to correction before approval.</p>
+
+<img class="shot" src="screenshots/21-feedback-for-institute.png">
+<p class="cap">Feedback, read in one place, with the page each person was on.</p>
+
+<img class="shot" src="screenshots/22-search-finds-helena.png">
+<p class="cap">A geriatrician searches for an actuary and finds her.</p>
+
+<img class="shot" src="screenshots/23-interest-registered.png">
+<p class="cap">An interest in working together, registered once, seen by the Institute, and passed
+on by hand at Alpha.</p>
+
+<img class="shot" src="screenshots/24-interests-for-institute.png">
+<p class="cap">The Institute's view of who would like to work with whom.</p>
+
+<h2>6. Who can see what</h2>
+<p>The architecture approved on 29 August, enforced in one place and printed from the
+same declarations the software obeys, so the written policy and the actual
+behavior cannot drift apart. Four audiences, most protected first. Nothing is
+placed in the fourth. A collaborator may always show less than the Institute
+permits and never more, and every ceiling traces to the promise made when the
+information was collected.</p>
+<p>The full field-by-field table is Appendix A of this report, and is also supplied as a
+separate document, <code>Who-Can-See-What.pdf</code>, for your approval. A field nobody has declared
+belongs to the Institute alone, and the test suite refuses to pass until somebody states an
+intention.</p>
+
+<h2>7. Verified by tests</h2>
+<p><strong>193 tests, 606 assertions, all passing</strong>, alongside code style, static
+analysis at level 6, a dependency security audit, and every migration proven to
+roll back. Among what they lock in:</p>
+<ul>
+  <li>The Registers load as written: 67 Fields, 411 relationships, Public Health Nutrition spanning its three Fields.</li>
+  <li>Selecting a Specialty never assigns a Field, and a Specialty still makes a person findable under its Fields.</li>
+  <li>Narrowing by Field reorders results and never removes any.</li>
+  <li>Punctuation and spelling variants find the term; nonsense finds nothing rather than guessing.</li>
+  <li>A missing term is recorded without blocking anybody, and is nobody else's vocabulary until approved.</li>
+  <li>A fourth credential and a fourth position are refused by the database, not only by the screen.</li>
+  <li>City is collected and never published; a non-listable profile is not found rather than forbidden.</li>
+  <li>A collaborator may narrow visibility and never widen it; nothing is visible on the open web; an undeclared field fails the build.</li>
+  <li>A rename by the Institute survives a release; retiring a term leaves it on existing profiles.</li>
+  <li>An interest is registered once per pair, only where accepted, never in oneself; feedback records its page.</li>
+  <li>Approving a proposal tells the proposer; declining tells nobody automatically.</li>
+</ul>
+
+<h2>8. Three things worth knowing</h2>
+<p><strong>Two items wait on material from the Institute.</strong> The founding collaborator
+spreadsheet is loaded the moment it arrives. The distinguishing lines for the
+twenty-nine crowded Fields can be entered in the Registers screen as they are written.</p>
+<p><strong>The live servers taught three lessons.</strong> Exercising the whole path
+on the real system before delivery, rather than only in tests, found that the release
+process would have discarded every uploaded photograph on the next deployment, that the
+web server had no permission to store one, and that every admitted collaborator carried a
+hidden directory switch left over from before the directory existed, so a complete profile
+could be told it was listed while its own page answered not found. All three are fixed:
+uploads now survive releases, the release itself prepares the storage the web server
+needs, and a collaborator is listed the moment their profile says enough, with the
+Institute holding a deliberate switch to withhold anybody. Each has a test or a release
+check behind it.</p>
+<p><strong>Six aliases resolve to nothing yet.</strong> They point at Pensions, Insurance and
+Psychometrics Specialties still being reconciled. The loader skips what it cannot
+resolve rather than inventing a target; they begin working when the Specialty
+Register catches up.</p>
+
+<h2>9. Where everything lives</h2>
+<ul>
+  <li>Staging: <code>https://staging.portal.activelongevityinstitute.org</code> — where the screenshots and video were taken.</li>
+  <li>Production: <code>https://portal.activelongevityinstitute.org</code> — the same release. No collaborator has yet been invited, so nothing is exposed.</li>
+  <li>Repository: <code>github.com/ActiveLongevityInstitute/active-longevity-portal</code>, the Institute's own organization.</li>
+  <li>The vocabulary data: <code>database/data/expertise-vocabulary.json</code> and <code>credentials.json</code>, loaded on every release, create-only.</li>
+</ul>
+
+<h2>10. Next — Milestone 4: Production Readiness and Handover</h2>
+<p>Hardening, monitoring, documentation, training, a cold-start test proving the
+system can be rebuilt from nothing, the launch itself, and thirty days of defect
+support, running while the Alpha group is already inside the Portal and saying
+what they find.</p>
+
+
+<h2 style="page-break-before: always">Appendix A. Who can see what</h2>
+<p>Printed from the same declarations the Portal enforces, so this table and the live
+behavior cannot drift apart. Please read it as the policy you are approving.</p>
+<p>Four audiences, from most protected to least. A collaborator may always choose to show less than the Institute permits, and never more.</p>
+<ul><li><strong>The Institute only</strong></li><li><strong>The collaborator and the Institute</strong></li><li><strong>Admitted collaborators</strong></li><li><strong>Anyone on the web</strong></li></ul>
+<p>Nothing is placed in the fourth. It exists so that if the Institute ever decides something should be visible on the open web, that is a setting rather than a rebuild.</p>
+<h3>The Institute only</h3>
+<table><tr><th>Information</th><th>Who decides</th><th>Why this limit</th></tr><tr><td>City</td><td>The Institute</td><td>Collected as administrative, and said to be so at the time.</td></tr><tr><td>State or region</td><td>The Institute</td><td>Collected as administrative, and said to be so at the time.</td></tr><tr><td>Password</td><td>The Institute</td><td>Stored only as an irreversible hash and never displayed to anybody.</td></tr><tr><td>Two-factor secret</td><td>The Institute</td><td>A security credential, never shown.</td></tr><tr><td>How they came to the Institute</td><td>The Institute</td><td>Provenance is the Institute&#x27;s record, not a public fact.</td></tr><tr><td>Who recommended them</td><td>The Institute</td><td>Named to the invited person by the Institute if it chooses, never published.</td></tr><tr><td>The referrer&#x27;s relationship to them</td><td>The Institute</td><td>A private statement by one person about another; seen by the Institute alone, permanently.</td></tr><tr><td>How the referrer knows them</td><td>The Institute</td><td>Given in confidence to inform a decision.</td></tr><tr><td>Why they applied</td><td>The Institute</td><td>Written for the admission decision, not for publication.</td></tr><tr><td>Review decisions and reasoning</td><td>The Institute</td><td>The Institute&#x27;s own judgments.</td></tr></table>
+<h3>The collaborator and the Institute</h3>
+<table><tr><th>Information</th><th>Who decides</th><th>Why this limit</th></tr><tr><td>Email address</td><td>The Institute</td><td>The Portal carries messages rather than displaying addresses. An address never displayed cannot be harvested.</td></tr><tr><td>Consent record</td><td>The Institute</td><td>Theirs to see, and the Institute&#x27;s to evidence.</td></tr><tr><td>Terms they proposed</td><td>The Institute</td><td>Visible to them while awaiting review, and published only once approved.</td></tr></table>
+<h3>Admitted collaborators</h3>
+<table><tr><th>Information</th><th>Who decides</th><th>Why this limit</th></tr><tr><td>First name</td><td>The Institute</td><td>A collaborator is known to the community by name.</td></tr><tr><td>Middle name</td><td>The Institute</td><td>Part of the name of record where a person gives one.</td></tr><tr><td>Family name</td><td>The Institute</td><td>A collaborator is known to the community by name.</td></tr><tr><td>Generational suffix</td><td>The Institute</td><td>Part of the name, held apart so sorting stays correct.</td></tr><tr><td>Preferred name</td><td>The Institute</td><td>Given in answer to how the Portal should address them.</td></tr><tr><td>Credentials after the name</td><td>The Institute sets the limit; the collaborator may show less</td><td>Chosen for display; the collaborator may show none.</td></tr><tr><td>Professional title</td><td>The Institute</td><td>The heart of a directory entry.</td></tr><tr><td>One-line summary</td><td>The Institute</td><td>Written for other collaborators to read.</td></tr><tr><td>About your work</td><td>The Institute sets the limit; the collaborator may show less</td><td>Written for the community; the collaborator may leave it blank.</td></tr><tr><td>Organization</td><td>The Institute</td><td>Professional affiliation is part of standing.</td></tr><tr><td>Current positions, up to three</td><td>The Institute</td><td>Senior people hold more than one appointment.</td></tr><tr><td>Fields</td><td>The Institute</td><td>The directory exists so that people can be found by these.</td></tr><tr><td>Specialties</td><td>The Institute</td><td>Optional precision, offered for discovery.</td></tr><tr><td>Links</td><td>The Institute sets the limit; the collaborator may show less</td><td>The collaborator chooses which to add and in what order.</td></tr><tr><td>Photograph</td><td>The Institute sets the limit; the collaborator may show less</td><td>The collaborator may choose not to publish one.</td></tr><tr><td>Languages</td><td>The Institute sets the limit; the collaborator may show less</td><td>Offered to help collaborators speak to one another.</td></tr><tr><td>Open to collaboration</td><td>The Institute sets the limit; the collaborator may show less</td><td>Entirely the collaborator&#x27;s own decision.</td></tr><tr><td>Country</td><td>The Institute</td><td>Collected as part of the directory and searchable by it.</td></tr></table>
+<h3>Anyone on the web</h3>
+<p><em>Nothing. Deliberately.</em></p>
+<h3>What this guarantees</h3>
+<ul><li>A field nobody has declared belongs to the Institute alone, and the test suite refuses to pass until somebody states an intention. The Portal&#x27;s mistakes err toward privacy.</li><li>Every ceiling traces back to the promise made when the information was collected. A field is never later shown more widely than the person was told when they gave it.</li><li>Enforcement happens in one place rather than page by page, so no future screen can get this wrong by forgetting.</li></ul>
+
+<p class="footer">Waga C · Pronto Digital — Full-Stack Engineering &amp; Platform Architecture · Milestone 3 of 4, Profiles, Directory and Identity</p>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+Hi Linas,
+
+These two are really one question wearing two hats, so let me take them together.
+
+The mobile note worries that the classification takes up too much room. The search note worries that it has to carry too much meaning. Underneath both is the same concern, that the structure grows unwieldy and the collaborator is the one who pays for it. And both have the same answer: keep the structure small, and let search carry the specificity.
+
+On search, the happy news is that this was settled a while ago. When I wrote the architecture package in August, before any code existed, I specified PostgreSQL's own full text search across profile text, with fuzzy matching on names, and deliberately no external search service. It is written down in the Milestone 1 documents in your repository, dated the fifteenth of August.
+
+So the foundation already expects exactly what you describe. Someone searching for sarcopenia, frailty, mortality modelling or longitudinal research would find collaborators who used those words anywhere in their profile, whether or not the term exists in the formal structure.
+
+To be straight with you, the foundation is planned but the feature itself sits just outside the Milestone 3 line, which covers name, Field and country. It is a modest addition rather than a free one, and modest precisely because the groundwork went in a milestone ago. I will price it properly with the Milestone 3 design package rather than pluck a number out of the air now.
+
+I also think you are right to want it, for the reason you gave rather than for its own sake. If people can be found by what they actually wrote, the formal structure does not have to be exhaustive, which is what you were asking for in the first place. The two things hold each other up.
+
+One caution so the expectation is right. Text search finds words rather than meaning, so somebody writing about muscle loss will not appear under a search for sarcopenia unless one of them happens to use the other's word. That is why both need to exist. The structure catches people who describe the same work differently. The text catches the specificity the structure was never meant to hold.
+
+On mobile, the Portal has been built responsively from the beginning, and what exists today works properly on a phone. But the screens you are actually asking about, Field and Specialty selection, profile completion and the directory, have not been designed yet. So you are raising this at the only moment when it is cheap, which is while they are still on paper.
+
+Concretely, this is what I will do. Long Field Family names will wrap onto a second line rather than being cut short or shrunk to unreadable text, which is the same rule we agreed for professional titles. Selection will be search first rather than a list to scroll, which is what makes a large vocabulary comfortable on any screen and happens to suit a small one particularly well. Profile completion will come in sections, so somebody can do a piece, leave, and return later on a different device. Photographs will upload from a phone camera roll, which is where most of them will actually come from. And the directory will read as a list rather than a wide table, because tables do not survive a narrow screen intact.
+
+I will also test on real phones rather than by narrowing a browser window on my desk.
+
+One last thought. A good number of your collaborators will be reading on a phone in imperfect light, which argues for generous text and plain layouts rather than dense, clever ones. That happens to be the same direction we chose for the Portal's character anyway, so the constraint and the intention point the same way, which is a piece of luck.
+
+Warm regards,
+
+Waga

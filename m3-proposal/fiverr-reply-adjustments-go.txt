@@ -1,0 +1,14 @@
+Dear Linas,
+
+Thank you. That is a clear decision on every point, and it lets me get on.
+
+The eight adjustments in section three begin today, exactly as listed. They go to staging as one release with tests behind each, and I will write to you the moment they are there, with a short note saying what to look at and where. I expect that within a few days.
+
+Your intention on column C is noted, and noted only. Nothing from it starts until you write to say so. When that day comes, the whole package at $1,460 is the right way to build it, because the shared structure is laid once and the eleven sections then follow in a natural order; I would expect about two working weeks from your word to everything on staging. I also think your reasoning is sound: if the Alpha group contains long careers, they should test the architecture built for long careers, not a preview of it.
+
+On the walkthrough, your assumption is exactly how I would do it. You sit at your computer with the reconciliation beside you, signed in to the staging Portal as the Founder. We talk on WhatsApp, voice rather than video so your screen stays yours, and you drive. I follow the same screens on my side and say where to look next, and you stop wherever you like. It takes about an hour, and it covers the full path: admitting a collaborator, building the profile from a blank one, classification, credentials, readiness, the directory, the Registers and the Proposals queue, and the community side. The two demonstration people from the video, Helena Marsh and Rafael Duarte, are still on staging, so there is something to find before you have built anything yourself.
+
+Early morning Chicago suits me well. Once the adjustments are on staging I will propose two slots and you pick. Before then, nothing is needed from you except the Founder sign in details you already hold, and an authenticator app on your phone for the second step.
+
+Best regards,
+Waga

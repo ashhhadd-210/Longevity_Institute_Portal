@@ -1,0 +1,69 @@
+Hi Linas,
+
+I have been through the Register properly. The direct answer to your question first: nothing in it conflicts with the Milestone 3 design, and nothing in it changes the agreed scope. The principles section reads as though it were written alongside the architecture rather than against it, which makes my job easy.
+
+Five things came out of the review. The first is the one that matters.
+
+Three of your own priorities are missing
+
+Back in August you were clear that this taxonomy had to be built from the questions longer lives raise rather than from academic departments, and you named the fields that had to be visible rather than tucked away: insurance, pensions, housing, urban design, employment, government and technology.
+
+Four of those seven are in the Register. Three are not.
+
+Insurance is absent. Actuarial Science is there, and it is not the same thing. An actuary prices risk; an insurance executive runs a business that carries it. The second person will read your list, find Actuarial Science, recognise that it describes a colleague rather than themselves, and conclude the Institute is aimed at somebody else.
+
+Pensions is absent. Financial Planning is the nearest neighbour and it is a different profession. Someone running a pension scheme, or working in retirement income policy, is not a financial planner. This is also the field where the arithmetic of longer lives bites hardest, so its absence is conspicuous.
+
+Housing is absent. Architecture and Urban Design is adjacent but describes designers. Housing policy, provision and operation is a separate professional world, and where people live as they age is not a minor question.
+
+I am not proposing wording, since the Register is yours. But I would be uncomfortable if these three went to Alpha missing, because they are precisely the professionals your Institute was conceived to reach and who a conventional longevity institute would overlook.
+
+Sixty four near neighbours, and no descriptions
+
+This is the genuine implementation risk, and it is not about the number.
+
+Several Fields sit very close to one another. Social Care and Social Work. Public Health, Health Policy, Public Policy and Public Administration. Finance, Financial Planning, Investment Management and Venture Capital. Statistics, Biostatistics and Bioinformatics. Technology, Computer Science and Artificial Intelligence. Nutrition Science and Dietetics.
+
+Every one of those distinctions is defensible, and most follow directly from your own principle about practitioner and academic identities being different. The difficulty is not that they are wrong. It is that a collaborator meeting sixty four bare names has to guess which of four neighbours is theirs, and the Register gives them nothing to guess with.
+
+The remedy is small: a single short line under each Field, whose only job is to help someone choose correctly. Social Care describing the sector and its services, Social Work describing the profession and its practitioners, and so on. Not a definition, and not a longevity rationale. Just enough to settle the question of whether this one is yours.
+
+You do not need to write sixty four of them. Perhaps twenty Fields have a close neighbour, and only those need a line. The rest are unambiguous.
+
+Two small implementation details
+
+Both are mine to handle rather than yours, but you should know they have been thought about.
+
+Several Fields contain an ampersand, and one contains a hyphen. Somebody typing Genetics and Genomics, or Speech Language Pathology, must find the entry regardless. Search will treat ampersands, the word and, and hyphens as interchangeable, so nobody fails to find a Field because of punctuation they did not copy exactly.
+
+The longest entry runs to thirty nine characters, which sits comfortably inside the limits and wraps cleanly on a phone.
+
+Aliases, once you reach them
+
+Nothing to do now, but the Register makes the shape of the alias set obvious, and it is mostly job titles pointing at Fields. Actuary to Actuarial Science. Physician, doctor and GP to Medicine. Physiotherapist to Physical Therapy. Dietitian to Dietetics. Lawyer, solicitor and attorney to Law. Urban planner to Architecture and Urban Design. Chief human resources officer and head of people to Human Resources. Demographer to Demography.
+
+A handful will usefully point at more than one Field. Data scientist belongs with both Statistics and Computer Science, and someone searching it should find both.
+
+On showing counts during Alpha
+
+You wanted to think about this, so here is a view rather than a decision.
+
+I would leave the numbers off at Alpha. With eight participants, a count is more likely to read as a disappointment than as information. Medicine followed by a 1 says something slightly deflating that Medicine on its own does not.
+
+The Fields shown will already be only those containing somebody, so the list is honest either way. Numbers become genuinely useful once they flatter, which is a switch you can turn on whenever you judge the moment right, exactly as with the figures on the prospective collaborator preview.
+
+In summary: nothing to change architecturally, three Fields I think are missing, around twenty short descriptive lines worth writing, and no rush on any of it.
+
+One practical thought to finish on
+
+You have now done the greater part of the thinking Milestone 3 depends on. The Register is settled in substance, the classification rules are agreed, and the two pieces still outstanding, the Specialty vocabulary and the aliases, are both things we agreed are better shaped by real use than by further work in advance.
+
+So there is nothing left to decide before building can start, and I suspect the next useful step is to see this on a screen rather than on paper. Loading the Register and looking at the selection experience with real Fields in it will tell you things a document cannot, particularly about the near neighbours, and it is far easier to adjust a descriptive line then than to agonise over it now.
+
+Whenever you would like to begin, say the word and I will send the Milestone 3 offer. The first thing you would receive is the design package, including the field-by-field visibility table for your approval before any code is written, which is the piece that genuinely needs your eye.
+
+There is no hurry from my side. I mention it only because you are further ahead than you may realise, and the remaining questions are the sort that answer themselves once people are actually using the thing.
+
+Warm regards,
+
+Waga

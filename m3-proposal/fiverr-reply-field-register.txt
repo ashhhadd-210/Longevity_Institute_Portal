@@ -1,0 +1,69 @@
+Hi Linas,
+
+No apology was needed for the time this took. Reconciling the earlier decisions before writing is exactly the work that prevents expensive corrections later, and this note shows it.
+
+Let me deal with the number first, then with the one thing you have changed, because it matters and you are right about it.
+
+On sixty four
+
+I am not troubled by it, and I think the test you settled on is better than the one I gave you. I said fifteen to twenty because I was guarding against a list that nobody could search. You have guarded against something more important, which is a professional being told the Institute has no home for them. Those are not equally recoverable mistakes. A long list is an inconvenience; a chief human resources officer finding nothing that describes them is a lost collaborator.
+
+Sixty four is also not a problem for the interface, because we are searching rather than scrolling. Search does not care whether there are sixty four entries or six hundred. Alphabetical browsing as a second route is the right companion.
+
+Classify lightly, describe richly is a good principle and I would like to borrow it for the orientation screen, because it tells a collaborator in four words what we want from them.
+
+The thing you have changed, and why you are right
+
+You have reversed something I proposed last week, and I want to make sure you know it, since you asked me to flag rather than absorb silently.
+
+I said that selecting a Specialty would quietly bring its Fields with it. You are now saying it must not. You are correct and I was wrong.
+
+My reason was to stop the two levels contradicting each other. Your reason is better: a journalist who writes about health policy is a journalist. If selecting Health Policy as a Specialty silently filed them under Public Health, the Portal would have misrepresented their professional identity, which is precisely the failure the whole exercise has been guarding against.
+
+So the fix is to stop treating the relationship as a constraint at all. Fields and Specialties become two independent choices, and the links between them exist only for search, never for assignment.
+
+That distinction does all the work. Nobody is ever placed in a Field they did not choose. But somebody searching Epidemiology still finds the collaborator who chose Nutritional Epidemiology as a Specialty, even though that person never claimed Epidemiology as a Field and may not consider themselves an epidemiologist at all.
+
+A search relationship rather than an identity claim. It is a smaller change than the one I described last week, and a more honest model.
+
+Something you have not raised, which I think you should know
+
+With eight Alpha participants spread across sixty four Fields, most Fields will be empty.
+
+That is not a flaw in the Register. It is simply arithmetic, and it will correct itself as the community grows. But it affects what the directory should do at the beginning, because a browsing screen showing sixty four categories of which fifty eight contain nobody makes a thriving Institute look deserted.
+
+So the directory will show only Fields that actually contain collaborators, with the number beside each. Empty Fields simply do not appear until somebody occupies them. Nothing is hidden, the Register is unaffected, and the Institute looks like what it is, which is small and growing rather than vast and vacant.
+
+I mention it now because it is a five minute decision during design and an awkward conversation after Alpha.
+
+No dead end, at both levels
+
+Your preference and my design are the same, so this is a straightforward yes.
+
+If a collaborator cannot find an appropriate Field, they enter the term they use, their profile saves, and they continue. Exactly the same at Specialty level. Nothing is interrupted, nothing waits on your review, and their own wording sits on their record where both you and they can see it.
+
+You then decide afterwards, at your leisure, whether the term maps to something that exists, becomes an alias, joins the Register properly, or simply remains that person's own description. None of those decisions blocks anybody.
+
+I should be clear that this is designed rather than built, because Milestone 3 has not started. But it is designed, and it is the same mechanism as the credential library, so it is settled rather than speculative.
+
+Specialties
+
+I agree, and more strongly than for Fields. Build a useful initial vocabulary for the people you actually expect, and let real use reveal the rest. A Specialty list written in advance for a community that does not yet exist is guesswork wearing a lab coat.
+
+Longevity as a Discovery Term
+
+That works, and the architecture already has room for it because an alias may point at several entries rather than one.
+
+So Longevity need not be a Field, and need not be forced under any single Field. Searching it can lead into geroscience, demography, actuarial science, architecture, nutrition and the rest, gathering the people whose work genuinely bears on it regardless of where they classified themselves. The professional taxonomy stays honest, and the Institute's defining term still behaves as a real route in.
+
+Where this leaves the architecture
+
+Nothing in your note conflicts with the Milestone 3 design. The one genuine change, independent selection, makes the model simpler than what I proposed rather than more complex.
+
+I will come back to you separately on the Register itself once I have read it properly, principally to check that nothing in it needs a structural accommodation we have not already discussed.
+
+Send the Specialty vocabulary and the alias set whenever they are ready. There is no hurry on either.
+
+Warm regards,
+
+Waga

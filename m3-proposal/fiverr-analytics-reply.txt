@@ -1,0 +1,75 @@
+Hi Linas,
+
+Good news on this one. It is not merely planned. It has been running since the first milestone.
+
+Back in August we agreed that the Portal would record events from the very beginning, because analytics is the one thing that cannot be added retrospectively. A dashboard can be built at any time. Last month's data cannot. That decision is now paying for itself.
+
+WHAT IS ALREADY BEING RECORDED
+
+Twenty-two kinds of event, each stamped with the moment it happened, and none of them alterable afterwards. The database itself refuses any attempt to rewrite history.
+
+They cover the admission story end to end: applications and referrals submitted, questions asked and answered, approvals, declines, cases set aside and resumed, invitations issued, reissued, revoked, lapsed and accepted, and collaborators admitted.
+
+They also cover access: every sign-in, every sign-out, failed attempts, lockouts and password resets.
+
+So several things on your list can already be answered from data held today. Registrations and admissions. Unique active people over any period you choose. Login frequency. Returning versus inactive collaborators. And the trend of all of it over time.
+
+THE DISTINCTION THAT MAKES THIS AFFORDABLE
+
+There are two separate things here, and keeping them apart is what keeps the cost sensible.
+
+The first is the record. It has to be created as things happen, it is cheap, and it is already done.
+
+The second is the dashboard, which is only a way of reading that record. It can be built whenever you like, and when it is built it will show the whole period before it existed.
+
+Your question treats them as one thing, quite reasonably. They are not, and that works in your favour.
+
+WHAT IS NOT YET CAPTURED, AND WHY
+
+Three items on your list depend on things that do not exist yet.
+
+Profile completion, and any breakdown by professional discipline, need profiles and the discipline structure. Both arrive in Milestone 3.
+
+Use of the major Portal functions means directory searches and profile views, which cannot be recorded before the directory exists.
+
+Announcement readership depends on announcements, which are still on your deferred list.
+
+So as Milestone 3 is built I will add event recording for each new part of the Portal as it appears, for exactly the reason we agreed in August. That is absorbed, as the original event recording was. By the time you want to look, the history will be waiting for you.
+
+YOUR PRIVACY INSTINCT SHOULD BE ARCHITECTURE, NOT POLICY
+
+You said you are not looking to monitor individuals unnecessarily. I would go further and build that in, rather than leave it to restraint.
+
+The dashboard will read aggregates. There will be no screen anywhere that shows one named collaborator's activity over time, because the moment such a screen exists, sooner or later somebody looks at it.
+
+And it will not show any figure so finely divided that it describes a single person. "One collaborator in Lithuania signed in twice this week" is not a statistic. It is surveillance of a named individual wearing a disguise. So there will be a minimum group size, below which a breakdown is simply not offered.
+
+You will recognise that rule. It is the same one we agreed for the prospective-collaborator preview, and for the same reason.
+
+THE ONE ITEM I WOULD PUSH BACK ON
+
+Announcement readership, if what it means is knowing who opened an email.
+
+Measuring opens requires an invisible image inside every message that reports back when it loads. There are two problems with it. It tells you when a person read their mail and roughly where they were, which is a different kind of thing from counting sign-ins to a Portal somebody chose to join. And it no longer works reliably in any case, because Apple and others now load those images automatically for everybody, so a large share of your opens would be machines rather than people.
+
+What I would measure instead is clicks. Did the announcement bring people back to the Portal. That is honest, it is accurate, it reflects something a person actually chose to do, and I think it is the thing you genuinely want to know.
+
+ONE WARNING ABOUT SMALL NUMBERS
+
+With five to ten people in the Alpha, and even with your founding group, most engagement figures will be noise. Two people taking a holiday will look like a forty percent collapse.
+
+So the dashboard will show counts and plain trends rather than dramatic percentages, and it will always say how many people a figure rests on. A number that cannot be trusted is worse than no number, because it invites a decision.
+
+WHAT I RECOMMEND, AND WHAT IT COSTS
+
+Keep recording, and keep it free. As each new part of the Portal is built, its events are recorded from its first day. That continues to be absorbed.
+
+Build the dashboard later. It is $400, and I would not build it yet.
+
+Not because of the money, but because there would be nothing to read. A dashboard looking at ten collaborators tells you less than simply asking them how they are finding it. The right moment is once your founding group is genuinely using the Portal, and by then you will have months of history waiting, because it will have been accumulating the whole time.
+
+That is the entire point of having started early.
+
+Warm regards,
+
+Waga

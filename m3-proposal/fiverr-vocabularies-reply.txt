@@ -1,0 +1,79 @@
+[ARCHIVE NOTE, not part of the message]
+This file contains a $220 credential-library revision that was NOT SENT.
+The version actually sent priced it at $150, making Milestone 3 $1,100.
+$150 is the number of record. Do not reuse the pricing text below.
+----------------------------------------------------------------------
+
+Hi Linas,
+
+This is the right moment for it, and I want to start by naming what you have actually described, because I think it is one thing rather than three.
+
+Credentials, disciplines and specialties are three different vocabularies, but the lifecycle you set out is identical for all of them. Search what exists, select it, request it if it is missing, the Institute reviews and standardises, and it becomes permanent. That is one mechanism used three times, not three separate builds.
+
+So we will build it once. One vocabulary engine, one review queue for proposals, one set of administrative screens, and three vocabularies running on it. That matters for cost, it matters for your time because every proposal arrives in the same place and behaves the same way, and it matters later, because the fourth vocabulary we discover we need will be almost free.
+
+WHAT IS ALREADY ACCOUNTED FOR
+
+The two-level structure is already agreed and is in the Milestone 3 design: discipline and specialty, with searching a discipline returning everyone in its specialties, and a collaborator able to hold specialties across several disciplines. The short line explaining why longer lives raise questions in each discipline is there. So are the administrative screens for you to add, rename, reorder and retire entries yourself, permanently, without development work.
+
+We also agreed in principle, back when we settled the taxonomy, that collaborators could propose additions for approval.
+
+I should be straight about one thing. When I wrote the Milestone 3 scope last week I described the administrative side of that properly but described the collaborator side of it in a single passing phrase. Your message has made me go back and look, and the document undersells what was agreed. That is my omission and I am correcting it rather than letting you discover it later.
+
+WHAT YOUR MESSAGE GENUINELY ADDS
+
+Three things.
+
+The credential library, which was the second item on your deferred list. It was quoted as a single line and you have now specified it properly: the acronym, its full meaning, jurisdiction and type, the type-ahead picker, the request option at the point of need, and administration that still works at a thousand entries.
+
+The request-and-approve loop for disciplines and specialties as a real, built thing rather than a principle. Specified, queued, reviewed, standardised.
+
+And searching rather than scrolling, everywhere. That sounds like a detail and is not. It is what makes a thousand-entry library usable and a hundred-entry one tolerable.
+
+THE QUESTION YOU LEFT TO ME
+
+You asked how to handle a specialty that belongs under more than one discipline, and said you did not want an artificial one-to-one relationship.
+
+The answer is that a specialty carries links to as many disciplines as genuinely apply, rather than belonging to one. Health economics sits under both economics and public health because it truly does. A collaborator who selects it is found by someone searching either discipline, which is precisely the interdisciplinary behaviour the Institute exists to produce.
+
+There is a related point I want to raise, because your message and our earlier agreement pull in slightly different directions and I would rather resolve it now than discover it mid-build.
+
+We agreed earlier that a collaborator selects specialties only, and the discipline follows automatically, so that the two levels can never contradict each other. Your message describes selecting the discipline first and then the specialty within it. Your reason is good: it turns an impossible list of thousands into a manageable one.
+
+Both are right, and they can both be true. Choosing a discipline first will act as a way of narrowing the search, not as a separate answer to be stored. What is recorded remains the specialty, with its disciplines derived from it, so the two levels still cannot disagree.
+
+But I would ask for one thing. A collaborator must also be able to search specialties directly, without choosing a discipline first. If we force everyone down through a discipline, the person who suffers is the one who does not know which discipline the Institute has filed their work under, and that is disproportionately the interdisciplinary collaborator. Those are the people the Institute most wants. It would be a shame to make the front door hardest for them.
+
+TWO THINGS I WOULD ADD
+
+First, a collaborator must never be held up waiting for you. If someone requests a new credential while completing their profile, their profile saves immediately with that credential attached, marked as awaiting Institute approval, visible to them and to you but not yet shown publicly or offered to anyone else. It appears on their profile the moment you approve it. Nobody is left stuck at a form, and nothing unapproved leaks into the vocabulary.
+
+Second, a consequence of doing this properly that is worth knowing. Because collaborators select an entry rather than typing text, when you standardise the wording of an entry it corrects every profile using it, at once. If forty people hold a credential you later decide should read differently, you change it once. That is the real dividend of a controlled vocabulary, and it is only available if we build it before the data exists rather than after.
+
+And when you retire an entry, people already holding it keep it. It simply stops being offered to anyone new. History is not rewritten by a change of policy.
+
+WHERE EACH PIECE BELONGS, AND WHAT IT COSTS
+
+The vocabulary engine, the review queue, and the request-and-approve flow for disciplines and specialties belong in Milestone 3, and I am absorbing them. The propose-for-approval part was already agreed, the rest is the machinery it needs, and it must exist before the profile is built rather than after.
+
+The credential library also belongs in Milestone 3, and here I want to change my own advice.
+
+Last week I recommended you defer it. Your reasoning is better than mine was. Credentials appear immediately after a person's name on every profile, so they are the most visible text in the directory and the most likely to arrive as inconsistent free text. And retrofitting control after two hundred and forty people have typed whatever they liked means a data cleanup, not a feature. You are right that it should be controlled from the start.
+
+On price, it stays at the $220 I quoted you last week, and I want to be open about why that is not simply the old number repeated.
+
+What you have specified here is considerably more than the single line I originally priced. The jurisdiction and the credential type alongside the meaning, the type-ahead picker, the request option at the point of need, the ability to correct wording before approving, and administration that still works at a thousand entries. Priced on its own, that would now cost more than $220.
+
+It stays at $220 because the mechanism is shared. The engine is being built anyway for disciplines and specialties, so the credential library rides on it rather than paying for it. I would rather that saving reached you as a fuller feature at the price already quoted than as a smaller number for a thinner one.
+
+So Milestone 3 becomes $600, plus $350 for the position screens, plus $220 for the credential library. That is $1,100.
+
+The staging still works in your favour. The $600 begins the work. The other $570 is for things built late in the milestone and can be invoiced then, not now.
+
+ONE THING I WOULD DEFER
+
+When a library reaches many hundreds of entries you will eventually approve two things that turn out to mean the same, and you will want to merge them and have every profile follow. That is genuinely useful at scale and unnecessary at launch. I would leave it until you have seen the library grow and know what actually needs merging.
+
+Warm regards,
+
+Waga

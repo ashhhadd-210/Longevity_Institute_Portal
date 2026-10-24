@@ -1,0 +1,18 @@
+Dear Linas,
+
+Thank you. This is exactly what I needed, and it arrived at the right moment, before anything was costed on an assumption.
+
+Having read it through, the picture is clearer rather than larger. Every one of the eleven sections is a selected list with a ceiling, a small set of fields, a few required and most optional, and a short free text. The differences between them are in the fields and the wording, not in the shape. That matters for the costing, because the first section carries the cost of building the shape once, and each further section is largely the cost of its fields and its screen wording. I will price them exactly that way, as a group and singly, so that the price of leaving one out is visible.
+
+Three things in the specification I want to acknowledge specifically, because they shape the design rather than merely the list of fields.
+
+First, the integrity rule in Education. A degree in progress must read as in progress and never as earned, and a programme attended must never imply a status the person did not hold. That is a rule the structure should enforce, not a note the collaborator is trusted to follow, and I will treat it as such when I describe what building it involves.
+
+Second, the repeated principle that a legitimate role or activity may exist without an organisation. This affects Current Positions, Selected Professional Experience and Boards alike, and I will make sure the assessment shows how each handles it consistently.
+
+Third, the decision not to collect license numbers and not to show a static Active status. Both are restraint that protects the Institute from implying verification it does not perform, and both make the section simpler, not harder.
+
+I have everything I need for the reconciliation now. Nothing in this is being built. You will have the document by the end of the week, and the walkthrough follows it whenever suits you.
+
+Best regards,
+Waga

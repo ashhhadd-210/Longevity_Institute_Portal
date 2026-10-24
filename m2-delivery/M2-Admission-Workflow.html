@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Milestone 2 — Admission Workflow &amp; Product Direction</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; color: #292524; margin: 48px 56px; line-height: 1.55; }
+  h1 { font-size: 26px; margin-bottom: 2px; }
+  h2 { font-size: 17px; border-bottom: 1px solid #d6d3d1; padding-bottom: 5px; margin-top: 34px; }
+  h3 { font-size: 14.5px; margin-top: 22px; margin-bottom: 6px; }
+  .sub { color: #78716c; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13px; }
+  th, td { border: 1px solid #d6d3d1; padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #f5f5f4; }
+  code { font-family: Consolas, monospace; font-size: 12.5px; background: #f5f5f4; padding: 1px 4px; }
+  pre { font-family: Consolas, monospace; font-size: 12px; background: #fafaf9; border: 1px solid #e7e5e4;
+        padding: 14px 16px; line-height: 1.5; overflow-x: auto; }
+  .A { color: #166534; font-weight: bold; }
+  .B { color: #92400e; font-weight: bold; }
+  .C { color: #57534e; font-weight: bold; }
+  .note { background: #fafaf9; border-left: 3px solid #a8a29e; padding: 10px 14px; margin: 14px 0; font-size: 13.5px; }
+  .footer { margin-top: 40px; color: #78716c; font-size: 13px; border-top: 1px solid #d6d3d1; padding-top: 12px; }
+  li { margin-bottom: 5px; }
+</style>
+</head>
+<body>
+
+<h1>Institute Collaborator Portal</h1>
+<p class="sub">Milestone 2 — Admission Workflow &amp; Product Direction · Waga C, Pronto Digital · 18 August 2026</p>
+
+<p>This document does two things. First, it sets out the admission workflow for your
+comment before any of the review interface is built, incorporating the correction you
+made about review decisions. Second, it answers your Wish List by sorting every item
+into the three categories you asked for, and gives you my recommendation on the four
+questions where you asked for architectural advice.</p>
+
+<h2>1. Your correction, and the principle behind it</h2>
+
+<p>You are right, and the correction is more than a wording change. There is a real
+distinction underneath it that will keep the Institute's records clean for years, so it
+is worth stating plainly.</p>
+
+<p><strong>A review produces three possible actions, but only two of them are decisions.</strong></p>
+
+<table>
+  <tr><th>Action</th><th>What it is</th><th>What it does to the case</th></tr>
+  <tr>
+    <td><strong>Approve</strong></td>
+    <td>A final judgement by the Institute</td>
+    <td>Closes the review. Recorded permanently. Makes an invitation possible.</td>
+  </tr>
+  <tr>
+    <td><strong>Decline</strong></td>
+    <td>A final judgement by the Institute</td>
+    <td>Closes the review. Recorded permanently, with your reasoning.</td>
+  </tr>
+  <tr>
+    <td><strong>Need More Information</strong></td>
+    <td>Not a judgement — a request</td>
+    <td>Keeps the case open and awaiting a response. May happen more than once.</td>
+  </tr>
+</table>
+
+<p>This matters because the permanent admission record should contain the Institute's
+<em>judgements</em>, not its correspondence. If "need more information" were stored as a
+decision, then a candidate you asked two questions of before approving would appear to
+have been decided upon three times. Instead, information requests are recorded as their
+own kind of event — visible in the history, fully audited, but never confused with a
+verdict.</p>
+
+<p>And you are equally right that <strong>issuing an invitation is not a review decision</strong>.
+It is the step that follows approval. I should note that the system already reflects this:
+an invitation carries a reference to the approval that authorised it, which is precisely
+why the Institute will be able to answer, years from now, not merely that someone was
+invited but on whose approval and on what reasoning.</p>
+
+<h2>2. The admission workflow</h2>
+
+<pre>
+   THREE WAYS IN                     REVIEW                        ADMISSION
+   ─────────────                     ──────                        ─────────
+
+   Website application ─┐
+                        │
+   Collaborator ────────┼──▶  ┌──────────────────┐
+   referral             │     │   REVIEW QUEUE   │
+                        │     │  (one place for  │
+                        │     │   both sources)  │
+                        │     └────────┬─────────┘
+                        │              │
+                        │       ┌──────┴───────┬─────────────────┐
+                        │       ▼              ▼                 ▼
+                        │   APPROVE        DECLINE      NEED MORE INFORMATION
+                        │       │              │                 │
+                        │       │              ▼                 ▼
+                        │       │        (closed, kept   ┌───────────────────┐
+                        │       │         permanently)   │ AWAITING RESPONSE │
+                        │       │                        │  you record what  │
+                        │       │                        │   is required     │
+                        │       │                        └─────────┬─────────┘
+                        │       │                                  │
+                        │       │            response received     │
+                        │       │        ◀─────────────────────────┘
+                        │       │        (returns to the queue, may be
+                        │       │         approved, declined, or asked again)
+                        │       ▼
+                        │   ┌──────────────────┐
+   Direct invitation ───┴──▶│ ISSUE INVITATION │  ◀── a consequence of approval,
+   by the Founder           └────────┬─────────┘      never a decision itself
+                                     │
+                            single-use, expiring link
+                            tracked: sent → delivered → accepted
+                            re-issuable in one click if it never arrives
+                                     │
+                                     ▼
+                            ┌──────────────────┐
+                            │   REGISTRATION   │  sets own password,
+                            │                  │  accepts privacy notice
+                            └────────┬─────────┘
+                                     │
+                                     ▼
+                          ADMITTED COLLABORATOR
+                                     │
+                     ┌───────────────┴───────────────┐
+                     │  NOT YET VISIBLE IN DIRECTORY │
+                     │  visibility remains gated by  │
+                     │  profile completion, then by  │
+                     │  your review and publication  │
+                     └───────────────────────────────┘
+</pre>
+
+<div class="note">
+<strong>Every transition above is recorded permanently:</strong> who acted, when, and on what
+reasoning. That record cannot be edited or removed by anyone, including me — a property
+the database itself enforces, and which survived the disaster-recovery rehearsal in
+Milestone 1.
+</div>
+
+<h3>The states a case can be in</h3>
+
+<table>
+  <tr><th>State</th><th>Meaning</th></tr>
+  <tr><td>Submitted</td><td>Received, not yet looked at</td></tr>
+  <tr><td>Under review</td><td>You have opened it</td></tr>
+  <tr><td>Awaiting response</td><td>You have requested further information; the case is open, not decided</td></tr>
+  <tr><td>Approved</td><td>Final judgement recorded; invitation may now be issued</td></tr>
+  <tr><td>Declined</td><td>Final judgement recorded, with reasoning, kept permanently</td></tr>
+  <tr><td>Withdrawn</td><td>The candidate withdrew before a decision</td></tr>
+</table>
+
+<h2>3. Your Wish List, sorted</h2>
+
+<p>Using your three categories: <span class="A">A — already planned or built</span>,
+<span class="B">B — belongs in this Foundation Release</span>,
+<span class="C">C — better deferred to a later phase</span>. Where an item spans
+categories, I have said so, because the useful distinction is usually between
+<em>capturing</em> something now and <em>building its interface</em> later.</p>
+
+<table>
+  <tr><th>Wish List item</th><th></th><th>My reading</th></tr>
+
+  <tr><td>1 · "Curated Collaboration Portal" language</td><td class="A">A</td>
+  <td>Adopted immediately — it costs nothing and it is a better description than anything I would have written.</td></tr>
+
+  <tr><td>1 · Introduction on first entry, and a How to Use guide with dos and don'ts</td><td class="B">B</td>
+  <td>Milestone 3, alongside the collaborator experience. Your "use abbreviations sparingly" example is exactly right and belongs in the guidance itself.</td></tr>
+
+  <tr><td>2 · Separate name fields</td><td class="A">A</td>
+  <td>Already built in Milestone 1: first, optional middle, family name, with full support for accented and non-English characters.</td></tr>
+
+  <tr><td>2 · Generational suffixes (Jr., Sr., II, III)</td><td class="B">B</td>
+  <td>A small addition. My recommendation: a separate field rather than part of the family name, so that sorting the directory by family name stays correct while the suffix still displays alongside the name.</td></tr>
+
+  <tr><td>2 · One consistent way names appear throughout</td><td class="B">B</td>
+  <td>Agreed, and I will propose a single display standard for your approval so the directory, profile and administrative views can never drift apart.</td></tr>
+
+  <tr><td>3 · Controlled credential list, up to three, submit-for-approval if missing</td><td class="B">B</td>
+  <td>Milestone 3. Worth knowing: this is the same mechanism as the Institute-controlled expertise vocabulary already built in Milestone 1 — a second vocabulary using a proven shape, not new machinery.</td></tr>
+
+  <tr><td>3 · Acronym Library for general Portal content</td><td class="C">C</td>
+  <td>The credential vocabulary above is the valuable half and comes first. A general library for use inside written content is a later phase.</td></tr>
+
+  <tr><td>4 · Collapsed directory view: photograph, name, credentials, title, organisation, country, short summary</td><td class="B">B</td>
+  <td>Milestone 3, as described.</td></tr>
+
+  <tr><td>4 · <strong>Up to three title / organisation combinations</strong></td><td class="B">B</td>
+  <td><strong>This one changes the model, and I am glad it arrived now.</strong> See section 4 below.</td></tr>
+
+  <tr><td>4 · Photograph standards</td><td class="B">B</td>
+  <td>Partly enforceable by software, partly not. See section 4.</td></tr>
+
+  <tr><td>4 · Unused optional fields disappear entirely</td><td class="B">B</td>
+  <td>Agreed as a formatting rule. It is the difference between a profile that looks composed and one that looks unfinished.</td></tr>
+
+  <tr><td>4 · Country from a standard list</td><td class="A">A</td>
+  <td>Already the case: country is stored as a standard international code, not free text.</td></tr>
+
+  <tr><td>5 · Expanded profile, consistent header, easy editing</td><td class="B">B</td>
+  <td>Milestone 3.</td></tr>
+
+  <tr><td>5 · Preview exactly as others will see it, before publishing</td><td class="B">B</td>
+  <td>Agreed and important. A professional should never publish something they have not seen as others will.</td></tr>
+
+  <tr><td>5 · Which hyperlinks should be permitted</td><td class="B">B</td>
+  <td>Recommendation in section 4.</td></tr>
+
+  <tr><td>6 · Two administrative steps: review profile, then publish profile</td><td class="B">B</td>
+  <td>Agreed, and it extends a distinction the system already makes. Admission and publication become two separate gates: admitted, then complete, then reviewed, then visible.</td></tr>
+
+  <tr><td>6 · Affirmative acknowledgment of Portal rules before publishing</td><td class="B">B</td>
+  <td>Straightforward, and recorded with a version — so the Institute can always show which rules a collaborator agreed to and when.</td></tr>
+
+  <tr><td>7 · Robust directory search</td><td class="B">B</td>
+  <td>Partly now, partly later. Recommendation in section 4.</td></tr>
+
+  <tr><td>8 · Central organisation directory</td><td class="A">A</td>
+  <td>Structurally already built; the public surface should wait. Recommendation in section 4.</td></tr>
+
+  <tr><td>9 · Global Events section</td><td class="C">C</td>
+  <td>A later phase, and cleanly additive — a new area of the Portal rather than a change to any existing one.</td></tr>
+
+  <tr><td>10 · Collaborator-to-collaborator communication</td><td class="C">C</td>
+  <td>My recommendation for the first Beta is deliberately <em>not</em> messaging. See section 4.</td></tr>
+
+  <tr><td>10 · Curated forums, live polls</td><td class="C">C</td>
+  <td>Later phases. Both need a moderation and curation model agreed before any code is written; the software is the easy part.</td></tr>
+
+  <tr><td>11 · Institute-wide administrative communication</td><td class="C">C</td>
+  <td>The surface is later; the foundation exists. Milestone 1 already logs every message the Portal sends, and the email setup deliberately separates bulk sending from invitations so that a mass message can never damage the deliverability of an invitation.</td></tr>
+
+  <tr><td>12 · Activity and usage dashboard</td><td class="C">C</td>
+  <td>The dashboard is later — but <strong>what it will one day display must be recorded starting now</strong>. See section 4; this is the item where delay is genuinely expensive.</td></tr>
+
+  <tr><td>13 · Alpha (5–10 people) and Beta (Founding Collaborators)</td><td class="B">B</td>
+  <td>This maps almost exactly onto the phased launch already agreed: Alpha is Wave 0, Beta is Wave 1. The visibility controls that make it possible are built.</td></tr>
+
+  <tr><td>13 · Structured feedback loop during both stages</td><td class="B">B</td>
+  <td>Agreed, and small: a discreet "tell us what confused you" mechanism, in place before Alpha begins. Alpha feedback is the most valuable data the Portal will ever collect and it must not arrive as scattered emails.</td></tr>
+
+  <tr><td>14 · Sophistication behind, simplicity in front</td><td class="A">A</td>
+  <td>Adopted as a standing requirement, and it is now one of my acceptance tests rather than an aspiration.</td></tr>
+</table>
+
+<h2>4. The four questions where you asked for advice</h2>
+
+<h3>a. Three title / organisation combinations — and why I am glad you raised it now</h3>
+
+<p>Today the model holds one professional title and one organisation for each collaborator.
+What you have described — a professor who also holds a hospital appointment and a
+directorship — is not a bigger version of that. It is a different shape: a person has
+<em>several positions</em>, each with its own title, organisation and possibly its own dates.</p>
+
+<p>Caught now, this is a small, additive change to a model that is not yet carrying real
+profiles. Caught during Milestone 3, it would have meant rebuilding the profile screens
+after they were built. Caught after launch, it would have meant migrating real people's
+data. This is exactly the kind of correction that is cheap today and expensive in
+October, and it is why I would rather have your Wish List early and long than late and
+tidy.</p>
+
+<p>My recommendation: up to three positions, each with title, organisation and an optional
+"primary" marker so the directory knows which one to show in the collapsed view. Where
+someone is independent, the organisation is simply left empty and — per your formatting
+principle — nothing appears.</p>
+
+<h3>b. Photograph standards: what software can and cannot enforce</h3>
+
+<p>I want to be honest about the line here, because it affects how the standard should be
+written.</p>
+
+<p><strong>Software can enforce:</strong> that the file is a genuine photograph in an accepted
+format; a minimum resolution so it does not appear blurred; a maximum file size; that it
+is not animated; and a consistent rectangular crop, presented consistently across the
+Portal.</p>
+
+<p><strong>Software cannot reliably enforce:</strong> that it is head-and-shoulders, that no hat
+is worn, or that it was taken within five years. Attempting to detect those automatically
+would produce confident wrong answers and reject good photographs.</p>
+
+<p>So my recommendation is: state the standard in plain language at the point of upload —
+where it will actually be read — and let your profile review step be the place it is
+applied. The two administrative steps you proposed in item 6 are precisely the right
+mechanism for this: the photograph is checked by a person, at review, before publication.</p>
+
+<h3>c. What belongs in the initial directory, and what should wait</h3>
+
+<p>My recommendation for the initial directory: <strong>browse, plus search by name, by area of
+expertise, and by country</strong>. Those three, and no more, for a reason: they are the only
+attributes that will be reliably and consistently populated for every collaborator from
+the first day. A filter that returns empty results because half the community has not
+filled in that field teaches collaborators that search does not work.</p>
+
+<p>Organisation search should wait until the organisation records have been tidied
+centrally — see (d) — otherwise "Karolinska Institutet" and "Karolinska Institute" become
+two different places.</p>
+
+<p>One clarification I would like from you: you list <em>professional discipline/specialty</em>
+and <em>area of expertise</em> as separate things. My strong recommendation is that these be
+<strong>one vocabulary with two levels</strong> — discipline, and specialties within it — rather
+than two independent lists. With two lists, the same idea gets recorded in both places
+differently and neither can be trusted. With one structured vocabulary, a collaborator
+can be found by the broad discipline or the narrow specialty, and the Institute keeps
+control of both.</p>
+
+<p>As for richer filtering: I would let the community tell us. At roughly a hundred
+collaborators, browsing a well-presented directory is genuinely pleasant and filters add
+little. The moment the directory becomes uncomfortable to browse — in my experience
+somewhere past a hundred and fifty — is the moment to build filtering, and by then we
+will know from actual searches what people are looking for. Building it earlier means
+guessing.</p>
+
+<h3>d. Organisations: structured records now, a directory only if it earns its place</h3>
+
+<p>My recommendation is the middle option you suggested, and it is largely done already:
+organisations are <strong>structured records linked to profiles</strong>, not free text typed into
+each profile. Milestone 1 built them that way.</p>
+
+<p>That gives the Institute three things immediately: consistent naming, the ability to ask
+"who here is at Kyoto University" later, and the option to give organisations their own
+pages in future without migrating anything.</p>
+
+<p>What I would <em>not</em> build yet is a public organisation directory. Until an organisation
+record carries something worth reading — a description, a link, the nonprofit's purpose,
+the collaborators associated with it — a directory of organisations is a list of names,
+and a list of names invites the question "why is this here?". The structure is what
+matters now; the surface can wait until you know what it is for. If the nonprofit
+dimension turns out to be central to the Institute's work, that is exactly the evidence
+that would justify building it.</p>
+
+<h3>e. Communication: my recommendation for the first Beta is no messaging</h3>
+
+<p>You asked what I recommend rather than assuming a full messaging system, so let me answer
+directly: <strong>for the first Beta, I recommend no messaging at all.</strong></p>
+
+<p>Instead, the "I would like to collaborate" mechanism you described earlier: a collaborator
+viewing a profile can record an interest in working with that person, and that interest
+becomes a record the Institute can see.</p>
+
+<p>Four reasons I prefer this for the Beta:</p>
+<ul>
+  <li>The people you are inviting already have email, and they are practised at using it.
+  A private messaging system asks distinguished professionals to check somewhere new.</li>
+  <li>Messaging creates an expectation of responsiveness. An unanswered message inside a
+  curated community reads as a slight; an unanswered email does not.</li>
+  <li>A private message is invisible to the Institute. An interest record is visible — and
+  the Institute's actual value here is <em>making the introduction</em>, which is far more
+  valuable to both parties than a message box.</li>
+  <li>Those records tell us, with evidence, who wanted to reach whom. If messaging is
+  genuinely needed, the interest records will show it, and will show what kind.</li>
+</ul>
+
+<p>If, during the Beta, the same pairs of people repeatedly express interest and the
+Institute finds itself relaying introductions by hand, that is the signal to build
+messaging — and we will know exactly what it needs to do.</p>
+
+<h3>f. Metrics: the one item where waiting is genuinely expensive</h3>
+
+<p>Of everything on your list, this is the item I would treat most urgently — not the
+dashboard, but what it will one day show.</p>
+
+<p><strong>Analytics cannot be backfilled.</strong> A dashboard built next year can only display
+history that was recorded this year. If the Portal records only current totals — how many
+collaborators exist today — then a year from now the Institute can never ask how long
+admission took, where candidates dropped out, or how quickly profiles were completed. If
+it records <em>events</em> as they happen, then any dashboard we build later can look
+backwards over the Institute's entire history.</p>
+
+<p>The good news is that the mechanism is already in place: the permanent record built in
+Milestone 1 is an event stream. My recommendation is simply that we record these
+deliberately from the start, at no meaningful cost:</p>
+
+<ul>
+  <li><strong>The admission funnel with timestamps</strong> — application or referral received,
+  reviewed, information requested, decided, invitation issued, invitation delivered,
+  invitation accepted, registration completed. From this, later, the Institute can see how
+  long each stage takes and where candidates are lost.</li>
+  <li><strong>Invitation delivery outcomes</strong> — already recorded, per message.</li>
+  <li><strong>Profile completion progress</strong> — when a collaborator starts, how far they get,
+  where they abandon. This is how you will find out which part of the profile is too much
+  to ask.</li>
+  <li><strong>First sign-in, and returns</strong> — whether admitted collaborators actually come
+  back, which is the single most honest measure of whether the Portal is useful.</li>
+  <li><strong>Directory searches, in aggregate</strong> — what people look for and how often they
+  find nothing. This is what will tell us which filters to build, rather than guessing.</li>
+  <li><strong>Expressions of collaboration interest</strong> — who is trying to connect, and about what.</li>
+</ul>
+
+<p>Deliberately not recorded: anything that amounts to surveillance of individuals. The
+purpose is to understand the community, not to watch its members, and that distinction
+should be visible in what the Institute chooses to keep.</p>
+
+<h2>5. Scope assessment against the agreed Foundation Release</h2>
+
+<p>You asked me not to treat the Wish List as an expansion of Milestone 2, and I have not.
+But the proposal made a commitment I intend to keep: that additions would be identified
+and priced openly at the time, and never quietly absorbed by reducing testing,
+documentation or security. Several items on your list are genuine additions to what was
+contracted, so here is the honest accounting — offered now, before any of it is built,
+so that neither of us is surprised in October.</p>
+
+<p>For reference, the agreed Foundation Release commits to: profiles with a single position
+and organisation; a directory with browse and pagination; search by <em>name and area of
+expertise</em>; an Institute-managed expertise vocabulary; and directory visibility control
+supporting the phased launch. The Brief itself notes that additional search capability and
+advanced filtering "may be introduced in later milestones".</p>
+
+<h3>a. Included at no additional cost</h3>
+
+<p>These are either already built, genuinely small, or simply good practice I would not
+charge for. They are absorbed into the existing milestones:</p>
+
+<table>
+  <tr><th>Item</th><th>Note</th></tr>
+  <tr><td>"Curated Collaboration Portal" as the Portal's language</td><td>A naming decision, and a better one than mine.</td></tr>
+  <tr><td>Separate name fields; country from a standard list; organisations as structured records</td><td>Already built in Milestone 1.</td></tr>
+  <tr><td>Generational suffixes (Jr., Sr., II, III)</td><td>One additional field, handled properly for sorting.</td></tr>
+  <tr><td>A single consistent name-display standard Portal-wide</td><td>Design discipline, not extra work.</td></tr>
+  <tr><td>Photograph standards stated in plain language at the point of upload</td><td>Guidance text; the human judgement happens at your review step.</td></tr>
+  <tr><td>Unused optional fields disappearing from published profiles</td><td>A formatting rule, applied once.</td></tr>
+  <tr><td>Acknowledgment of Portal rules before publication</td><td>Small, and recorded with a version.</td></tr>
+  <tr><td>Recording events now so a future dashboard can look backwards</td><td>The mechanism already exists; recording deliberately costs nothing. This is the item where <em>delay</em> would be expensive, not the work.</td></tr>
+  <tr><td>My architectural recommendations on organisations, search scope, messaging and metrics</td><td>Advice, not work.</td></tr>
+</table>
+
+<h3>b. Genuine additions to the agreed scope</h3>
+
+<p>These are real work beyond what was contracted. None is large on its own; together they
+would extend the Foundation Release. My recommendation is that you choose which of them
+you want, and I will price them as a single change item rather than piecemeal — and I
+would suggest deciding on items 1 to 4 before Milestone 3 begins, since they affect how
+profiles are built rather than being added afterwards.</p>
+
+<table>
+  <tr><th>#</th><th>Addition</th><th>Why it is beyond the agreed scope</th><th>Scale</th></tr>
+  <tr><td>1</td><td><strong>Up to three position / organisation combinations per profile</strong></td>
+      <td>The agreed scope has one position and one organisation. Several positions is a different shape, not a longer field.</td><td>Modest</td></tr>
+  <tr><td>2</td><td><strong>Controlled credential library with submit-for-approval</strong></td>
+      <td>Displaying up to three credentials was agreed. A second controlled vocabulary, plus a workflow for collaborators to propose new credentials and an administrative screen to approve them, is additional machinery.</td><td>Modest</td></tr>
+  <tr><td>3</td><td><strong>Two-step profile review and publication</strong></td>
+      <td>The agreed scope has visibility control — effectively a switch with an override. What you have described is a second review queue with its own approval step.</td><td>Modest</td></tr>
+  <tr><td>4</td><td><strong>Profile preview exactly as others will see it</strong></td>
+      <td>A distinct presentation mode in addition to editing and viewing.</td><td>Small</td></tr>
+  <tr><td>5</td><td><strong>Collaborator introduction and "How to Use the Portal" guide</strong></td>
+      <td>An administrator guide is committed for Milestone 4; a collaborator-facing introduction and user guide is not in any milestone.</td><td>Small to modest</td></tr>
+  <tr><td>6</td><td><strong>Directory search beyond name and expertise</strong> (country, discipline, organisation)</td>
+      <td>The Brief places additional search capability in later milestones. Country is small; organisation depends on item 2-style vocabulary discipline; a two-level discipline vocabulary is modest.</td><td>Small to modest</td></tr>
+  <tr><td>7</td><td><strong>"I would like to collaborate" interest records</strong></td>
+      <td>I undertook to <em>model</em> this so it could be added without rework — which I have. Building its interface is new work.</td><td>Small</td></tr>
+  <tr><td>8</td><td><strong>Structured feedback capture for Alpha and Beta</strong></td>
+      <td>The phased launch is agreed; a feedback mechanism inside the Portal is not.</td><td>Small</td></tr>
+</table>
+
+<h3>c. Later phases — no cost now, and nothing lost by waiting</h3>
+
+<p>These stay in the product backlog. Each is designed for as an extension point, so none of
+them will require rebuilding anything when their time comes:</p>
+
+<ul>
+  <li>A public organisation directory (the underlying records already exist)</li>
+  <li>The Events section</li>
+  <li>Member-to-member messaging, curated forums, live polls</li>
+  <li>Institute-wide broadcast communication (the sending foundation and a separate bulk
+  channel are already provided for)</li>
+  <li>The activity and usage dashboard (with its underlying events recorded from now)</li>
+  <li>A general Acronym Library for written Portal content</li>
+</ul>
+
+<div class="note">
+<strong>To be explicit about what will not happen:</strong> I will not quietly absorb the items in
+section (b) by spending less time on testing, documentation or security, and I will not
+quietly drop them either. They are listed here so that you can decide, with the full
+picture, what belongs in the Foundation Release and what waits. If you would prefer to
+defer all of them, the Foundation Release remains exactly what was agreed, and every one
+of them can still be added later without rework — which was the entire point of building
+the foundation the way we did.
+</div>
+
+<h2>6. What happens next</h2>
+
+<ol>
+  <li>Your comments on this workflow, in particular the review states and anything the
+  three actions do not cover.</li>
+  <li>I then build the admission system against it — the two intake forms, the review queue
+  with all three actions, the invitation lifecycle, registration, and the permanent
+  admission history.</li>
+  <li>You will see it appearing on the rehearsal Portal as it goes, not only at the end.</li>
+  <li>Milestone 2 closes with you running a complete admission live: a website application,
+  your review, your decision, an invitation, and a registered collaborator.</li>
+</ol>
+
+<p>Two clarifications I would value when convenient: whether discipline and expertise should
+be one vocabulary or two (section 4c), and a colleague at a university or institute
+willing to receive a single test invitation at their work address, so we can confirm
+institutional mail systems accept the Institute's invitations before the first real one is
+sent.</p>
+
+<div class="footer">
+Waga C · Pronto Digital · Milestone 2 of the Foundation Release ·
+Prepared for the Active Longevity Institute, 18 August 2026
+</div>
+
+</body>
+</html>

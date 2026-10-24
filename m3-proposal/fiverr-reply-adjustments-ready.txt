@@ -1,0 +1,30 @@
+Dear Linas,
+
+Thank you for checking in, and you were right to. I told you a few days and it took longer. The delay was mine.
+
+The eight adjustments are now done and live, as one release with tests behind each, on staging and on the live Portal. Here is what to look at and where.
+
+1. Orientation and Profile Standards. The orientation on "Where your work belongs" is now in your own four sentences. The Collaborator Profile Standards appear once, at the top of the profile page, the first time a collaborator opens it. There is no checkbox: the Portal records that they were shown, with the version, date and time. Afterwards they stay readable from "Profile Standards" at the top of the profile page.
+
+2. Professional Identity. Renamed throughout, with your prompt, and a line under it saying that credentials, Fields, Specialties, interests and achievements each have their own place.
+
+3. About Your Work. Up to 500 characters, your prompt word for word, required for Directory readiness, and shown on the profile directly under the name rather than on the directory card.
+
+4. About. Optional, up to 2,000 characters, for broader professional context.
+
+5. Current Positions. Each now has country and start year, both optional. Only the title is required, so a legitimate role no longer needs an organisation.
+
+6. Photograph. The guidance is rewritten to your standard: an individual professional image, ideally head and shoulders, no logos, avatars, group photographs or organisational graphics, and cultural and religious dress entirely welcome. The photograph is now part of readiness.
+
+7. Directory readiness. Name, Professional Identity, About Your Work, a Field or a pending Field proposal, country and photograph. Nothing optional counts for or against it. When those are met the collaborator sees "Your profile is ready for Directory Review" with Preview my profile beside it.
+
+8. Directory card. Photograph, name with credentials, Professional Identity and country, and nothing else.
+
+One thing you will notice. Every existing profile was judged again under the new readiness rule, so on staging the earlier demonstration profiles without a photograph have left the directory and Helena Marsh is the one person listed. That is the rule doing its job, and it means the first profile you build yourself during the walkthrough will appear beside hers the moment it is ready.
+
+For the walkthrough, I would suggest Tuesday 6 October or Wednesday 7 October at 7:00 in the morning Chicago time, by WhatsApp voice, with you at your computer, signed in to staging as the Founder, and the reconciliation beside you. It takes about an hour. If neither morning suits, name one that week and I will fit it.
+
+Once you are satisfied in the walkthrough that the reconciled Milestone 3 is in place, Milestone 3 is complete, and Milestone 4 is ready to begin whenever you choose to start it. Nothing moves on that, or on the additional items, until you say so.
+
+Best regards,
+Waga

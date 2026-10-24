@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Milestone 2 Delivery — Institute Collaborator Portal</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; color: #292524; margin: 48px 56px; line-height: 1.55; }
+  h1 { font-size: 26px; margin-bottom: 2px; }
+  h2 { font-size: 17px; border-bottom: 1px solid #d6d3d1; padding-bottom: 5px; margin-top: 34px; }
+  h3 { font-size: 15px; margin-top: 22px; margin-bottom: 6px; }
+  .sub { color: #78716c; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid #d6d3d1; padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #f5f5f4; }
+  .ok { color: #166534; font-weight: bold; }
+  .shot { width: 100%; border: 1px solid #d6d3d1; margin: 10px 0 4px; }
+  .cap { font-size: 12.5px; color: #78716c; margin: 0 0 18px; }
+  code { font-family: Consolas, monospace; font-size: 12.5px; background: #f5f5f4; padding: 1px 4px; }
+  .footer { margin-top: 40px; color: #78716c; font-size: 13px; border-top: 1px solid #d6d3d1; padding-top: 12px; }
+  li { margin-bottom: 4px; }
+  blockquote { margin: 12px 0 12px 0; padding-left: 14px; border-left: 3px solid #d6d3d1; color: #57534e; }
+</style>
+</head>
+<body>
+
+<h1>Institute Collaborator Portal</h1>
+<p class="sub">Milestone 2 Delivery — Admission System · Waga C, Pronto Digital · September 2026</p>
+
+<p>Milestone 1 built the foundation and the locked front door. Milestone 2 opens it.
+A person can now reach the Institute by three routes, be judged once, and become an
+admitted collaborator, with every step recorded and nothing happening to anybody
+before the Institute decides it should. It is delivered running on the Institute's
+own infrastructure, and every screenshot in this report was taken from the live
+system, not from a mock-up.</p>
+
+<h2>1. What was delivered</h2>
+<table>
+  <tr><th>Committed for Milestone 2</th><th>Status</th></tr>
+  <tr><td>Website application form</td><td class="ok">Delivered — public, no account needed, with the applicant told plainly that a person will read it</td></tr>
+  <tr><td>Referral form for collaborators</td><td class="ok">Delivered — including the relationship question agreed on 27 August, seen by the Institute alone</td></tr>
+  <tr><td>Administrative review queue</td><td class="ok">Delivered — one list, oldest first, so nobody waits longest merely because they arrived by a different route</td></tr>
+  <tr><td>Four review actions</td><td class="ok">Delivered — Approve, Need more information, Set aside, Decline, with only the first and last recorded as judgements</td></tr>
+  <tr><td>Invitation lifecycle</td><td class="ok">Delivered — unique, single-use, expiring, revocable, reissuable, by email or by copied link</td></tr>
+  <tr><td>Registration and the admission record</td><td class="ok">Delivered — the invited person confirms their own details; admission, provenance and consent are recorded permanently</td></tr>
+  <tr><td>Consent</td><td class="ok">Delivered — recorded at registration against the privacy notice version in force at that moment</td></tr>
+  <tr><td>Up to three positions per collaborator (approved addition, Item 1)</td><td class="ok">Structural work delivered — the limit of three is enforced by the database itself; the entry screens arrive with Milestone 3 as agreed</td></tr>
+</table>
+
+<h2>2. The decisions this milestone implements</h2>
+<p>Each of these was agreed in writing during August, and each is now enforced by the
+software rather than remembered by whoever is working on it.</p>
+
+<h3>Four actions, of which only two are judgements</h3>
+<p>Approve and Decline are recorded permanently. <strong>Need more information</strong> is a
+question: it keeps the case open and may be asked more than once. <strong>Set aside</strong> is a
+silent pause that stays in the queue, because a case that disappears when paused is a
+case that gets forgotten. A candidate who is questioned twice and then approved appears
+in the record as <em>one</em> decision, not three.</p>
+<p>Issuing an invitation is deliberately not among the four. It is a consequence of
+approval, so it appears only after approval and never as a fifth way of judging someone.</p>
+
+<h3>Who the Portal may contact, and when</h3>
+<p>On a referral, a question goes to the <strong>referrer</strong>, never to the person recommended.
+Until the Institute approves them they are being discussed, not dealt with, and they may
+not know the conversation is happening at all. Set aside and Decline send nothing to
+anybody. The referrer is told once, and only once: when an invitation has been issued.
+They are never told about a decline.</p>
+
+<h3>The invitation link survives being scanned</h3>
+<p>LinkedIn and Outlook open links to inspect them before a person ever clicks. An
+invitation consumed on opening would therefore be spent by a machine, and the real
+recipient would meet a dead link. Opening changes nothing here; only a completed
+registration spends the invitation. This is demonstrated below, opened three times
+before use.</p>
+
+<h3>The link is shown once</h3>
+<p>Only a cryptographic hash of the invitation is stored, so there is no page anywhere —
+including that one, on a refresh — that can display the link again. Losing it is not a
+problem: issuing a fresh link is one click and retires the old one at the same moment.</p>
+
+<h3>One person, one case, one decision</h3>
+<p>Somebody may apply unprompted while a collaborator independently recommends them. Both
+submissions are kept, because each carries something the other lacks, and the Portal
+suggests that they may be the same person. It never joins them by itself. A shared email
+address is strong evidence and a shared name is weak, but neither is proof, and a wrongly
+joined pair of people is far harder to repair than an unjoined one.</p>
+
+<h3>Names and titles are never abbreviated by the software</h3>
+<p>First, middle, family and preferred names allow 100 characters each; organisations and
+departments 200; professional titles 300. They are counted in characters rather than
+bytes, so a Lithuanian or Chinese name receives exactly the same allowance as an English
+one. Whatever is accepted is displayed in full, wrapped onto further lines, and never
+truncated. The evidence below shows a 187-character named chair displayed whole.</p>
+
+<h3>How the Portal addresses people</h3>
+<p>One rule, written once, used by every message and by the Portal itself: the preferred
+name if one was given, otherwise the first name, otherwise a courteous greeting with no
+name at all. That last step matters — before registration the Portal may hold only what
+was typed, and it must never send "Hello ,".</p>
+
+<h2>3. The walkthrough</h2>
+<p>A recorded walkthrough accompanies this report: <code>video/M2-Walkthrough.mp4</code>,
+seven minutes, with subtitles. It follows one person the whole way in, from the form on
+the website to an admitted collaborator, and it was recorded against the live staging
+system rather than staged. Subtitles are shown on screen, and are also supplied
+separately as <code>.srt</code> and <code>.vtt</code> should you wish to use them elsewhere.</p>
+
+<h2>4. Evidence, from the live system</h2>
+
+<img class="shot" src="screenshots/01-application-form.png">
+<p class="cap">The public application, as a stranger meets it. The note under the title
+field exists because people abbreviate their own titles when they suspect a form will not
+accept the whole thing.</p>
+
+<img class="shot" src="screenshots/02-application-received.png">
+<p class="cap">The confirmation. It promises only what the Institute can honour: that a
+person will read it. No date is invented.</p>
+
+<img class="shot" src="screenshots/03-review-queue.png">
+<p class="cap">The review queue. Applications and referrals in one list, oldest first.</p>
+
+<img class="shot" src="screenshots/04-case-and-four-actions.png">
+<p class="cap">The case, and the four actions. Note the 187-character named chair displayed
+in full, and that each action states its own consequence before it is taken.</p>
+
+<img class="shot" src="screenshots/05-question-asked-not-decided.png">
+<p class="cap">After asking a question. The case reads "Awaiting information" and remains
+open. No decision has been recorded, and the question may be asked again.</p>
+
+<img class="shot" src="screenshots/06-approved-invitation-offered.png">
+<p class="cap">After approval. An invitation is now <em>offered</em>, separately. Approving
+did not invite anybody.</p>
+
+<img class="shot" src="screenshots/07-invitation-form.png">
+<p class="cap">The invitation form. A name is all that is required, because many of these
+relationships begin on LinkedIn where the Institute has no email address at all.</p>
+
+<img class="shot" src="screenshots/08-link-shown-once.png">
+<p class="cap">The link, shown once. The Portal states plainly that it cannot be displayed
+again, and what to do instead.</p>
+
+<img class="shot" src="screenshots/09-registration-link-survives-scanners.png">
+<p class="cap">The registration page, after the link had already been opened three times —
+as a link scanner would. The invitation is intact. The personal sentence from the Institute
+appears above.</p>
+
+<img class="shot" src="screenshots/10-admitted-collaborator.png">
+<p class="cap">Registration complete. An admitted collaborator now exists.</p>
+
+<img class="shot" src="screenshots/11-referral-form-with-relationship.png">
+<p class="cap">The referral form. The relationship question is required, which is exactly
+why "Prefer not to specify" is one of the options. The panel states, to the referrer, that
+these answers are seen by the Institute alone.</p>
+
+<img class="shot" src="screenshots/13-referral-institute-only-context.png">
+<p class="cap">The same referral as the Institute sees it. "I mentored them" rather than a
+bare "Mentor", because the direction of a mentoring relationship changes how an
+introduction should be worded.</p>
+
+<img class="shot" src="screenshots/14-complete-admission-history.png">
+<p class="cap">The complete history: applied, questioned, answered, approved, invited,
+registered. It is assembled from the records themselves rather than kept as a separate
+log, so it cannot drift away from the facts it describes.</p>
+
+<img class="shot" src="screenshots/15-courteous-lapsed-link.png">
+<p class="cap">A link that no longer works. Arriving here is not a mistake the visitor made,
+so they are never shown an error. An unrecognised link is shown these same words, so
+nothing distinguishes a wrong guess from a real invitation.</p>
+
+<img class="shot" src="screenshots/16-link-cannot-be-used-twice.png">
+<p class="cap">The same link after it was used. Single-use, enforced.</p>
+
+<h2>5. Verified by tests</h2>
+<p>The automated suite — <strong>101 tests, 298 assertions, all passing</strong> — locks in the
+commitments above so that they are checked on every future change rather than remembered:</p>
+<ul>
+  <li>There are exactly four review actions, and only two of them write a judgement.</li>
+  <li>A question keeps a case open, may be asked repeatedly, and leaves one decision behind after approval.</li>
+  <li>A set-aside case sends nothing, decides nothing, and stays in the queue.</li>
+  <li>A question about a referral reaches the referrer; the person recommended is never a contact point during review.</li>
+  <li>Declining and setting aside send nothing to anybody.</li>
+  <li>The referrer is told when an invitation is issued, once, and never on a reissue.</li>
+  <li>Opening an invitation link repeatedly does not consume it; only registration does.</li>
+  <li>Lapsed, withdrawn and already-used links are met courteously.</li>
+  <li>Two submissions converge only when a person says so; a decided case cannot be joined.</li>
+  <li>The database itself refuses a second live invitation for one person, and refuses to email an invitation with no address.</li>
+  <li>The greeting is never empty, and a 194-character named chair survives storage whole.</li>
+  <li>A complete admission runs end to end, from the website form to an admitted collaborator.</li>
+</ul>
+<p>Alongside these: code style, static analysis at level 6, a dependency security audit,
+and every migration proven to roll back as well as apply.</p>
+
+<h2>6. Two things worth knowing</h2>
+<p><strong>The optional courteous reply on declining an application</strong> is not built, deliberately.
+You described it but had not given final confirmation, and building it unasked would mean
+the Portal writing to somebody you had chosen not to contact. It waits on your decision
+and is a small addition whenever you want it.</p>
+<p><strong>Where an invitation is sent by copied link</strong>, the Portal will show it as issued and
+later as accepted, but never as delivered, because it did not carry it and cannot see what
+happened. It will not imply a delivery it cannot observe.</p>
+
+<h2>7. Where everything lives</h2>
+<ul>
+  <li>Staging: <code>https://staging.portal.activelongevityinstitute.org</code> — where the screenshots above were taken.</li>
+  <li>Production: <code>https://portal.activelongevityinstitute.org</code> — the same release, deployed on your approval.</li>
+  <li>Repository: <code>github.com/ActiveLongevityInstitute/active-longevity-portal</code>, the Institute's own organisation.</li>
+  <li>Design package for this milestone: <code>docs/10-m2-design-package.md</code>, recording every decision and where it is implemented.</li>
+</ul>
+
+<h2>8. Next — Milestone 3: Profiles, Directory and Identity</h2>
+<p>The collaborator profile, photographs, the community directory and search by name,
+expertise and country, together with the visual identity of the Portal. It opens with a
+design package, which will include the field-by-field visibility table we agreed on
+29 August — every field, who may see it, and who decides — for your approval before any
+code is written.</p>
+
+<p class="footer">Waga C · Pronto Digital — Full-Stack Engineering &amp; Platform Architecture · Milestone 2 of 4, Admission System</p>
+
+</body>
+</html>

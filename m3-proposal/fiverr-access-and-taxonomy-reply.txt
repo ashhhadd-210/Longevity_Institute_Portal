@@ -1,0 +1,53 @@
+Hi Linas,
+
+Your assumption is exactly right, and it is already built that way.
+
+HOW SOMEONE RETURNS TO THE PORTAL
+
+There is a permanent address, live now with its certificate in place:
+
+https://portal.activelongevityinstitute.org
+
+That is the front door and it never changes. An invitation link is for one thing only, which is the first registration, and it is spent the moment that registration completes. From then on a collaborator signs in at the address above, exactly as you supposed.
+
+You have put your finger on the real risk without quite naming it, so let me name it. The likeliest mistake is not that somebody loses the Portal address. It is that they keep the invitation email and click that link again months later, because it is the thing sitting in their inbox.
+
+That case is already handled. Rather than an error, they are told plainly that an invitation has already been used, that this usually means they have registered before, and they are given a link to sign in. They arrive where they were trying to go.
+
+WHY THEY WILL NOT NEED TO REMEMBER THE ADDRESS
+
+A bookmark is a fragile thing. People change laptops, clear browsers and read mail on a phone they did not set the bookmark on.
+
+So the Portal address appears in every message the Portal ever sends: the invitation, the welcome, and anything that follows. In practice this means a collaborator never has to remember it. Searching their mail for the Institute always finds a way back in, and their inbox becomes the index rather than their memory.
+
+It also works properly on a phone, which is where a fair number of these people will first open it.
+
+ONE THING WORTH KNOWING ABOUT FORGOTTEN PASSWORDS
+
+Password reset works from the sign-in page in the usual way.
+
+There is one deliberate consequence of a decision we made in the first milestone. The Portal will not tell an unrecognised address that it is unrecognised, because doing so would let anybody test whether a particular person is a collaborator, and your membership list is confidential. So somebody who mistypes their email receives the same calm message as somebody who did not. If an Alpha participant tells you a reset never arrived, a mistyped address is the first thing to check.
+
+FOR ALPHA SPECIFICALLY
+
+With five to ten people you will be in direct contact with all of them anyway, so the address matters less than it will later. It is at Beta, with the founding group, that people sign in occasionally rather than constantly and the return route has to stand on its own.
+
+And when the Institute website is ready, a Collaborator sign in link there closes the last gap. Until then the email route is enough, and it is the route most people would use in any case.
+
+THE DISCIPLINE AND SPECIALTY QUESTIONS
+
+Attached.
+
+One thing I would say before you start, because it should save you a great deal of effort. Do not try to be complete.
+
+Since collaborators can now request what is missing and you approve it, the list does not have to anticipate every profession on earth. It has to cover the people you already have, well enough that your first wave mostly finds itself. Fifteen or twenty disciplines that fit your founding group is a better starting point than sixty that attempt to cover the world.
+
+The most useful exercise is the first one in the document: read down your founding collaborator spreadsheet and write what those people actually call themselves. That draft will be drawn from real people rather than from theory, which makes it far likelier to be right.
+
+I have also included a draft list of disciplines at the end. It is there to be argued with rather than approved. Cutting and renaming things on it will tell me more than agreeing with it would.
+
+Take whatever time you need. Nothing waits on it today, and doing it unhurried now keeps it off the critical path later.
+
+Warm regards,
+
+Waga

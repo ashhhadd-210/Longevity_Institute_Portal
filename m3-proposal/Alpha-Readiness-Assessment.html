@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Alpha Readiness - Institute Collaborator Portal</title>
+<style>
+  body { font-family: Georgia, serif; color: #292524; margin: 48px 56px; line-height: 1.55; }
+  h1 { font-size: 26px; margin-bottom: 2px; }
+  h2 { font-size: 17px; border-bottom: 1px solid #d6d3d1; padding-bottom: 5px; margin-top: 34px; }
+  h3 { font-size: 15px; margin-top: 22px; margin-bottom: 6px; }
+  .sub { color: #78716c; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid #d6d3d1; padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #f5f5f4; }
+  td.num { text-align: right; white-space: nowrap; }
+  .done { color: #166534; font-weight: bold; }
+  .wait { color: #9a3412; font-weight: bold; }
+  .tot { background: #f5f5f4; font-weight: bold; }
+  code { font-family: Consolas, monospace; font-size: 12.5px; background: #f5f5f4; padding: 1px 4px; }
+  .note { background: #f5f5f4; border-left: 3px solid #a8a29e; padding: 10px 14px; margin: 16px 0; font-size: 14px; }
+  .footer { margin-top: 40px; color: #78716c; font-size: 13px; border-top: 1px solid #d6d3d1; padding-top: 12px; }
+</style>
+</head>
+<body>
+
+<h1>Alpha Readiness</h1>
+<p class="sub">Institute Collaborator Portal &middot; Waga C, Pronto Digital &middot; September 2026</p>
+
+<p>You asked four questions. This answers them in order, and I have tried to be
+plain rather than encouraging, because you are planning around it.</p>
+
+<h2>1. How close is the Portal to Alpha readiness?</h2>
+
+<p>The half of the Portal that admits people is finished. The half they use once
+they are admitted is not yet built.</p>
+
+<p>An Alpha participant needs to be able to do six things. Here is where each one
+stands today.</p>
+
+<table>
+  <tr><th>What an Alpha participant needs to do</th><th>State</th><th>Where it lives</th></tr>
+  <tr><td>Be invited by you, personally or by link</td><td class="done">Done</td><td>Milestone 2</td></tr>
+  <tr><td>Register and confirm their own details</td><td class="done">Done</td><td>Milestone 2</td></tr>
+  <tr><td>Sign in, and return again later</td><td class="done">Done</td><td>Milestone 1 and 2</td></tr>
+  <tr><td>Recommend someone else to the Institute</td><td class="done">Done</td><td>Milestone 2</td></tr>
+  <tr><td>Have a profile, and see other collaborators</td><td class="wait">Not built</td><td>Milestone 3</td></tr>
+  <tr><td>Tell you what they think of it</td><td class="wait">Not built</td><td>See section 4</td></tr>
+</table>
+
+<div class="note">
+  To be concrete about what this means today: an Alpha participant would register
+  successfully, sign in, and reach a page that says their profile and the
+  directory open in a forthcoming release. They could recommend a colleague. That
+  is the whole of it.
+</div>
+
+<p>So the honest answer is that Alpha readiness effectively means completing
+Milestone 3. That is not a surprise or a change of plan. It is simply where
+profiles and the directory have always sat.</p>
+
+<h2>2. What substantive items remain?</h2>
+
+<h3>Milestone 3, which is the substance of it</h3>
+<ul>
+  <li>The collaborator profile, and the screens to complete it.</li>
+  <li>Photographs, with upload and cropping.</li>
+  <li>The Field and Specialty structure, with the request-and-approve vocabulary.</li>
+  <li>The credential library.</li>
+  <li>The directory, and search.</li>
+  <li>The visibility rules, and the field-by-field table for your approval first.</li>
+  <li>The three positions per collaborator.</li>
+</ul>
+
+<h3>One release step that is easy to overlook</h3>
+<p>Everything built in Milestone 2 currently runs on staging. Production is still
+serving the Milestone 1 release, which is why the application form does not yet
+answer on the live address. Releasing to production is a deliberate, gated step
+rather than something that happens automatically, and it is a short piece of work
+rather than a large one. It has to happen before any real person is invited.</p>
+
+<h3>Two small things still outstanding from Milestone 2</h3>
+<ul>
+  <li>The three email deliverability tests, including the university address, which is the one that matters most. Nothing depends on them until real invitations go out, but they should be done before Alpha rather than during it.</li>
+  <li>Your decision on the optional courteous reply when an application is declined, which remains unbuilt because you had not confirmed it.</li>
+</ul>
+
+<h2>3. What is waiting on you?</h2>
+
+<table>
+  <tr><th>Waiting on you</th><th>Why it matters</th></tr>
+  <tr><td>The Field and Specialty answers</td><td>The largest one. It is your thinking rather than my building, and the structure cannot be seeded without it. You already have the questions.</td></tr>
+  <tr><td>Going ahead with Milestone 3</td><td>Nothing in section 2 can begin until it starts.</td></tr>
+  <tr><td>Your founding collaborator spreadsheet</td><td>Loaded once the profile structure exists. Absorbed at no charge, as agreed.</td></tr>
+  <tr><td>Confirming who the Alpha participants are</td><td>Not needed yet, but useful to have settled before the production release.</td></tr>
+  <tr><td>The Sentry monitoring key</td><td>A few minutes of work once you supply it. It is how faults reach me rather than reaching you.</td></tr>
+  <tr><td>The optional decline reply</td><td>A small decision, and a small build.</td></tr>
+</table>
+
+<h2>4. Is the remaining work within the agreed scope?</h2>
+
+<p>Yes. Everything described above sits inside the four milestones we agreed in
+August. Nothing needed to reach Alpha falls outside them, and I am not aware of
+anything that would require additional development beyond what is already quoted.</p>
+
+<p>What remains financially is what you already know:</p>
+
+<table>
+  <tr><td>Milestone 3, including the approved additions</td><td class="num">$1,100</td></tr>
+  <tr><td>Milestone 4, production readiness and handover</td><td class="num">$700</td></tr>
+  <tr class="tot"><td>Remaining to a finished, launched, handed-over Portal</td><td class="num">$1,800</td></tr>
+</table>
+
+<h3>One thing I am moving, at no cost to you</h3>
+<p>We agreed some time ago that a way for participants to give feedback was needed
+before Alpha. It was subsequently placed in Milestone 4, which comes after Alpha.
+That sequencing is wrong, and it was my error.</p>
+<p>So it moves into Milestone 3 and remains absorbed. Alpha is the moment when
+feedback matters most, and asking five thoughtful people what they think, with no
+way for them to answer, would waste the most valuable group you will ever have.</p>
+
+<h3>The optional items, listed with prices so the picture is complete</h3>
+<p>You asked to manage the remaining budget, so it would be unhelpful of me to say
+only that these exist. Here they are with their prices, all of them previously
+quoted and none of them changed.</p>
+<p><strong>None is needed for Alpha, and I recommend buying none of them now.</strong>
+They are listed so that nothing can surprise you later, not because I think you
+should be considering them.</p>
+
+<table>
+  <tr><th>Optional item</th><td class="num"><strong>Price</strong></td><th>My recommendation</th></tr>
+  <tr><td>Announcements to all collaborators or a selected group</td><td class="num">$300</td><td>Wait. You need a community before you have anything to announce, and it is cheaper built after Milestone 3.</td></tr>
+  <tr><td>Owner analytics dashboard</td><td class="num">$600</td><td>Wait. The events are already being recorded, so nothing is lost. There is simply nothing worth reading at ten collaborators.</td></tr>
+  <tr><td>Preview of the Portal for prospective collaborators</td><td class="num">$250</td><td>Wait. A recruitment tool, valuable when recruiting at scale rather than while admitting your first ten.</td></tr>
+  <tr><td>Two-step administrative profile review and publication</td><td class="num">$180</td><td>Wait. A simpler version is already included in Milestone 3.</td></tr>
+  <tr><td>Free text search across profile text</td><td class="num">To be quoted</td><td>Worth doing, and the only one I would genuinely consider for Milestone 3. Priced properly with the design package.</td></tr>
+  <tr class="tot"><td>If you eventually bought all of the priced items</td><td class="num">$1,330</td><td></td></tr>
+</table>
+
+<div class="note">
+  So the widest possible picture, if you one day chose to buy everything currently
+  on the table, is $1,800 committed plus $1,330 optional. I would be surprised if
+  you ever wanted all of it, and nothing here expires or becomes more expensive
+  for having waited.
+</div>
+
+<h2>5. A realistic route to Alpha</h2>
+<ol>
+  <li>You work through the Field and Specialty questions, at whatever pace suits. This can happen now and costs nothing.</li>
+  <li>Milestone 3 begins when you are ready. It is three and a half weeks of work.</li>
+  <li>Within it, you approve the visibility table before the profile is built.</li>
+  <li>Milestone 2 and 3 are released together to production.</li>
+  <li>The deliverability tests are completed.</li>
+  <li>You and I run one complete admission on the live Portal before a single Alpha participant is invited.</li>
+  <li>Alpha begins.</li>
+</ol>
+
+<div class="note">
+  In other words, Alpha follows Milestone 3 rather than waiting for Milestone 4.
+  Milestone 4 is about hardening, monitoring, documentation, training and the
+  formal launch, which is the right shape of work to do <em>while</em> a small,
+  friendly group is already using the Portal and telling you what they find.
+</div>
+
+<h2>6. The short version</h2>
+<ul>
+  <li>Getting people in: finished.</li>
+  <li>Giving them something to use: Milestone 3, not started.</li>
+  <li>Waiting on you: the Field and Specialty answers, and the go-ahead.</li>
+  <li>Outside agreed scope: nothing.</li>
+  <li>Remaining cost: $1,800, of which $600 starts Milestone 3.</li>
+  <li>Optional extras, if you ever want them: $1,330, and none recommended yet.</li>
+</ul>
+
+<p class="footer">Waga C &middot; Pronto Digital - Full-Stack Engineering &amp; Platform Architecture &middot; Alpha readiness assessment</p>
+
+</body>
+</html>

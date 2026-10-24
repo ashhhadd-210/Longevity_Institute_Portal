@@ -1,0 +1,48 @@
+Dear Linas,
+
+Milestone 2, the Admission System, is complete and running live. Milestone 1 built the foundation and the locked front door. This milestone opens it.
+
+A person can now reach the Institute by three routes, be judged once, and become an admitted collaborator, without a developer being involved at any point.
+
+What exists today:
+
+The website application form, open to anyone, with the applicant told plainly that a person will read what they wrote and no date invented that the Institute cannot honour.
+
+The referral form for collaborators, including the relationship question we settled on 27 August. The wording is directional, so a referrer chooses "I mentored them" or "They mentored me" rather than a bare "Mentor" that could mean either. Those answers, and the private note beside them, are seen by the Institute alone. They are never shown to the person being recommended and never appear on any profile.
+
+The review queue, with the four actions exactly as agreed. Approve and Decline are judgements and are recorded permanently. Need more information is a question: it keeps the case open and you may ask again. Set aside is a silent pause that stays in the queue, because a case that disappears when paused is a case that gets forgotten. Someone questioned twice and then approved appears in the record as one decision, not three.
+
+Issuing an invitation is not one of the four. It appears only after approval, so it can never be mistaken for another way of judging somebody.
+
+The invitation system, with both routes. You can have the Portal send it, or take the link and send it yourself through LinkedIn. When you invite someone directly, their name is the only thing required, because most of those relationships have no email address behind them and I did not want you inventing one. The link is shown once and only its fingerprint is stored, so it cannot be looked up again by anyone, including me. If you lose it, one click issues a fresh one and the old link stops working at that moment.
+
+The protection you asked about is in place and I have shown it working in the report. LinkedIn and Outlook open links to scan them before a person ever clicks. In the evidence, a link is opened three times by a machine and is still perfectly usable when the real recipient arrives. Only completing registration uses it up.
+
+Registration, where the invited person confirms their own details rather than being stuck with what you typed, and states how they would like the Portal to address them. Consent is recorded at that moment against the privacy notice in force.
+
+The admission history, which reads as one continuous story: applied, questioned, answered, approved, invited, registered. It is assembled from the records themselves rather than kept as a separate log, so it can never drift away from what actually happened.
+
+Duplicate handling, as agreed. If someone applies while a collaborator independently recommends them, both submissions are kept and the Portal tells you they may be the same person. It never joins them by itself, because a wrongly joined pair is far harder to repair than an unjoined one.
+
+The character limits are in place: 100 for names, 200 for organisations and departments, 300 for professional titles, counted in characters rather than bytes so an international name gets the same room as an English one. In the report you will see a real named chair of 187 characters displayed in full and wrapped, never cut off.
+
+Also delivered: the structural work for up to three positions per collaborator, which is the addition you approved. The screens for entering them arrive with Milestone 3 as planned.
+
+There are 101 automated tests behind all of this, which exist so that these promises are checked on every future change rather than remembered by whoever is working on the code.
+
+Two things I want to be straight with you about.
+
+First, the optional courteous reply when you decline an application is not built. You described it but had not given final confirmation, and building it unasked would mean the Portal writing to someone you had chosen not to contact. It waits on your word and is a small addition whenever you want it.
+
+Second, when you send an invitation by copied link, the Portal will show it as issued and later as accepted, but never as delivered. It did not carry the message and cannot see what happened to it, so it will not imply otherwise.
+
+There is a seven minute walkthrough video with the attachments, with subtitles on screen. It follows one person the whole way in, from the form on your website through to an admitted collaborator, and it was recorded on the live system rather than staged. You will see the link scanner test in it, opened three times before the invitation is used.
+
+The attached report walks through every item with screenshots taken from the same live system, not from mock-ups.
+
+Whenever it suits you, I would like to sit with you while you run a complete admission yourself, start to finish. That is how this milestone is meant to close, and I think you will enjoy it more than reading about it.
+
+On your approval, Milestone 3 begins: profiles, the directory, and search. It opens with a design package that will include the field-by-field visibility table we agreed on 29 August, every field with who may see it and who decides, for you to read before any code is written.
+
+Best regards,
+Waga

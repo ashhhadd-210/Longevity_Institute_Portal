@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Milestone 1 Delivery — Institute Collaborator Portal</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; color: #292524; margin: 48px 56px; line-height: 1.55; }
+  h1 { font-size: 26px; margin-bottom: 2px; }
+  h2 { font-size: 17px; border-bottom: 1px solid #d6d3d1; padding-bottom: 5px; margin-top: 34px; }
+  .sub { color: #78716c; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid #d6d3d1; padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #f5f5f4; }
+  .ok { color: #166534; font-weight: bold; }
+  .shot { width: 100%; border: 1px solid #d6d3d1; margin: 10px 0 4px; }
+  .cap { font-size: 12.5px; color: #78716c; margin: 0 0 18px; }
+  code { font-family: Consolas, monospace; font-size: 12.5px; background: #f5f5f4; padding: 1px 4px; }
+  .footer { margin-top: 40px; color: #78716c; font-size: 13px; border-top: 1px solid #d6d3d1; padding-top: 12px; }
+  li { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<h1>Institute Collaborator Portal</h1>
+<p class="sub">Milestone 1 Delivery — Foundation &amp; Identity · Waga C, Pronto Digital · August 2026</p>
+
+<p>Milestone 1 establishes the architecture the Portal will be built on for the next
+ten years, and the identity and security layer everything else depends on. It is
+delivered running on the Institute's own infrastructure, under the Institute's own
+accounts, exactly as committed in the proposal.</p>
+
+<h2>1. Live environments</h2>
+<table>
+  <tr><th>Environment</th><th>Address</th><th>Deployment</th></tr>
+  <tr><td>Staging</td><td>http://167.71.98.53</td><td>Automatic on every approved change, via the continuous-integration pipeline</td></tr>
+  <tr><td>Production</td><td>http://167.99.63.85</td><td>Manual, from release tag <code>m1.0</code>, after staging verification</td></tr>
+</table>
+<p>Friendly web addresses (portal.activelongevityinstitute.org) and certificates
+attach in the DNS step scheduled with the Institute; the systems themselves are
+complete and serving.</p>
+
+<h2>2. What was delivered</h2>
+<table>
+  <tr><th>Committed in the proposal (M1)</th><th>Status</th></tr>
+  <tr><td>Institute-owned repository with continuous integration</td><td class="ok">Delivered — every change runs code style, static analysis, a dependency security audit, database migrations and the full test suite against PostgreSQL 16 before it can merge</td></tr>
+  <tr><td>Staging and production environments</td><td class="ok">Delivered — both live on the Institute's DigitalOcean account (~$33/month, inside the estimate)</td></tr>
+  <tr><td>Complete data model for the full domain, not only Phase 1</td><td class="ok">Delivered — identity, roles/permissions, applications, referrals, decisions, invitations, collaborators, profiles with structured CV sections, expertise vocabulary, organisations, consent and data-request records, audit stream, email delivery log</td></tr>
+  <tr><td>Authentication, password management and reset, secure sessions</td><td class="ok">Delivered — with rate limiting and protection against account enumeration; the membership list stays confidential</td></tr>
+  <tr><td>Multi-factor authentication for administrators</td><td class="ok">Delivered — mandatory: an administrator cannot reach any administrative page until enrollment is complete (screenshots below)</td></tr>
+  <tr><td>Role and permission framework</td><td class="ok">Delivered — roles and permissions are data, not code; future reviewer or staff roles are configuration, verified by an authorization test matrix</td></tr>
+  <tr><td>Email infrastructure</td><td class="ok">Foundation delivered — every outbound message is logged with per-message delivery status; test sends reach the provider correctly. Production sending switches on with the DNS/domain step, before any real invitation</td></tr>
+  <tr><td>Backups and a performed restore</td><td class="ok">Delivered and rehearsed — see section 4</td></tr>
+  <tr><td>Architecture documentation and decision records</td><td class="ok">Delivered — nine architecture documents, five operations guides, and nine numbered decision records live in the repository</td></tr>
+</table>
+
+<h2>3. Security posture, verified by tests</h2>
+<p>The automated suite — <strong>43 tests, 109 assertions, all passing</strong> — locks in the
+guarantees that matter institutionally:</p>
+<ul>
+  <li>Names with full international characters survive intact end to end — a collaborator's name is never simplified by a technical limitation.</li>
+  <li>The audit history cannot be rewritten: the database itself refuses any change to past events.</li>
+  <li>Admission provenance is traversable years later — from a collaborator back to the original application, referral, or direct invitation.</li>
+  <li>Directory visibility rules (admitted is not the same as visible) behave exactly as specified, including administrative overrides.</li>
+  <li>A suspended account is ejected immediately, even mid-session.</li>
+  <li>Every role is tested against every protected area: allowed where granted, denied everywhere else.</li>
+</ul>
+
+<h2>4. Disaster-recovery rehearsal (performed, not promised)</h2>
+<p>A live backup of the staging database was restored into a clean database and
+compared: every table matched the source exactly. The restored copy was then
+deliberately attacked — an attempt to alter the audit history — and the database
+refused: <code>audit_events is append-only: UPDATE is not permitted</code>.
+Institutional history survives disaster recovery still un-rewritable.</p>
+
+<h2>5. Evidence</h2>
+<img class="shot" src="screenshots/01-staging-login.png">
+<p class="cap">Staging — the collaborator sign-in page, live.</p>
+<img class="shot" src="screenshots/02-production-login.png">
+<p class="cap">Production — the same release, deployed from tag m1.0.</p>
+<img class="shot" src="screenshots/03-staging-signed-in.png">
+<p class="cap">Signed in as an administrator account.</p>
+<img class="shot" src="screenshots/04-admin-blocked-mfa-wall.png">
+<p class="cap">The same administrator attempting to open the administrative area — redirected to
+two-factor enrollment. The wall is enforced by the server, not the interface.</p>
+<img class="shot" src="screenshots/05-mfa-enrollment-qr.png">
+<p class="cap">Beginning enrollment requires re-confirming the password — defense in depth.</p>
+
+<h2>6. Where everything lives</h2>
+<ul>
+  <li>Repository: <code>github.com/ActiveLongevityInstitute/active-longevity-portal</code> — the Institute's organisation, from the first commit.</li>
+  <li>Documentation: <code>docs/</code> — architecture (01–09), decision records (ADR-001–009), deployment, operations runbook, configuration, database, security.</li>
+  <li>Infrastructure: the Institute's DigitalOcean project "Active Longevity Portal" — two servers, managed PostgreSQL 16, cloud firewall. The database accepts connections from the two Portal servers only.</li>
+  <li>Every credential sits in the Institute's accounts; the developer holds delegated access only.</li>
+</ul>
+
+<h2>7. Next — Milestone 2: the Admission System</h2>
+<p>On this foundation, Milestone 2 delivers the Institute's core operational
+workflow end to end: invitations, the referral form, the website application
+form, the administrative review queue, and registration — culminating in a live
+demonstration of a complete admission from application to admitted collaborator.</p>
+
+<p class="footer">Waga C · Pronto Digital — Full-Stack Engineering &amp; Platform Architecture · Milestone 1 of 4, Foundation Release</p>
+
+</body>
+</html>

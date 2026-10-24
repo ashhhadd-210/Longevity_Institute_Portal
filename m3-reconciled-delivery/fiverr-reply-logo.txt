@@ -1,0 +1,8 @@
+Dear Linas,
+
+Thank you, and understood. The compass on its own is gone. The complete logo you sent, with ACTIVE LONGEVITY INSTITUTE, now heads every page of the Portal: sign-in, the collaborator pages and the Admin area, with "Collaborator Portal" beside it. It is live on staging now, so you will see it when you sign in, and on the live Portal as well.
+
+One small request, only if it is easy. The file you attached is 540 pixels wide, which looks good on most screens but can be slightly soft on high-resolution displays such as recent Macs and phones. If your designer has the logo as an SVG, or as a PNG at least 1,500 pixels wide, I will swap it in. If not, the current version is perfectly serviceable.
+
+Best regards,
+Waga

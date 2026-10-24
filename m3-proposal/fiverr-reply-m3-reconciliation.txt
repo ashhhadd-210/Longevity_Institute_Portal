@@ -1,0 +1,18 @@
+Dear Linas,
+
+Thank you, both for the payment and for the way you have framed what comes next. Paying promptly for what is done while keeping the reconciliation open is exactly the right separation, and I will treat the two as separate.
+
+Milestone 4 is on hold. Nothing moves until you say so.
+
+On the reconciliation itself, I would like to make it as easy for you as I can, and I think the way to do that is to take the comparison off your desk rather than wait for it.
+
+If you send me the architecture email as you wrote it, I will go through it line by line against what is built and return one document with every point in one of three columns: already covered, with where to see it; covered differently, where I will say what the Portal does, why I chose that, and what changing it would involve; and genuinely new, where the point describes something the milestone did not contain. I will not decide which column anything belongs in on my own. I will show my reasoning and you decide. Where I built something differently from what you had in mind, the difference is mine to explain and yours to keep or overturn, and I would rather you overturn a decision now than live with one you never agreed to.
+
+So that there is no ambiguity about money before you have even started: adjustments to what M3 already contains, including corrections where your intent and my reading diverged, are part of M3 and carry no charge. Only a point that is new capability would be a scope question, and I will flag those clearly rather than fold them in quietly. I expect them to be few. Most of what people find when they compare an architecture with a build is wording, placement and emphasis, and those are simply mine to fix.
+
+Two things you can do in the meantime, if useful. The staging Portal is yours to try at any pace, with the profile and directory exactly as delivered, and there is a footer link on every page for anything you notice while you are in it. And the walkthrough session stands whenever you want it, before or after the reconciliation. Some people find it easier to compare against a system they have driven themselves than against screenshots, so if you would like to do the walkthrough first and reconcile second, that works equally well.
+
+Take the time it needs. I would much rather this closed carefully than quickly.
+
+Best regards,
+Waga

@@ -1,0 +1,52 @@
+Dear Linas,
+
+Milestone 3, Profiles, Directory and Identity, is complete and running live. Milestone 2 let a person into the Institute. This one gives them somewhere to stand once they are in, and lets the community find them.
+
+Everything in it was built from the documents you wrote in September. The Registers are yours, and they are now in the Portal exactly as you specified them.
+
+What exists today:
+
+The three Registers, loaded as written. Sixty seven Fields including Insurance, Pensions and Retirement Benefits and Housing, four hundred and ten Specialties with their cross Field relationships, and the alias set. Those relationships serve search only. Selecting a Specialty never assigns anybody a Field, as we agreed on the seventeenth.
+
+The collaborator profile. Title in full, a one line summary, about their work in their own words, country, up to five links with your label rule, and the three current positions you approved as an addition, each with its own title, organization and department. Each section saves on its own, because people fill these in over several sittings and often on a phone.
+
+Photographs, cropped to the center and held to the same portrait rectangle whatever shape arrives. The software refuses anything animated and anything that is not a still photograph. Head and shoulders, no hats and recency remain yours to judge, and the screen tells the collaborator so.
+
+Where their work belongs. Search first, never a list to scroll. Every result is labeled Field or Specialty. Type the word you use and the controlled term appears, with a quiet note saying why. The orientation opens once and never interrupts again. And nothing is a dead end: if no term fits, the collaborator writes their own, their profile saves, and you decide later.
+
+Credentials after the name, up to three, chosen from a library of one hundred and fourteen starter entries for your review. The same letters may return several records, and the meaning beside each is how a person picks the FRCP they actually hold. The meaning is searchable as well as the letters, so somebody who does not think of themselves as an MPH still finds it. Where the library lacks what someone has, they request it and carry on, and the form shows near matches first so nobody proposes Masters in Public Health when Master of Public Health already exists.
+
+The directory. Browse, and search by name, by Field or Specialty at either level, and by country. A profile appears once it says enough for somebody else to recognize the person. Only Fields that actually contain a collaborator are offered, so eight Alpha participants do not sit inside fifty nine empty categories, and counts are off until the numbers flatter, as you asked.
+
+Registering an interest in working with someone, which is what we agreed the first Beta uses instead of messaging. Once per pair, only where the other person has said they are open to approaches, never in oneself. You see every one and pass it on. A record and a note, not a conversation.
+
+Feedback, from the footer of every page, with the page each person was on recorded beside what they said. Your Alpha group are the most valuable readers this Portal will ever have, and they now have somewhere to speak.
+
+Two things on your side of the Portal.
+
+A Proposals queue, where terms collaborators have entered arrive for your decision. Approve, correct the wording first if you wish, decline, or match to a term the vocabulary already holds. Each proposal arrives with the near matches, so a duplicate is hard to approve by accident. The person is told when it goes their way. A decline sends nothing by itself; whether to explain is yours.
+
+A Registers screen, where you add, rename, reorder and retire Fields, Specialties and aliases yourself, and write the distinguishing line under a Field with close neighbors. Renaming changes every profile that uses the term at once. Retiring never deletes. Routine vocabulary maintenance no longer needs me.
+
+And the visibility architecture you approved on the twenty ninth of August, enforced in one place and printed as a plain English table for your approval. It is Appendix A of the report and also attached on its own as Who Can See What, four pages, so you can read it without the rest. Four audiences, the fourth deliberately empty. A collaborator may always show less than the Institute permits and never more. City and region are collected and never published, and a test proves it.
+
+There are one hundred and ninety three automated tests behind all of this, which exist so that these promises are checked on every future change rather than remembered.
+
+Three things I want to be straight with you about.
+
+First, two items are waiting on material from you rather than work from me. The one time load of your founding collaborator spreadsheet happens the moment you send it. The distinguishing lines for the twenty nine crowded Fields can be entered in the Registers screen as you write them, or sent to me to enter.
+
+Second, six aliases in your Register point at Pensions, Insurance and Psychometrics Specialties you are still reconciling. They are loaded and will simply start working when the Specialty Register catches up. Nothing is broken.
+
+Third, while building the Registers screen I found that the release process would have quietly undone any rename you made, by restoring the original wording on the next deployment. That is fixed, and a test now proves a rename survives a release. I mention it because it is exactly the kind of thing that would have looked like the Portal ignoring you, months from now, for no reason you could see.
+
+In the same spirit, exercising the whole path on the live servers before you saw it turned up three faults that no test environment would have shown: the release would have discarded every uploaded photograph on the next deployment, the web server had no permission to store one, and every admitted collaborator carried a hidden directory switch left over from before the directory existed. All three are fixed, each with a test or a release check behind it, and the walkthrough was recorded after the fixes on the real system.
+
+The attached report walks through every item with screenshots from the live system. There is a walkthrough video of about seven minutes, with subtitles, following two collaborators from admission to finding each other. Nothing in it is staged; it was recorded on the live Portal.
+
+Whenever it suits you, I would like to sit with you while you run the whole thing yourself: admit a collaborator, build a profile, find them in the directory. That is how this milestone is meant to close, and it is the moment the Portal stops being a design conversation.
+
+On your approval, Milestone 4 begins: hardening, monitoring, documentation, your training, and the launch itself, running while your Alpha group is already inside.
+
+Best regards,
+Waga

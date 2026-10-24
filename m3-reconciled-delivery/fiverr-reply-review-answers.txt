@@ -1,0 +1,70 @@
+Dear Linas,
+
+Thank you for such a careful review. Every point in your PDF and your three emails has been dealt with, and the changes are live on staging now. Below is what changed, then answers to each of your questions.
+
+YOUR STAGING ACCESS
+
+First, an apology. I wrote that you already held Founder sign in details for staging, and that was wrong: the only Founder account on staging was the one I used to record the walkthrough. I have now created a Founder account in your own name, and I will send the one time password to you separately on WhatsApp rather than here.
+
+The address is: https://staging.portal.activelongevityinstitute.org
+
+Sign in with linas@activelongevityinstitute.org and that password. The first time, you will be asked to set up two step verification with an authenticator app on your phone, which I explain below.
+
+WHAT HAS CHANGED, FROM YOUR PDF
+
+The Institute's logo and the words "Collaborator Portal" now appear at the top of every page: the collaborator Portal, the Admin area, sign in and the invitation pages. The Institute's name sits in the footer. I have used the compass mark from the Institute's website; if you have a master logo file you would prefer, send it and I will swap it in.
+
+"Curated" is gone everywhere, and the Portal is called the Collaborator Portal throughout.
+
+The home page cards are now clearly buttons, "Open your profile" and "Open the Directory", with a short note explaining the menu at the top of every page: Directory, Your profile and Recommend.
+
+Profile Standards: "members" is now "collaborators", and "legitimately" is removed.
+
+"About" is now "Additional Information", with your explanation beneath the title, word for word.
+
+Countries are chosen from a list and appear by their full name everywhere, in profiles, positions and the Directory. Great Britain appears as "United Kingdom", which is the standard name for the country code; if you would prefer "Great Britain" I can change it.
+
+The capitalized "E.G." came from a style that put the whole country box in capitals. The box is now a list, so it no longer appears.
+
+Credentials now show as three numbered lines, like Links and Positions. After the first is chosen it fills line 1 and the next search fills line 2, and so on. On the profile itself, unused lines do not appear. The cut off "Country, if it matters" is now "Country (optional)".
+
+"Elsewhere" is now "Links", and the two near duplicate lines on the interest form are now one.
+
+Proposals: "fitted" is now "fit". Declining a term now asks you to confirm, and then emails the collaborator that the term was not added, including your note if you write one. The term does not appear on their profile.
+
+Collaboration interests now show both people's email addresses and an "Introduce them by email" button. It opens your own email program with both addresses and a short draft introduction you can edit before sending.
+
+Registers: these screens are Admin only; collaborators never see them. Each column is now labeled and explained on the screen. The number is the order in lists, and it now starts at 1 instead of 0. "Offered" means collaborators can choose the term. If you untick it, the term is no longer offered to anyone new, and people who already hold it keep it, so nothing is lost.
+
+And from your earlier email, the whole Portal now uses American English, with an automated check that fails if a British spelling ever returns.
+
+ANSWERS TO YOUR QUESTIONS
+
+Names. Every profile now has a "Your name" section that the collaborator can correct at any time: first name or initial, middle name or initial, family name, suffix, and "Name I go by". P. Thomas Smith enters "P." and "Thomas" and "Smith" and appears exactly that way. PT Smith enters "PT" and "Smith". Nobody is forced into a conventional first and last name.
+
+Name I go by. Yes, this was retained, although at registration it was worded "How would you like the Portal to address you?", which is why it was easy to miss. It is now labeled "Name I go by", with "Thomas" as the example, both at registration and on the profile. It is used wherever the Portal addresses someone: the welcome on the home page and the greeting in every email. Other collaborators see it on the profile as "Goes by Thomas". The full name remains the name of record.
+
+Missing information. When a profile is not yet ready, the top of the profile page now lists exactly what is still needed, for example "A photograph" and "Country". Each item links straight to that section. Nothing else is required, and nothing optional is ever listed.
+
+Specialty without a Field. A collaborator can choose Specialties with or without Fields, since the two are independent. For Directory readiness, though, your point 24 asks for at least one Field, or a Field they have proposed that you have not yet decided. If you would like a Specialty alone to be enough for readiness, tell me and I will change it.
+
+More than one Field. There is no ceiling on Fields or Specialties, so they appear as a list that grows as the person adds them, rather than as a fixed number of lines.
+
+Returning later. The invitation link is used once, to register. After that, the collaborator always returns at the same address, https://portal.activelongevityinstitute.org, and signs in with their email and password. The profile saves section by section, so they continue exactly where they stopped. If they forget their password, "Forgot your password?" on the sign in page emails them a reset link.
+
+The passkey. What you saw is two step verification, not a passkey, and only the Founder and administrators are asked for it. Collaborators sign in with their email and password only. At your first sign in, the Portal shows a QR code. You scan it once with an authenticator app such as Google Authenticator or Microsoft Authenticator, and from then on the app shows a six digit code that changes every thirty seconds. You type that code after your password. Nothing is stored on your computer. You are also given a set of recovery codes, once, to keep somewhere safe. If you lose your phone, any recovery code signs you in. If you lose those too, I can reset your two step verification so you can set it up again on a new phone.
+
+Invitation expiry. Invitations used to expire after 14 days. They now stay open for 90 days, so somebody who answers six weeks later can still register. If a link has expired, the person sees a courteous page, not an error, inviting them to reply to the message that brought them, and you can issue a fresh link in one click from the Collaborators page.
+
+Knowing who has registered. There is now a Collaborators page in the Admin area that separates everyone into three groups: invited but not yet registered, registered with a profile in progress (with what is still missing), and profile ready for the Directory. You are also emailed the moment an invited person registers.
+
+Screens 05 and 06. They are the same page. 05 shows the Profile Standards, which appear only the first time someone opens their profile. 06 is that page scrolled down to the readiness notice.
+
+Feedback. "Tell the Institute what you think", at the foot of every page, opens a short form, and screenshot 22 is that form after it was sent. You read everything sent this way on the Feedback page in the Admin area, with the page each person was on.
+
+The Directory. Yes, clicking anywhere on a person's entry opens their full profile.
+
+Everything above is part of Milestone 3, at no charge. The screenshots you reviewed were taken before these changes, so the live staging Portal is now the most accurate picture. If anything there differs from what you expect, send it over and I will correct it the same way.
+
+Best regards,
+Waga

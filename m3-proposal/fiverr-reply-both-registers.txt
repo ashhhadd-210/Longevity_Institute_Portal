@@ -1,0 +1,63 @@
+Hi Linas,
+
+Both Registers reviewed. The new document format is a real improvement, by the way. The structure makes it considerably easier to work from, and the Specialty Register in particular reads as something I can load rather than something I have to interpret.
+
+I will take the Field Register first, since one finding there matters more than anything in the Specialty document.
+
+Three of your own priorities are missing from the Field Register
+
+Back in August you were clear that this vocabulary had to be built from the questions longer lives raise rather than from academic departments, and you named the fields that had to be visible rather than tucked away. Insurance, pensions, housing, urban design, employment, government and technology.
+
+Four of those seven are in the Register. Three are not.
+
+Insurance is absent. Actuarial Science is there and it is not the same thing. An actuary prices risk; an insurance executive runs a business that carries it. The second person reads your list, finds Actuarial Science, recognises it as describing a colleague rather than themselves, and quietly concludes the Institute is aimed at somebody else.
+
+Pensions is absent as a Field. You do have Pensions & Retirement Benefits as a Specialty under Actuarial Science, and Pension Economics under Economics, which tells me the subject matters to you. But somebody running a pension scheme, or working in retirement income policy, is neither an actuary nor an economist. This is also the field where the arithmetic of longer lives bites hardest, so its absence is conspicuous.
+
+Housing is absent. Architecture and Urban Design is adjacent, and you have Housing Design as a Specialty within it, but that describes designers. Housing policy, provision and operation is a separate professional world, and where people live as they age is not a minor question.
+
+I am not proposing wording, since the Register is yours. But I would be uneasy carrying these three into Alpha missing, because they are precisely the professionals the Institute was conceived to reach and whom a conventional longevity institute overlooks.
+
+Sixty four near neighbours, with nothing to tell them apart
+
+This is the one genuine implementation risk in the Field Register, and it is not about the number.
+
+Several Fields sit very close together. Social Care and Social Work. Public Health, Health Policy, Public Policy and Public Administration. Finance, Financial Planning, Investment Management and Venture Capital. Statistics, Biostatistics and Bioinformatics. Technology, Computer Science and Artificial Intelligence. Nutrition Science and Dietetics.
+
+Every one of those distinctions is defensible, and most follow directly from your own principle that practitioner and academic identities are different. The difficulty is not that they are wrong. It is that a collaborator meeting sixty four bare names has to guess which of four neighbours is theirs, and the Register gives them nothing to guess with.
+
+The remedy is small. One short line under each Field, whose only job is to help somebody choose correctly. Social Care describing the sector and its services, Social Work describing the profession and its practitioners. Not a definition and not a longevity rationale, just enough to settle whether this one is yours.
+
+You would not need sixty four of them. Around twenty Fields have a close neighbour. The rest are unambiguous, and I can tell you which is which if that would help.
+
+Now the Specialty Register
+
+This one I can be brief about, because it is in good shape.
+
+All sixty four Fields carry Specialties, so there are no gaps to chase. There are four hundred and eleven entries covering three hundred and ninety seven distinct terms, and the fourteen repetitions are exactly the thirteen cross Field Specialties you listed in section six, with Public Health Nutrition appearing under three Fields rather than two. In other words the document is internally consistent, which is rarer than it sounds and means it can be loaded as written rather than reconciled first.
+
+Your section six is the part I would single out. Defining the multi Field relationships explicitly, in their own table, rather than leaving them implied by repetition, is exactly what makes them safe to implement. It also means that when I build the search relationships there is no interpretation on my part, which is how mistakes get avoided.
+
+Three small things I noticed while working through it
+
+Three Specialty names sit inside a Field name. Architecture and Urban Design both appear as Specialties under the Field Architecture and Urban Design, and Industrial Relations appears under Employment, Labor and Industrial Relations.
+
+That is not an error, and I would not change the Register. It simply means somebody typing Architecture will see both a Field and a Specialty in their results. The answer is that results are labelled, so the person can see which is which and choose deliberately rather than by accident. I mention it because it is the sort of thing that looks like a bug if nobody has explained it in advance.
+
+Several entries contain an ampersand and one contains a hyphen. Someone typing Genetics and Genomics, or Speech Language Pathology, must still find the entry. Search will treat ampersands, the word and, and hyphens as interchangeable, so nobody fails to find a term because of punctuation they did not copy exactly.
+
+And the longest entry runs to thirty nine characters, which sits comfortably within the limits and wraps cleanly on a phone.
+
+On showing counts during Alpha
+
+You wanted to think about this, so here is a view rather than a decision.
+
+I would leave the numbers off at the start. With eight participants a count is more likely to read as a disappointment than as information, and Medicine followed by a 1 says something slightly deflating that Medicine alone does not. The Fields shown will already be only those containing somebody, so the list stays honest either way. Numbers become genuinely useful once they flatter, which is a switch you can turn on whenever you judge the moment right.
+
+Where that leaves things
+
+Nothing in either Register conflicts with what we have designed, and nothing changes the scope. What I would value from you, when convenient and in no particular hurry, is a view on the three missing Fields and the twenty or so descriptive lines. Everything else is mine to get on with.
+
+Warm regards,
+
+Waga

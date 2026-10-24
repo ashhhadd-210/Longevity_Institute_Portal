@@ -1,0 +1,103 @@
+name: Deploy production
+
+# Manual, tag-based, after staging verification and the Institute's GO
+# (docs/DEPLOYMENT.md). Gated by DEPLOY_PRODUCTION_ENABLED=true.
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Git tag to deploy (e.g. m1.0)'
+        required: true
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: vars.DEPLOY_PRODUCTION_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    # Repository-level secrets rather than a GitHub Environment (see the
+    # staging workflow). Production remains manual and tag-based.
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag }}
+
+      - name: Set up PHP 8.3
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, intl, pdo_pgsql, pgsql, zip, gd, sodium
+
+      - name: Install production dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction --no-dev --optimize-autoloader
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Build frontend assets
+        run: |
+          npm ci
+          npm run build
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.PRODUCTION_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "${{ secrets.PRODUCTION_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Sync application
+        run: |
+          rsync -az --delete \
+            --exclude '.git' --exclude 'node_modules' --exclude 'tests' \
+            --exclude '.env' --exclude 'storage/logs' --exclude 'storage/framework' \
+            --exclude 'storage/app' --exclude 'public/storage' \
+            ./ "${{ secrets.PRODUCTION_USER }}@${{ secrets.PRODUCTION_HOST }}:/var/www/portal/"
+
+      - name: Release
+        run: |
+          ssh "${{ secrets.PRODUCTION_USER }}@${{ secrets.PRODUCTION_HOST }}" bash -s <<'RELEASE'
+          set -euo pipefail
+          cd /var/www/portal
+          # Photographs are cropped with GD. A server without the extension
+          # would accept every upload and then fail each one with a blank
+          # error, so refuse to release onto it and say why instead.
+          # Asked of PHP directly rather than through a pipe: `grep -q` closes the
+          # pipe on its first match, and under pipefail that reads as failure.
+          php -r 'exit(extension_loaded("gd") ? 0 : 1);' || { echo "php-gd is not installed on this server: apt-get install php8.3-gd && systemctl restart php8.3-fpm"; exit 1; }
+          php artisan down --retry=30
+          # Uploaded photographs live under storage/app and are served through
+          # the public/storage link. Neither is in the repository, so the sync
+          # above leaves both alone; this makes sure they exist and that the
+          # web server, which runs as a different user, may write there.
+          chmod -R g+rwX storage/app 2>/dev/null || true
+          php artisan storage:link --force
+          php artisan migrate --force
+          # Controlled vocabularies are part of how the Portal works, not
+          # demonstration data. Idempotent, so it runs on every release.
+          php artisan portal:sync-reference-data
+          php artisan config:cache
+          php artisan route:cache
+          php artisan view:cache
+          php artisan queue:restart
+          # Laravel's scheduler only runs if something calls it every minute.
+          # Installed here, idempotently, so a scheduled task can never be
+          # shipped in a state where it silently never fires.
+          #
+          # Both `crontab -l` with no crontab and `grep -v` that filters every
+          # line exit non-zero, so each needs neutralising: under pipefail they
+          # would otherwise fail a release that had already succeeded.
+          ( crontab -l 2>/dev/null || true ) | grep -v 'artisan schedule:run' > /tmp/portal-cron || true
+          echo '* * * * * cd /var/www/portal && php artisan schedule:run >> /dev/null 2>&1' >> /tmp/portal-cron
+          crontab /tmp/portal-cron
+          rm -f /tmp/portal-cron
+          crontab -l | grep -c 'artisan schedule:run'
+          php artisan up
+          RELEASE

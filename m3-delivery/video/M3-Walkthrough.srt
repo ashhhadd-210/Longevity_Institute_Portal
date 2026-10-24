@@ -1,0 +1,290 @@
+1
+00:00:20,235 --> 00:00:23,058
+This is Milestone 3, on the live Portal. It
+begins where your work began: with the
+
+2
+00:00:23,118 --> 00:00:25,941
+Registers.
+
+3
+00:00:26,009 --> 00:00:30,449
+Sixty seven Fields, four hundred and ten
+Specialties and the alias set, loaded from the
+
+4
+00:00:30,509 --> 00:00:34,949
+documents you wrote, and now yours to maintain
+without a developer.
+
+5
+00:00:42,139 --> 00:00:46,579
+Here are the crowded neighbours. Public
+Health, Health Policy, Public Policy, Public
+
+6
+00:00:46,639 --> 00:00:51,079
+Administration. The line beside each is the
+one that helps somebody choose.
+
+7
+00:00:51,724 --> 00:00:55,973
+Renaming a term here changes every profile
+that uses it at once. Retiring one stops
+
+8
+00:00:56,033 --> 00:01:00,282
+offering it, and leaves it exactly where it
+already is.
+
+9
+00:01:07,399 --> 00:01:12,113
+A direct invitation, as in Milestone 2. Name
+only, link copied, sent by hand.
+
+10
+00:01:19,799 --> 00:01:22,746
+Helena has registered, and this is what is
+new. Her profile and the community are one
+
+11
+00:01:22,806 --> 00:01:25,753
+click away.
+
+12
+00:01:27,230 --> 00:01:30,487
+Her profile. Each part saves on its own,
+because people do this over several sittings
+
+13
+00:01:30,547 --> 00:01:33,804
+and often on a phone.
+
+14
+00:01:33,876 --> 00:01:38,316
+And she is not yet in the directory. A profile
+joins it once it carries a name, a title, a
+
+15
+00:01:38,376 --> 00:01:42,816
+Field, and something in her own words. Nothing
+is urgent.
+
+16
+00:01:46,597 --> 00:01:50,970
+A photograph. Whatever shape arrives, it is
+cropped to the centre and held to the same
+
+17
+00:01:51,030 --> 00:01:55,403
+portrait rectangle, so the directory reads
+consistently.
+
+18
+00:01:58,421 --> 00:02:02,887
+Her full title. One hundred and eighteen
+characters, nothing abbreviated.
+
+19
+00:02:05,391 --> 00:02:09,609
+Country is shown to collaborators. City stays
+with the Institute. That was the promise made
+
+20
+00:02:09,669 --> 00:02:13,887
+when it was asked for, and the screen says so.
+
+21
+00:02:16,841 --> 00:02:20,842
+Up to three current positions, each with its
+own organisation and department. Senior people
+
+22
+00:02:20,902 --> 00:02:24,903
+hold more than one appointment at once.
+
+23
+00:02:30,052 --> 00:02:33,030
+Where her work belongs. The orientation opens
+by itself the first time and never interrupts
+
+24
+00:02:33,090 --> 00:02:36,068
+again.
+
+25
+00:02:36,139 --> 00:02:41,721
+Classify lightly. Describe richly. She is not
+being asked to describe everything she knows.
+
+26
+00:02:43,723 --> 00:02:48,685
+Search first, never a list to scroll. Sixty
+seven Fields are nothing to a search.
+
+27
+00:02:51,116 --> 00:02:54,032
+Type the word you use. Physiotherapy leads to
+Physical Therapy, and the screen quietly says
+
+28
+00:02:54,092 --> 00:02:57,008
+why.
+
+29
+00:03:00,981 --> 00:03:04,827
+A Specialty is optional. Selecting one never
+assigns her a Field. A journalist who writes
+
+30
+00:03:04,887 --> 00:03:08,733
+about health policy is a journalist.
+
+31
+00:03:09,607 --> 00:03:12,864
+And no dead end. If nothing fits, she writes
+the term she uses and carries on. The
+
+32
+00:03:12,924 --> 00:03:16,181
+Institute decides later.
+
+33
+00:03:22,052 --> 00:03:27,138
+Credentials after the name, up to three,
+chosen from the library rather than typed.
+
+34
+00:03:28,479 --> 00:03:32,919
+The same letters, several records. FRCP
+differs between London, Edinburgh and Glasgow,
+
+35
+00:03:32,979 --> 00:03:37,419
+and the meaning beside each is how she picks
+the one she holds.
+
+36
+00:03:40,554 --> 00:03:44,245
+And the meaning is searchable as well as the
+letters. Somebody who does not think of
+
+37
+00:03:44,305 --> 00:03:47,996
+themselves as an MPH still finds it.
+
+38
+00:03:56,461 --> 00:04:00,710
+Her profile as another collaborator sees it.
+Credentials after the name. The full title,
+
+39
+00:04:00,770 --> 00:04:05,019
+wrapped rather than cut. City nowhere on the
+page.
+
+40
+00:04:06,386 --> 00:04:10,826
+Links show their label and never their
+address. Empty sections do not appear at all,
+
+41
+00:04:10,886 --> 00:04:15,326
+so a profile with a few things filled in reads
+as deliberate.
+
+42
+00:04:16,535 --> 00:04:20,975
+The directory. She appears because her profile
+now says enough. Only Fields containing
+
+43
+00:04:21,035 --> 00:04:25,475
+somebody are offered, so a small community
+does not look deserted.
+
+44
+00:04:26,968 --> 00:04:31,310
+And from the footer of every page, somewhere
+to say what she found. Your Alpha group are
+
+45
+00:04:31,370 --> 00:04:35,712
+the most valuable readers this Portal will
+ever have.
+
+46
+00:04:52,328 --> 00:04:55,268
+Helena proposed Longevity Economics as a
+Field. It arrives here with anything close
+
+47
+00:04:55,328 --> 00:04:58,268
+that the vocabulary already holds, so mapping
+is one click and a duplicate is hard to
+
+48
+00:04:58,328 --> 00:05:01,268
+approve by accident.
+
+49
+00:05:01,788 --> 00:05:06,228
+You may correct the wording before approving.
+Because people select entries rather than
+
+50
+00:05:06,288 --> 00:05:10,728
+typing text, your wording is what every
+profile then shows, including hers.
+
+51
+00:05:12,333 --> 00:05:16,773
+Approved. It is now in the vocabulary, on her
+profile, and she has been told. Had you
+
+52
+00:05:16,833 --> 00:05:21,273
+declined, nothing would have been sent:
+whether to explain is yours.
+
+53
+00:05:22,689 --> 00:05:25,636
+What the community has said about the Portal,
+with the page each person was on when they
+
+54
+00:05:25,696 --> 00:05:28,643
+said it.
+
+55
+00:05:52,769 --> 00:05:56,119
+Rafael, a geriatrician, searches for an
+actuary and finds Helena. Two people who would
+
+56
+00:05:56,179 --> 00:05:59,529
+not otherwise have met.
+
+57
+00:06:02,086 --> 00:06:05,026
+What the first Beta uses instead of messaging.
+He registers an interest, the Institute sees
+
+58
+00:06:05,086 --> 00:06:08,026
+it and passes it on. A record and a note, not
+a conversation, and only because Helena said
+
+59
+00:06:08,086 --> 00:06:11,026
+she was open to approaches.
+
+60
+00:06:25,362 --> 00:06:29,673
+And here it is on your side. One collaborator
+would like to work with another. Passing it on
+
+61
+00:06:29,733 --> 00:06:34,044
+is yours to do, which at Alpha is exactly
+right.
